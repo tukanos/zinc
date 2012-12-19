@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfZinc",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 08/07/2012 06:40",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfZinc",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
