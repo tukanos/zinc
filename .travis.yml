@@ -8,6 +8,11 @@ env:
 #   - ST=GemStone-2.4.5
 #   - ST=GemStone-2.4.5.1
 
+# blacklist master as it is the "shared code" branch
+branches:
+  except:
+    - master
+
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
