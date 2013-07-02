@@ -6,3 +6,4 @@ SystemOrganization addCategory: 'Zinc-HTTP-GemStone'!
 SystemOrganization addCategory: 'Zinc-HTTP-Logging'!
 SystemOrganization addCategory: 'Zinc-HTTP-Streaming'!
 SystemOrganization addCategory: 'Zinc-HTTP-Support'!
+SystemOrganization addCategory: 'Zinc-HTTP-Variables'!
