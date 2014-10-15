@@ -31,6 +31,8 @@ baseline: spec
         package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'Neo JSON') ];
         package: 'Zinc-Zodiac'
           with: [ spec requires: #('Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests') ];
+        package: 'Zodiac-Core';
+        package: 'Zodiac-Tests' with: [ spec requires: 'Zodiac-Core' ];
         package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP' ];
         package: 'Zinc-WebSocket-Tests'
           with: [ spec requires: 'Zinc-WebSocket-Core' ];
@@ -81,7 +83,9 @@ baseline: spec
           with:
             #('SSO-OAuth1' 'SSO-OAuth2' 'SSO-OpenID' 'SSO-Demo' 'Zinc-SSO-Demo');
         group: 'WWS' with: #('Zinc-WWS-Server' 'Zinc-WWS-Client');
-        group: 'REST' with: #('Zinc-REST') ].
+        group: 'REST' with: #('Zinc-REST');
+        group: 'Zodiac' with: #('Zinc-Zodiac');
+        yourself ].
   spec
     for: #'squeakCommon'
     do: [ 
