@@ -15,7 +15,6 @@ baseline: spec
               spec
                 versionString: #'stable';
                 repository: 'http://mc.stfx.eu/Neo' ].
-
       spec
         package: 'Zinc-Character-Encoding-Core';
         package: 'Zinc-Character-Encoding-Tests'
@@ -34,7 +33,7 @@ baseline: spec
           with: [ spec requires: #('Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests') ];
         package: 'Zodiac-Core';
         package: 'Zodiac-Tests' with: [ spec requires: 'Zodiac-Core' ];
-        package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP'];
+        package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP' ];
         package: 'Zinc-WebSocket-Tests'
           with: [ spec requires: 'Zinc-WebSocket-Core' ];
         package: 'Zinc-SSO-OAuth1-Core'
@@ -59,6 +58,7 @@ baseline: spec
       spec
         group: 'default' with: #('Core');
         group: 'Core' with: #('Zinc-HTTP');
+        group: 'CI' with: #('default' 'Tests');
         group: 'Tests'
           with:
             #('Zinc-Tests' 'Zinc-Character-Encoding-Tests' 'Zinc-Resource-Meta-Tests');
@@ -120,7 +120,7 @@ baseline: spec
               spec
                 version: '0.9.2';
                 repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
-	  configuration: 'Cryptography'
+        configuration: 'Cryptography'
           with: [ 
               spec
                 versionString: #'stable';
@@ -128,13 +128,17 @@ baseline: spec
       spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
-        package: 'Zinc-WebSocket-Core' with: [ spec requires: #('Zinc-HTTP' 'Cryptography')];
+        package: 'Zinc-WebSocket-Core'
+          with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         package: 'Zinc-HTTP'
           with: [ 
               spec
                 requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
                 includes: #('SocketStream') ];
-        package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ] ].
+        package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
+      spec
+        group: 'CI' with: #('Zinc-WebSocket-Tests');
+        yourself ].
   spec
     for: #'gs2.x'
     do: [ 
@@ -152,8 +156,8 @@ baseline: spec
           with: [ spec includes: 'Zinc-Character-Encoding-GS3-Tests' ];
         package: 'Zinc-Character-Encoding-GS3-Tests'
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
-        package: 'Zinc-WebSocket-Core' 
-		with: [ spec requires: #('Zinc-HTTP' 'Cryptography')]; 
+        package: 'Zinc-WebSocket-Core'
+          with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         yourself ].
   spec
     for: #(#'gs2.x' #'gs3.0.x')
@@ -180,5 +184,5 @@ baseline: spec
         package: 'Zinc-Character-Encoding-Core'
           with: [ spec includes: 'Zinc-Character-Encoding-GS32-Core' ];
         package: 'Zinc-Character-Encoding-GS32-Core'
-          with: [ spec requires: 'Zinc-Character-Encoding-Core' ]; 
+          with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
         yourself ]
