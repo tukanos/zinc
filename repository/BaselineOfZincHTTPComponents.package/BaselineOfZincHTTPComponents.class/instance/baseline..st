@@ -123,7 +123,7 @@ baseline: spec
         configuration: 'Cryptography'
           with: [ 
               spec
-                versionString: #'stable';
+                versionString: '1.0';
                 repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ].
       spec
         package: 'SocketStream';
