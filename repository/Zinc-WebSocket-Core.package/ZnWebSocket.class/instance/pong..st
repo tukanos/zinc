@@ -4,4 +4,4 @@ pong: payload
 	
 	| frame |
 	frame := ZnWebSocketFrame pong: payload.
-	self sendFrame: frame 
+	self sendFrame: frame

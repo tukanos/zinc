@@ -1,9 +1,12 @@
 testing
 testChatroom
 	| webSocket1 message1 inbox1 webSocket2 message2 inbox2 |
-	ZnServer startDefaultOn: 1701.
-	ZnServer default 
-		delegate: (ZnWebSocketDelegate map: 'ws-chatroom' to: ZnWebSocketChatroomHandler new).
+	ZnServer defaultServerClass initialize.	
+	ZnServerStarter start: ZnServer 
+							 named: 'ZnWebSocketTestChatServer' 
+							 onPorts: #(1701) 
+							 delegate: (ZnWebSocketDelegate map: 'ws-chatroom' to: ZnWebSocketChatroomHandler new).
+	(Delay forSeconds: 3) wait.
 	webSocket1 := ZnWebSocket to: 'ws://localhost:1701/ws-chatroom'.
 	message1 := 'Message 1 @ ', TimeStamp now printString.
 	webSocket2 := ZnWebSocket to: 'ws://localhost:1701/ws-chatroom'.
@@ -18,4 +21,5 @@ testChatroom
 	self assert: (inbox2 includes: message2).
 	webSocket1 close.
 	webSocket2 close.
-	ZnServer stopDefault.
+	ZnServerStarter stopAndRemoveGemServerNamed: 'ZnWebSocketTestChatServer'.
+	(Delay forSeconds: 3) wait

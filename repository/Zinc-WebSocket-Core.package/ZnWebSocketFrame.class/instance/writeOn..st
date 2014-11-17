@@ -12,4 +12,4 @@ writeOn: stream
 				ifFalse: [
 					self assert: size < (2 raisedTo: 31).
 					stream nextPut: (byte + 127); nextPutAll: (size asByteArrayOfSize: 8) ] ].
-	self writeBodyOfSize: size on: stream 
+	self writeBodyOfSize: size on: stream
