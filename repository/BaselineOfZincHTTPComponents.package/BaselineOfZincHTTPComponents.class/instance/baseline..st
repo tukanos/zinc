@@ -10,11 +10,7 @@ baseline: spec
               spec
                 versionString: #'stable';
                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-        configuration: 'Neo JSON'
-          with: [ 
-              spec
-                versionString: #'stable';
-                repository: 'http://mc.stfx.eu/Neo' ].
+        yourself.
       spec
         package: 'Zinc-Character-Encoding-Core';
         package: 'Zinc-Character-Encoding-Tests'
@@ -28,7 +24,7 @@ baseline: spec
         package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ];
         package: 'Zinc-AWS'
           with: [ spec requires: #('Zinc-HTTP' 'XML Support') ];
-        package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'Neo JSON') ];
+        package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-Zodiac'
           with: [ spec requires: #('Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests') ];
         package: 'Zodiac-Core';
@@ -37,9 +33,9 @@ baseline: spec
         package: 'Zinc-WebSocket-Tests'
           with: [ spec requires: 'Zinc-WebSocket-Core' ];
         package: 'Zinc-SSO-OAuth1-Core'
-          with: [ spec requires: #('Zinc-HTTP' 'Neo JSON') ];
+          with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-SSO-OAuth2-Core'
-          with: [ spec requires: #('Zinc-HTTP' 'Neo JSON') ];
+          with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-SSO-OpenID-Core'
           with: [ spec requires: #('Zinc-HTTP' 'XML Support') ];
         package: 'Zinc-SSO-Demo'
@@ -58,6 +54,7 @@ baseline: spec
       spec
         group: 'default' with: #('Core');
         group: 'Core' with: #('Zinc-HTTP');
+        group: 'CI' with: #('default' 'Tests');
         group: 'Tests'
           with:
             #('Zinc-Tests' 'Zinc-Character-Encoding-Tests' 'Zinc-Resource-Meta-Tests');
@@ -89,6 +86,13 @@ baseline: spec
   spec
     for: #'squeakCommon'
     do: [ 
+      spec
+        configuration: 'NeoJSON'
+          with: [ 
+              spec
+                versionString: #'stable';
+                repository: 'http://mc.stfx.eu/Neo' ];
+        yourself.
       spec package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ].
       spec group: 'Patch-HTTPSocket' with: #('Zinc-Patch-HTTPSocket') ].
   spec
@@ -118,16 +122,32 @@ baseline: spec
           with: [ 
               spec
                 version: '0.9.2';
-                repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ].
+                repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
+        configuration: 'Cryptography'
+          with: [ 
+              spec
+                versionString: #'stable';
+                repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ];
+        baseline: 'NeoJSON'
+          with: [ 
+              spec
+                loads: 'Core';
+                repository: 'github://GsDevKit/NeoJSON:master/repository' ];
+        yourself.
       spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+        package: 'Zinc-WebSocket-Core'
+          with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         package: 'Zinc-HTTP'
           with: [ 
               spec
                 requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
                 includes: #('SocketStream') ];
-        package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ] ].
+        package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
+      spec
+        group: 'CI' with: #('REST');
+        yourself ].
   spec
     for: #'gs2.x'
     do: [ 
@@ -145,6 +165,8 @@ baseline: spec
           with: [ spec includes: 'Zinc-Character-Encoding-GS3-Tests' ];
         package: 'Zinc-Character-Encoding-GS3-Tests'
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
+        package: 'Zinc-WebSocket-Core'
+          with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         yourself ].
   spec
     for: #(#'gs2.x' #'gs3.0.x')

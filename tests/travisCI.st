@@ -15,7 +15,7 @@ GsDeployer deploy: [
     baseline: 'ZincHTTPComponents';
     repository: 'filetree://', gitPath, '/zinc/repository';
     onLock: [:ex | ex honor ];
-    load: #('Tests' 'default')
+    load: #('CI')
 ].
 
 "Run the Tode tests"

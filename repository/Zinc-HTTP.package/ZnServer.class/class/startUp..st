@@ -1,9 +1,4 @@
 system startup
 startUp: resuming
-	"Our system startUp hook: start all servers we manage.
-	We do this using deferred startup actions to allow normal error handling."
+  "noop for gemstone ... always explicitly start server on startup for GemStone"
 
-	(resuming or: [ self alwaysRestart ])
-		ifTrue: [
-			Smalltalk addDeferredStartupAction: [ 
-				self managedServers do: [ :each | each start ] ] ]

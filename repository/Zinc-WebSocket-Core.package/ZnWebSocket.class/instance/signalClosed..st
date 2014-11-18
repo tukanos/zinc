@@ -7,6 +7,6 @@ signalClosed: frame
 	frame isEmpty 
 		ifFalse: [
 			exception 
-				code: frame closeCode;
+				code: frame closeCode asString;
 				reason: frame closeReason ].
 	exception signal.
