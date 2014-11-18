@@ -1,3 +1,3 @@
 accessing
 benchRead
-	^ [ self read ] bench
+  ^ [ self read ] perform: #'bench'

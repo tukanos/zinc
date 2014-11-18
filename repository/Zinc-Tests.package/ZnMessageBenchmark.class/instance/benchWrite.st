@@ -1,3 +1,3 @@
 accessing
 benchWrite
-	^ [ self write ] bench
+  ^ [ self write ] perform: #'bench'
