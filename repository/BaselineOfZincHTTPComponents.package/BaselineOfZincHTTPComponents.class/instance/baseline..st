@@ -10,11 +10,7 @@ baseline: spec
               spec
                 versionString: #'stable';
                 repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-        configuration: 'Neo JSON'
-          with: [ 
-              spec
-                versionString: #'stable';
-                repository: 'http://mc.stfx.eu/Neo' ].
+        yourself.
       spec
         package: 'Zinc-Character-Encoding-Core';
         package: 'Zinc-Character-Encoding-Tests'
@@ -28,7 +24,7 @@ baseline: spec
         package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ];
         package: 'Zinc-AWS'
           with: [ spec requires: #('Zinc-HTTP' 'XML Support') ];
-        package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'Neo JSON') ];
+        package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-Zodiac'
           with: [ spec requires: #('Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests') ];
         package: 'Zodiac-Core';
@@ -37,9 +33,9 @@ baseline: spec
         package: 'Zinc-WebSocket-Tests'
           with: [ spec requires: 'Zinc-WebSocket-Core' ];
         package: 'Zinc-SSO-OAuth1-Core'
-          with: [ spec requires: #('Zinc-HTTP' 'Neo JSON') ];
+          with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-SSO-OAuth2-Core'
-          with: [ spec requires: #('Zinc-HTTP' 'Neo JSON') ];
+          with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-SSO-OpenID-Core'
           with: [ spec requires: #('Zinc-HTTP' 'XML Support') ];
         package: 'Zinc-SSO-Demo'
@@ -90,6 +86,13 @@ baseline: spec
   spec
     for: #'squeakCommon'
     do: [ 
+      spec
+        configuration: 'NeoJSON'
+          with: [ 
+              spec
+                versionString: #'stable';
+                repository: 'http://mc.stfx.eu/Neo' ];
+        yourself.
       spec package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ].
       spec group: 'Patch-HTTPSocket' with: #('Zinc-Patch-HTTPSocket') ].
   spec
@@ -124,7 +127,13 @@ baseline: spec
           with: [ 
               spec
                 versionString: #'stable';
-                repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ].
+                repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ];
+        configuration: 'NeoJSON'
+          with: [ 
+              spec
+                versionString: #'stable';
+                repository: 'http://mc.stfx.eu/Neo' ];
+        yourself.
       spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
@@ -137,7 +146,7 @@ baseline: spec
                 includes: #('SocketStream') ];
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
-        group: 'CI' with: #('Zinc-WebSocket-Tests');
+        group: 'CI' with: #('REST');
         yourself ].
   spec
     for: #'gs2.x'
