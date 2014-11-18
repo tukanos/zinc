@@ -7,7 +7,7 @@ env:
    - ST=GemStone-2.4.6
 #   - ST=GemStone-3.0.1 # not suppored in GemStone 3.0.1
    - ST=GemStone-3.1.0.6
-   - ST=GemStone-3.2.2
+   - ST=GemStone-3.2.3
 
 # blacklist master as it is the "shared code" branch
 branches:
