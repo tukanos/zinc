@@ -128,11 +128,11 @@ baseline: spec
               spec
                 versionString: #'stable';
                 repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ];
-        configuration: 'NeoJSON'
+        baseline: 'NeoJSON'
           with: [ 
               spec
-                versionString: #'stable';
-                repository: 'http://mc.stfx.eu/Neo' ];
+                loads: 'Core';
+                repository: 'github://GsDevKit/NeoJSON:master/repository' ];
         yourself.
       spec
         package: 'SocketStream';
