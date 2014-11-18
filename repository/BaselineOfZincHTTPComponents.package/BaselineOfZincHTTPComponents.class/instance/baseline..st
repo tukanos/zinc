@@ -146,7 +146,7 @@ baseline: spec
                 includes: #('SocketStream') ];
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
-        group: 'CI' with: #('REST' 'WebSocket');
+        group: 'CI' with: #('REST');
         yourself ].
   spec
     for: #'gs2.x'
