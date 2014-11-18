@@ -123,11 +123,11 @@ baseline: spec
               spec
                 version: '0.9.2';
                 repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
-        configuration: 'Cryptography'
+        baseline: 'Cryptography'
           with: [ 
               spec
-                versionString: #'stable';
-                repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ];
+                loads: #('Cryptography');
+                repository: 'github://GsDevKit/Cryptography:master/repository' ];
         baseline: 'NeoJSON'
           with: [ 
               spec
@@ -146,7 +146,7 @@ baseline: spec
                 includes: #('SocketStream') ];
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
-        group: 'CI' with: #('REST');
+        group: 'CI' with: #('REST' 'WebSocket');
         yourself ].
   spec
     for: #'gs2.x'
