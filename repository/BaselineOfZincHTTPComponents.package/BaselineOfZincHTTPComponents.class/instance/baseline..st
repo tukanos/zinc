@@ -129,10 +129,7 @@ baseline: spec
                 loads: #('Cryptography');
                 repository: 'github://GsDevKit/Cryptography:master/repository' ];
         baseline: 'NeoJSON'
-          with: [ 
-              spec
-                loads: 'Core';
-                repository: 'github://GsDevKit/NeoJSON:master/repository' ];
+          with: [ spec repository: 'github://GsDevKit/NeoJSON:master/repository' ];
         yourself.
       spec
         package: 'SocketStream';
