@@ -2,7 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"expectedFailures" : "dkh 11/17/2014 16:48",
 		"setUp" : "SvenVanCaekenberghe 12/10/2012 20:03",
 		"tearDown" : "SvenVanCaekenberghe 12/10/2012 19:18",
 		"testCreate" : "dkh 11/17/2014 16:45",
