@@ -128,12 +128,20 @@ baseline: spec
               spec
                 loads: #('Cryptography');
                 repository: 'github://GsDevKit/Cryptography:master/repository' ];
+        baseline: 'GsApplicationTools'
+          with: [ 
+              spec
+                loads: #('Core');
+                repository:
+                    'github://GsDevKit/gsApplicationTools:master/repository' ];
         baseline: 'NeoJSON'
           with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
         yourself.
       spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+        package: 'Zinc-GemStone-Server-Tools'
+          with: [ spec requires: #('GsApplicationTools') ];
         package: 'Zinc-WebSocket-Core'
           with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         package: 'Zinc-HTTP'
@@ -143,6 +151,7 @@ baseline: spec
                 includes: #('SocketStream') ];
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
+        group: 'Core' with: #('Zinc-GemStone-Server-Tools');
         group: 'CI' with: #('REST' 'WebSocket');
         yourself ].
   spec
