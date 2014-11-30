@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"delegate",
-		"debugMode",
-		"log" ],
-	"name" : "ZnGemServer",
+		 ],
+	"name" : "ZnGemServerLogSupport",
 	"pools" : [
 		 ],
-	"super" : "GemServer",
+	"super" : "ZnLogSupport",
 	"type" : "normal" }
