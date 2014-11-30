@@ -13,7 +13,7 @@ testStatus
   message := webSocket readMessage.
   self
     assert:
-      (#('Gemstone' 'memory' 'GC' 'Process')
+      (#('GemStone' 'Free Space' 'Process')
         allSatisfy: [ :each | message includesSubstring: each ]).
   webSocket close ]
     ensure: [ 
