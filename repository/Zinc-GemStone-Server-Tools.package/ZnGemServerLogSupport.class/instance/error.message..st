@@ -1,4 +1,4 @@
 accessing
 error: errorDescription message: message
-  self createContinuation: errorDescription errorDescription.
+  self createContinuation: errorDescription.
   super error: errorDescription message: message
