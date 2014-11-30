@@ -1,0 +1,4 @@
+accessing
+debugMode
+
+   ^debugMode

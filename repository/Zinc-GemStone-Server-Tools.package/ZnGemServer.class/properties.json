@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "ZnServerStarter",
+		"delegate",
+		"debugMode" ],
+	"name" : "ZnGemServer",
 	"pools" : [
 		 ],
-	"super" : "GemServerStarter",
+	"super" : "GemServer",
 	"type" : "normal" }
