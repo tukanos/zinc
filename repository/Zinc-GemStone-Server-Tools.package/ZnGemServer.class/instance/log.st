@@ -3,11 +3,16 @@ log
   log
     ifNil: [ 
       | logger |
-      "default logger snaps off continuations for errors and logs errors to 
+      self debugMode
+        ifTrue: [ 
+          "In debugMode, snap off continuations for errors, but use the ZnObjectLogLogger"
+          logger := ZnObjectLogLogger new ]
+        ifFalse: [ 
+          "default logger snaps off continuations for errors and logs errors to 
        Transcript (gem server log file)"
-      logger := ZnTranscriptLogger new
-        filter: #'error';
-        yourself.
+          logger := ZnTranscriptLogger new logger
+            filter: #'error';
+            yourself ].
       log := ZnGemServerLogSupport new
         addListener: logger;
         yourself ].
