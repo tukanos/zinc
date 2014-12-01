@@ -10,7 +10,7 @@ log
         ifFalse: [ 
           "default logger snaps off continuations for errors and logs errors to 
        Transcript (gem server log file)"
-          logger := ZnTranscriptLogger new logger
+          logger := ZnTranscriptLogger new
             filter: #'error';
             yourself ].
       log := ZnGemServerLogSupport new

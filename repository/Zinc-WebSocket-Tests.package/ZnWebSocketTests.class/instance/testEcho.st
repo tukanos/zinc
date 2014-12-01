@@ -3,7 +3,6 @@ testEcho
   | webSocket message gemServer |
   ZnServer defaultServerClass initialize.
   gemServer := (ZnGemServer register: 'ZnWebSocketTestEchoServer' on: #(1701))
-    debugMode: true;
     delegate:
         (ZnWebSocketDelegate map: 'ws-echo' to: ZnWebSocketEchoHandler new);
     yourself.
