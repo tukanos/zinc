@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"expectedFailures" : "dkh 11/30/2014 20:23",
 		"setUp" : "dkh 11/30/2014 09:50",
 		"tearDown" : "dkh 11/30/2014 09:50",
 		"testChatroom" : "dkh 11/29/2014 19:55",
