@@ -1,4 +1,4 @@
 accessing
 debugMode
-
-   ^debugMode
+  debugMode ifNil: [ debugMode := false ].
+  ^ debugMode
