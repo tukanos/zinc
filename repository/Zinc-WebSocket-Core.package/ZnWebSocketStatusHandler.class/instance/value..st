@@ -11,5 +11,5 @@ value: webSocket
   webSocket isConnected ]
     whileTrue ]
     on: ConnectionClosed
-    do: [ webSocket log debug: 'Ignoring connection close' ].
+    do: [ :ignored | webSocket log debug: 'Ignoring connection close' ].
   webSocket log info: 'Stopping status streaming'

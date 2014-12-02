@@ -5,7 +5,7 @@
 		"expectedFailures" : "dkh 11/30/2014 20:23",
 		"setUp" : "dkh 11/30/2014 09:50",
 		"tearDown" : "dkh 11/30/2014 09:50",
-		"testChatroom" : "dkh 12/01/2014 10:09",
+		"testChatroom" : "dkh 12/02/2014 14:50",
 		"testEcho" : "dkh 12/01/2014 10:09",
 		"testEchoSecureWebSocketsDotOrg" : "SebastianHeidbrink 11/02/2014 15:53",
 		"testEchoWebSocketsDotOrg" : "SebastianHeidbrink 11/02/2014 12:25",
