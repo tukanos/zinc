@@ -3,6 +3,7 @@ testStatus
   | webSocket message gemServer |
   ZnServer defaultServerClass initialize.
   gemServer := (ZnGemServer register: 'ZnWebSocketTestStatusServer' on: #(1701))
+    debugMode: true;
     delegate:
         (ZnWebSocketDelegate map: 'ws-status' to: ZnWebSocketStatusHandler new);
     yourself.
