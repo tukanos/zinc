@@ -9,4 +9,7 @@ startServerOn: port
     log: self log;
     yourself.
   server start.
-  [ true ] whileTrue: [ (Delay forSeconds: 10) wait ]
+  [ true ]
+    whileTrue: [ 
+      (Delay forSeconds: 10) wait.
+      self log info: 'startServerOn Delay expired.' ]
