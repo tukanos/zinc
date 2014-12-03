@@ -4,7 +4,7 @@ readFrame
 	Control frames are handled. ConnectionClosed is signalled when the other end closes."
 
   | frame |
-  frame := ZnWebSocketFrame readFrom: stream.
+  frame := ZnWebSocketFrame readFrom: self stream.
   self log info: [ self asOop printString , ' got frame..' ].
   frame isControl
     ifTrue: [ 
