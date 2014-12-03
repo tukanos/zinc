@@ -1,6 +1,6 @@
 private
 createContinuation: errorDescription
-  self enabled
+  (self enabled and: [ self enableContinuations ])
     ifTrue: [ 
       GRPlatform current
         doTransaction: [ DebuggerLogEntry createContinuationLabeled: errorDescription ] ]

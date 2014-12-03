@@ -8,7 +8,10 @@
 	"instvars" : [
 		"delegate",
 		"debugMode",
-		"log" ],
+		"enableContinuations",
+		"log",
+		"logListener",
+		"logFilter" ],
 	"name" : "ZnGemServer",
 	"pools" : [
 		 ],

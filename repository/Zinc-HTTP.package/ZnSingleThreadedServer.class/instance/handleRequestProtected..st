@@ -6,5 +6,8 @@ handleRequestProtected: request
   ^ [ self authenticateAndDelegateRequest: request ]
     on: Error
     do: [ :exception | 
-      self logServerError: exception.
-      ZnResponse serverError: exception printString ]
+      self debugMode
+        ifTrue: [ exception pass ]
+        ifFalse: [ 
+          self logServerError: exception.
+          ZnResponse serverError: exception printString ] ]

@@ -2,18 +2,8 @@ accessing
 log
   log
     ifNil: [ 
-      | logger |
-      self debugMode
-        ifTrue: [ 
-          "In debugMode, snap off continuations for errors, but use the ZnObjectLogLogger"
-          logger := ZnTranscriptLogger new ]
-        ifFalse: [ 
-          "default logger snaps off continuations for errors and logs errors to 
-       Transcript (gem server log file)"
-          logger := ZnTranscriptLogger new
-            filter: #'error';
-            yourself ].
       log := ZnGemServerLogSupport new
-        addListener: logger;
+        enableContinuations: true;
+        addListener: self logListener;
         yourself ].
   ^ log

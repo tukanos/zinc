@@ -1,10 +1,7 @@
 logging
 logServerError: exception
-  (self logServerErrorDetails and: [ self log enabled ])
-    ifTrue: [ 
-      "for GemStone, we are typically logging to an object log, so we don't have 
-       to conform to classical `log format`"
-      self log
-        error: 'ERROR: ' , exception description
-        message: (GsProcess stackReportToLevel: 100) ]
-    ifFalse: [ self handleError: exception ]
+  "For GemStone, we want to log the exception description (conditionally snapping off a continuation) and
+   dump the error information to the gem log."
+
+  self log error: exception description.
+  self handleError: exception

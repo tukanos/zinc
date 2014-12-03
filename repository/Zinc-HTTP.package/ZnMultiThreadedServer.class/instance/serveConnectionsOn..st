@@ -12,7 +12,7 @@ serveConnectionsOn: listeningSocket
   [ 
   [ self executeRequestResponseLoopOn: stream ]
     on: Error
-    do: [ :ex | self handleError: ex ] ]
+    do: [ :ex | self logServerError: ex ] ]
     ensure: [ 
       self log debug: 'Closing stream'.
       self closeSocketStream: stream ] ]

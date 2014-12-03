@@ -3,12 +3,13 @@ testStatus
   | webSocket message gemServer |
   ZnServer defaultServerClass initialize.
   gemServer := (ZnGemServer register: 'ZnWebSocketTestStatusServer' on: #(1701))
-    debugMode: true;
+    logToObjectLog;
+    logEverything;
     delegate:
         (ZnWebSocketDelegate map: 'ws-status' to: ZnWebSocketStatusHandler new);
     yourself.
   [ 
-  gemServer startGems.
+  gemServer startGems.	"does a commit"
   (Delay forSeconds: 3) wait.
   webSocket := ZnWebSocket to: 'ws://localhost:1701/ws-status'.
   message := webSocket readMessage.
@@ -18,6 +19,7 @@ testStatus
         allSatisfy: [ :each | message includesSubstring: each ]).
   webSocket close ]
     ensure: [ 
-      gemServer stopGems.
-      GemServerRegistry removeGemServer: gemServer.
+      gemServer
+        stopGems;
+        unregister.
       (Delay forSeconds: 3) wait ]
