@@ -16,7 +16,7 @@
 		"executeOneRequestResponseOn:" : "dkh 11/30/2014 09:45",
 		"handleError:" : "dkh 06/29/2014 23:12",
 		"handleRequest:" : "PaulDeBruicker 4/19/2012 16:29",
-		"handleRequestProtected:" : "SvenVanCaekenberghe 1/31/2013 10:09",
+		"handleRequestProtected:" : "dkh 12/02/2014 14:49",
 		"initializeServerSocket" : "SvenVanCaekenberghe 9/5/2012 10:11",
 		"isListening" : "dkh 07/30/2012 21:23",
 		"isRunning" : "SvenVanCaekenberghe 12/10/2010 13:57",

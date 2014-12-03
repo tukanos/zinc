@@ -121,7 +121,7 @@ baseline: spec
         configuration: 'GsPharo'
           with: [ 
               spec
-                version: '0.9.2';
+                version: '0.9.3';
                 repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
         baseline: 'Cryptography'
           with: [ 
