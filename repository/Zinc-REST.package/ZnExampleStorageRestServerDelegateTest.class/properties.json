@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"server",
-		"client" ],
+		"server" ],
 	"name" : "ZnExampleStorageRestServerDelegateTest",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "ZnAbstractExampleStorageRestServerDelegateTest",
 	"type" : "normal" }

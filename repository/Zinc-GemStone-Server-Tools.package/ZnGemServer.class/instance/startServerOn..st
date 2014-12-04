@@ -5,7 +5,7 @@ startServerOn: port
   | server |
   server := (self serverClass on: port)
     delegate: self delegate;
-    debugMode: false;
+    debugMode: self debugMode;
     log: self log;
     yourself.
   server start.

@@ -4,7 +4,7 @@ testCreate
 	The result is a 201 Created response with the URI of the new object both
 	returned as a JSON string and as the Location header"
 
-  | data objectUri |
+  | data objectUri x |
   data := Dictionary with: 'x' -> 'foo' with: 'y' -> 'bar'.
   client
     addPathSegment: 'objects';
@@ -18,7 +18,7 @@ testCreate
   client resetEntity.
   client get.
   self assert: client isSuccess.
-  self assert: (client contents includes: objectUri).
+  self assert: ((x := client contents) includes: objectUri).
   client
     url: objectUri;
     get.

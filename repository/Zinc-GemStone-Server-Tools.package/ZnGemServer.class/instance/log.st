@@ -3,7 +3,7 @@ log
   log
     ifNil: [ 
       log := ZnGemServerLogSupport new
-        enableContinuations: true;
+        enableContinuations: self enableContinuations;
         addListener: self logListener;
         yourself ].
   ^ log
