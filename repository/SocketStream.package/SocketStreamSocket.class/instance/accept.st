@@ -1,9 +1,13 @@
 as yet unclassified
 accept
-	"^an SpSocket
+  "^an SpSocket
 	I accept the next connection made to the server socket I represent.  I return a new
 	instance of SpSocket which represents the socket over which information can be
 	exchanged.
 	NOTE: this call will block waiting for an inbound connection"
 
-	^SocketStreamSocket onNativeclientSocket: (self underlyingSocket accept) for: self
+  | gsSocket |
+  gsSocket := self underlyingSocket accept.
+  gsSocket
+    ifNil: [ NetworkError signal: 'accept error: ' , self underlyingSocket lastErrorString ].
+  ^ SocketStreamSocket onNativeclientSocket: gsSocket for: self

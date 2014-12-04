@@ -9,4 +9,5 @@ setUp
             (ZnCallHierarchyRestUriSpace new
                 rootClass: ZnExampleSumRestCall;
                 yourself);
-        yourself)
+        yourself).
+  client := self createClientFor: server localUrl

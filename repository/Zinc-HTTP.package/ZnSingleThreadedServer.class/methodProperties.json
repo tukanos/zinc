@@ -14,7 +14,7 @@
 		"authenticateRequest:do:" : "SvenVanCaekenberghe 1/10/2013 15:13",
 		"closeDelegate" : "SvenVanCaekenberghe 1/10/2013 15:14",
 		"executeOneRequestResponseOn:" : "dkh 11/30/2014 09:45",
-		"handleError:" : "dkh 06/29/2014 23:12",
+		"handleError:" : "dkh 12/04/2014 07:09",
 		"handleRequest:" : "dkh 12/03/2014 20:04",
 		"handleRequestProtected:" : "dkh 12/03/2014 11:59",
 		"initializeServerSocket" : "SvenVanCaekenberghe 9/5/2012 10:11",

@@ -16,7 +16,5 @@ handleError: anException
   (ObjectLogEntry error: 'Zinc Server error: ' , data object: stack) addToLog ]
     on: Error
     do: [ :e | self notifyUnreportableError: anException description ].
-  TranscriptProxy proxyTranscript ~~ nil
-    ifTrue: [ 
-      "interactive session, so bring up a debugger"
-      anException pass ]
+  self debugMode
+    ifTrue: [ anException pass ]
