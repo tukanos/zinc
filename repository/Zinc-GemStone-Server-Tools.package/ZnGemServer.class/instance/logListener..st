@@ -1,4 +1,4 @@
 accessing
 logListener: anObject
-
-   logListener := anObject
+  log := nil.
+  logListener := anObject

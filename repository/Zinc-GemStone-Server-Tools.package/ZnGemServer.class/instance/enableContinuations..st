@@ -1,4 +1,4 @@
 accessing
 enableContinuations: anObject
-
-   enableContinuations := anObject
+  log := nil.
+  enableContinuations := anObject
