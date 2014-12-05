@@ -11,7 +11,8 @@
 		"enableContinuations",
 		"log",
 		"logListener",
-		"logFilter" ],
+		"logFilter",
+		"breakpointExceptionSet" ],
 	"name" : "ZnGemServer",
 	"pools" : [
 		 ],

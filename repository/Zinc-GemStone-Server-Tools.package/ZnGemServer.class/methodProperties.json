@@ -2,14 +2,16 @@
 	"class" : {
 		"serverClass" : "dkh 11/29/2014 06:40" },
 	"instance" : {
+		"breakpointExceptionSet" : "dkh 12/05/2014 15:03",
+		"breakpointExceptionSet:" : "dkh 12/05/2014 15:03",
 		"debugMode" : "dkh 11/30/2014 21:29",
 		"debugMode:" : "dkh 11/29/2014 08:44",
 		"delegate" : "dkh 11/29/2014 08:44",
 		"delegate:" : "dkh 11/29/2014 08:44",
 		"enableContinuations" : "dkh 12/03/2014 12:21",
 		"enableContinuations:" : "dkh 12/04/2014 09:56",
-		"initialize" : "dkh 12/04/2014 06:37",
-		"log" : "dkh 12/05/2014 14:52",
+		"initialize" : "dkh 12/05/2014 15:04",
+		"log" : "dkh 12/05/2014 15:03",
 		"log:" : "dkh 11/30/2014 11:08",
 		"logErrorsOnly" : "dkh 12/04/2014 06:36",
 		"logEverything" : "dkh 12/03/2014 12:25",
