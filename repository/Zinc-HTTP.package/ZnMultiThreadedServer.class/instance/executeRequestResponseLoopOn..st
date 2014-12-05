@@ -9,5 +9,5 @@ executeRequestResponseLoopOn: stream
   ZnCurrentServer
     value: self
     during: [ [ self executeOneRequestResponseOn: stream ] whileFalse ] ]
-    on: ZnGemServer breakpointExceptionSet
-    do: [ :ex | ZnGemServer handleBreakpointException: ex ]
+    on: self log breakpointExceptionSet
+    do: [ :ex | self log handleBreakpointException: ex ]
