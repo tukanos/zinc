@@ -12,7 +12,7 @@ serveConnectionOn: listeningSocket
   [ 
   [ 
   [ self executeOneRequestResponseOn: stream ]
-    on: ZnGemServer breakpointExceptionSet
+    on: self log breakpointExceptionSet
     do: [ :ex | self log handleBreakpointException: ex ] ]
     ensure: [ 
       self log debug: 'Closing stream'.
@@ -20,5 +20,5 @@ serveConnectionOn: listeningSocket
     ifCurtailed: [ 
       self log debug: 'Destroying socket'.
       socket destroy ] ]
-    on: ZnGemServer breakpointExceptionSet
+    on: self log breakpointExceptionSet
     do: [ :ex | self log handleBreakpointException: ex ]
