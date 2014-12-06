@@ -4,8 +4,13 @@ serveConnectionsOn: listeningSocket
 	If we get one we wrap it in a SocketStream and #executeRequestResponseLoopOn: on it"
 
   | stream socket |
+  [ 
   socket := (listeningSocket waitForAcceptFor: self acceptWaitTimeout)
-    ifNil: [ ^ self noteAcceptWaitTimedOut ].
+    ifNil: [ ^ self noteAcceptWaitTimedOut ] ]
+    on: Error
+    do: [ :ex | 
+      self logServerError: ex.
+      ^ self ].
   stream := self socketStreamOn: socket.
   [ 
   [ 

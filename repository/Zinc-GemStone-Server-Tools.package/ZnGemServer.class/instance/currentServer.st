@@ -1,0 +1,3 @@
+accessing
+currentServer
+  ^ currentServer value

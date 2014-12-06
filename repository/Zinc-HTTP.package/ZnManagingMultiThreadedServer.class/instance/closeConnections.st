@@ -2,6 +2,8 @@ private
 closeConnections
   self connections isEmpty
     ifTrue: [ ^ self ].
+  self log
+    debug: [ 'Closing ' , self connects size printString , ' connections' ].
   self lock
     critical: [ 
       self connections
@@ -13,4 +15,5 @@ closeConnections
               self log
                 error: exception description
                 message: (GsProcess stackReportToLevel: 100) ] ].
-      self connections removeAll ]
+      self connections removeAll ].
+  self log debug: [ 'Done Closing connections' ]

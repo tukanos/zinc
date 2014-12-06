@@ -9,5 +9,8 @@ accept
   | gsSocket |
   gsSocket := self underlyingSocket accept.
   gsSocket
-    ifNil: [ NetworkError signal: 'accept error: ' , self underlyingSocket lastErrorString ].
+    ifNil: [ 
+      NetworkError
+        signal:
+          'accept error: ' , self underlyingSocket lastErrorString asString ].
   ^ SocketStreamSocket onNativeclientSocket: gsSocket for: self
