@@ -3,7 +3,7 @@ closeConnections
   self connections isEmpty
     ifTrue: [ ^ self ].
   self log
-    debug: [ 'Closing ' , self connects size printString , ' connections' ].
+    debug: [ 'Closing ' , self connections size printString , ' connections' ].
   self lock
     critical: [ 
       self connections
