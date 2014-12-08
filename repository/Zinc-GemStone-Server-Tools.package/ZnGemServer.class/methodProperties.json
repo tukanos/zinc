@@ -2,7 +2,7 @@
 	"class" : {
 		"serverClass" : "dkh 11/29/2014 06:40" },
 	"instance" : {
-		"bounceServerForBreakpointHandling" : "dkh 12/06/2014 14:12",
+		"bounceServerForBreakpointHandling" : "dkh 12/07/2014 18:20",
 		"breakpointExceptionSet" : "dkh 12/05/2014 15:03",
 		"breakpointExceptionSet:" : "dkh 12/05/2014 15:03",
 		"currentServer" : "dkh 12/05/2014 16:39",
@@ -16,13 +16,15 @@
 		"initialize" : "dkh 12/05/2014 16:59",
 		"log" : "dkh 12/05/2014 15:03",
 		"log:" : "dkh 11/30/2014 11:08",
+		"logDebug:" : "dkh 12/07/2014 10:09",
 		"logErrorsOnly" : "dkh 12/04/2014 06:36",
 		"logEverything" : "dkh 12/03/2014 12:25",
 		"logFilter" : "dkh 12/03/2014 20:02",
 		"logFilter:" : "dkh 12/04/2014 09:56",
+		"logInfo:" : "dkh 12/07/2014 10:09",
 		"logListener" : "dkh 12/03/2014 12:19",
 		"logListener:" : "dkh 12/04/2014 09:56",
 		"logToObjectLog" : "dkh 12/03/2014 12:23",
 		"logToTranscript" : "dkh 12/03/2014 12:16",
-		"startBasicServerOn:" : "dkh 12/05/2014 16:52",
-		"startServerOn:" : "dkh 12/06/2014 10:22" } }
+		"startBasicServerOn:" : "dkh 12/07/2014 18:35",
+		"startServerOn:" : "dkh 12/07/2014 09:07" } }

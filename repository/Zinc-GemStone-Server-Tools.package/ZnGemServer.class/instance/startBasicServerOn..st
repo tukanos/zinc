@@ -8,8 +8,14 @@ startBasicServerOn: port
     debugMode: self debugMode;
     log: self log;
     yourself.
-  server start.
-  self currentServer: server.
   Transcript
     cr;
-    show: self currentServer
+    show:
+        'Starting server: ' , server printString , ' (native thread: '
+            , GsProcess usingNativeCode printString , ')'.
+  server start.
+  self currentServer: server.
+  self log
+    debug: [ 
+      'started: ' , server printString , ' (native thread: '
+        , GsProcess usingNativeCode printString , ')' ]
