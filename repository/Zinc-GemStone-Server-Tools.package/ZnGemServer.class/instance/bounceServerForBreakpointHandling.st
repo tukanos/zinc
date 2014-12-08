@@ -8,6 +8,9 @@ bounceServerForBreakpointHandling
     bounceServerAfterSetOrClearBreakpoints: [ 
       self currentServer
         ifNotNil: [ :server | 
-          self log info: 'Bounced server, because of set or clear breakpoints.'.
+          self log
+            info:
+              'Bounced server, because of set or clear breakpoints: '
+                , GsProcess _current _nativeStack printString.
           server stop.
           self startBasicServerOn: server port ] ]
