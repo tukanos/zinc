@@ -1,5 +1,5 @@
 accessing
 currentServer: aServer
   currentServer
-    ifNil: [ currentServer := TransientValue value: aServer ]
+    ifNil: [ currentServer := TransientStackValue value: aServer ]
     ifNotNil: [ currentServer value: aServer ]

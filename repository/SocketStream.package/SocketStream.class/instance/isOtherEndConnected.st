@@ -1,3 +1,3 @@
 as yet unclassified
 isOtherEndConnected
-	^socket isConnected
+  ^ self socket isConnected
