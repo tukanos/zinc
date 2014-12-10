@@ -9,7 +9,7 @@ startBasicServerOn: port
     log: self log;
     yourself.
   startMessage := server printString , ' (native thread: '
-    , GsProcess _current _nativeStack printString , ')'.
+    , self activeProcessIsNative printString , ')'.
   Transcript
     cr;
     show: 'Starting server: ' , startMessage.

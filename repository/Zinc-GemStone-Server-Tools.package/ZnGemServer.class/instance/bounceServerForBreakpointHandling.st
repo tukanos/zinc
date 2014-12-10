@@ -11,6 +11,6 @@ bounceServerForBreakpointHandling
           self log
             info:
               'Bounced server, because of set or clear breakpoints: '
-                , GsProcess _current _nativeStack printString.
+                , self activeProcessIsNative printString.
           server stop.
           self startBasicServerOn: server port ] ]
