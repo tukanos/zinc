@@ -14,5 +14,5 @@ startBasicServerOn: port
     cr;
     show: 'Starting server: ' , startMessage.
   server start.
-  self currentServer: server.
+  self serverInstance: server.
   self log debug: 'started: ' , startMessage

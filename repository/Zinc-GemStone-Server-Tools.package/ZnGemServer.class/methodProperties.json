@@ -2,18 +2,15 @@
 	"class" : {
 		"serverClass" : "dkh 11/29/2014 06:40" },
 	"instance" : {
-		"bounceServerForBreakpointHandling" : "dkh 12/09/2014 14:12",
 		"breakpointExceptionSet" : "dkh 12/05/2014 15:03",
 		"breakpointExceptionSet:" : "dkh 12/05/2014 15:03",
-		"currentServer" : "dkh 12/05/2014 16:39",
-		"currentServer:" : "dkh 12/09/2014 10:01",
 		"debugMode" : "dkh 11/30/2014 21:29",
 		"debugMode:" : "dkh 11/29/2014 08:44",
 		"delegate" : "dkh 11/29/2014 08:44",
 		"delegate:" : "dkh 11/29/2014 08:44",
 		"enableContinuations" : "dkh 12/03/2014 12:21",
 		"enableContinuations:" : "dkh 12/04/2014 09:56",
-		"initialize" : "dkh 12/09/2014 10:01",
+		"initialize" : "dkh 12/10/2014 14:49",
 		"log" : "dkh 12/05/2014 15:03",
 		"log:" : "dkh 11/30/2014 11:08",
 		"logDebug:" : "dkh 12/07/2014 10:09",
@@ -26,5 +23,5 @@
 		"logListener:" : "dkh 12/04/2014 09:56",
 		"logToObjectLog" : "dkh 12/03/2014 12:23",
 		"logToTranscript" : "dkh 12/03/2014 12:16",
-		"startBasicServerOn:" : "dkh 12/09/2014 14:12",
-		"startServerOn:" : "dkh 12/07/2014 09:07" } }
+		"startBasicServerOn:" : "dkh 12/10/2014 14:49",
+		"startServerOn:" : "dkh 12/10/2014 14:41" } }
