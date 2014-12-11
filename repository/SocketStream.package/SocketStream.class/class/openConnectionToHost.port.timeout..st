@@ -1,4 +1,4 @@
-*zinc-http
+as yet unclassified
 openConnectionToHost: host port: portNumber timeout: timeout
 	| socket |
 	socket :=SocketStreamSocket newTCPSocket.

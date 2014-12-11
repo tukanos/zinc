@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"on:" : "PaulDeBruicker 03/03/2011 11:49",
+		"openConnectionToHost:port:timeout:" : "JohanBrichau 06/16/2013 16:20",
 		"openConnectionToHostNamed:port:" : "PaulDeBruicker 03/12/2011 11:11" },
 	"instance" : {
 		"<<" : "PaulDeBruicker 03/03/2011 11:55",
