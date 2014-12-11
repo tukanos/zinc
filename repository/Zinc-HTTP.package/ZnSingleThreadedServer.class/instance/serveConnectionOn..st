@@ -13,7 +13,7 @@ serveConnectionOn: listeningSocket
   [ 
   [ self executeOneRequestResponseOn: stream ]
     on: self log breakpointExceptionSet
-    do: [ :ex | self log handleBreakpointException: ex ] ]
+    do: [ :ex | self log handleBreakpointException: ex resumeIfResumable: self debugMode ] ]
     ensure: [ 
       self log debug: 'Closing stream'.
       stream close ] ]
@@ -21,4 +21,4 @@ serveConnectionOn: listeningSocket
       self log debug: 'Destroying socket'.
       socket destroy ] ]
     on: self log breakpointExceptionSet
-    do: [ :ex | self log handleBreakpointException: ex ]
+    do: [ :ex | self log handleBreakpointException: ex resumeIfResumable: self debugMode ]

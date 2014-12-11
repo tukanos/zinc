@@ -17,4 +17,6 @@ handleError: anException
     on: Error
     do: [ :e | self notifyUnreportableError: anException description ].
   self debugMode
-    ifTrue: [ anException pass ]
+    ifTrue: [ 
+      GsFile gciLogServer: 'Passing ' , anException class name.
+      anException pass ]

@@ -6,14 +6,10 @@ readRequestSafely: stream
   [ self readRequest: stream ]
     on: self readRequestBadExceptionSet
     do: [ :exception | 
-      self log
-        error: exception description
-        message: (GsProcess stackReportToLevel: 100).
+      self log debug: [ exception description , ' bad request while parsing' ].
       self writeResponseBad: exception on: stream.
       nil ] ]
     on: self readRequestTerminationExceptionSet
     do: [ :exception | 
-      self log
-        error: exception description
-        message: (GsProcess stackReportToLevel: 100).
+      self log debug: [ exception description , ' while reading request' ].
       nil ]

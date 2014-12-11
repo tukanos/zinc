@@ -14,4 +14,3 @@ asString36
 	^((candidate beginsWith: '36r')
 			ifTrue: [candidate copyFrom: 4 to: candidate size]
 			ifFalse: [candidate]) asLowercase
-	

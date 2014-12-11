@@ -6,4 +6,3 @@ resetEntity
 	
 	(request notNil and: [ request hasEntity ])
 		ifTrue: [ request resetEntity: nil ]
-	

@@ -10,4 +10,4 @@ executeRequestResponseLoopOn: stream
     value: self
     during: [ [ self executeOneRequestResponseOn: stream ] whileFalse ] ]
     on: self log breakpointExceptionSet
-    do: [ :ex | self log handleBreakpointException: ex ]
+    do: [ :ex | self log handleBreakpointException: ex resumeIfResumable: self debugMode ]
