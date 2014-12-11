@@ -12,8 +12,7 @@
 		"log",
 		"logListener",
 		"logFilter",
-		"breakpointExceptionSet",
-		"currentServer" ],
+		"breakpointExceptionSet" ],
 	"name" : "ZnGemServer",
 	"pools" : [
 		 ],
