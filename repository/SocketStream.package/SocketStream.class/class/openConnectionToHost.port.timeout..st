@@ -1,8 +1,8 @@
 as yet unclassified
-openConnectionToHost: host port: portNumber timeout: timeout
-	| socket |
-	socket :=SocketStreamSocket newTCPSocket.
-	socket connectTo: host port: portNumber.
-	^(self on: socket) 
-		timeout: timeout; 
-		yourself
+openConnectionToHost: host port: portNumber timeout: timeoutSeconds
+  | socket |
+  socket := SocketStreamSocket newTCPSocket.
+  socket connectTo: host port: portNumber timeout: timeoutSeconds.
+  ^ (self on: socket)
+    timeout: timeoutSeconds;
+    yourself
