@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testAuthorizationFailed" : "SvenVanCaekenberghe 8/23/2012 14:34",
+		"testAuthorizationFailed" : "dkh 12/13/2014 19:37",
 		"testAuthorizationSuccessful" : "SvenVanCaekenberghe 8/23/2012 14:34",
 		"testDefault" : "SvenVanCaekenberghe 3/12/2012 22:06",
 		"testEcho" : "SvenVanCaekenberghe 11/10/2012 17:42",
@@ -21,4 +21,7 @@
 		"testSessionRoute" : "SvenVanCaekenberghe 12/31/2012 16:58",
 		"testTooManyHeaders" : "SvenVanCaekenberghe 5/14/2013 12:53",
 		"testUrl" : "SvenVanCaekenberghe 5/14/2013 09:26",
+		"withGemServer:do:" : "dkh 12/13/2014 19:44",
+		"withGemServerDo:" : "dkh 12/13/2014 19:44",
+		"withServer:do:" : "dkh 12/13/2014 19:42",
 		"withServerDo:" : "dkh 06/29/2014 11:02" } }
