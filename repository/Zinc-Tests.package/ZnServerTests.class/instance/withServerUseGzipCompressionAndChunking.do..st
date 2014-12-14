@@ -1,8 +1,8 @@
 private
-withServer: authenticator do: block
+withServerUseGzipCompressionAndChunking: useGzipCompressionAndChunking do: block
   | server |
   server := super withServerDo: block.
-  server authenticator: authenticator.
+  server useGzipCompressionAndChunking: useGzipCompressionAndChunking.
   [ 
   server start.
   self assert: server isRunning & server isListening.

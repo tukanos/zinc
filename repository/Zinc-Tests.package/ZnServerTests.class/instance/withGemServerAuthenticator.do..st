@@ -1,5 +1,5 @@
 private
-withGemServer: authenticator do: block
+withGemServerAuthenticator: authenticator do: block
   | gemServer |
   gemServer := super withGemServerDo: block.
   gemServer authenticator: authenticator.
@@ -7,4 +7,7 @@ withGemServer: authenticator do: block
   gemServer restartGems.
   (Delay forSeconds: 3) wait.
   block cull: gemServer ]
-    ensure: [ gemServer stop ]
+    ensure: [ 
+      gemServer stop.
+      (Delay forSeconds: 3) wait.
+      gemServer unregister ]

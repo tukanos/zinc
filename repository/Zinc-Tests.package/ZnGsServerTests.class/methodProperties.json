@@ -1,6 +1,15 @@
 {
 	"class" : {
-		 },
+		"shouldInheritSelectors" : "dkh 12/14/2014 07:21" },
 	"instance" : {
-		"withServer:do:" : "dkh 12/13/2014 19:36",
-		"withServerDo:" : "dkh 12/13/2014 19:29" } }
+		"testDefault" : "dkh 12/14/2014 07:11",
+		"testSessionExpired" : "dkh 12/14/2014 08:03",
+		"testUrl" : "dkh 12/14/2014 08:10",
+		"withServerAuthenticator:do:" : "dkh 12/14/2014 07:41",
+		"withServerBindingAddress:do:" : "dkh 12/14/2014 07:50",
+		"withServerDelegate:do:" : "dkh 12/14/2014 07:58",
+		"withServerDo:" : "dkh 12/13/2014 19:29",
+		"withServerMaximumEntitySize:do:" : "dkh 12/14/2014 07:53",
+		"withServerReader:do:" : "dkh 12/14/2014 07:46",
+		"withServerRoute:do:" : "dkh 12/14/2014 08:04",
+		"withServerUseGzipCompressionAndChunking:do:" : "dkh 12/14/2014 07:56" } }

@@ -8,3 +8,4 @@ print: positiveNumberString on: aStream prefix: prefix length: minimum padded: z
 				ifFalse: [aStream nextPutAll: (String new: padLength withAll: Character space); nextPutAll: prefix]]
 		ifFalse: [aStream nextPutAll: prefix].
 	aStream nextPutAll: positiveNumberString
+	

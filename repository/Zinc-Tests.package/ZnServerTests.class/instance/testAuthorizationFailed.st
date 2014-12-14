@@ -1,7 +1,8 @@
 testing
 testAuthorizationFailed
   self
-    withServer: (ZnBasicAuthenticator username: 'foo' password: 'secret')
+    withServerAuthenticator:
+      (ZnBasicAuthenticator username: 'foo' password: 'secret')
     do: [ :server | 
       | response |
       response := ZnEasy

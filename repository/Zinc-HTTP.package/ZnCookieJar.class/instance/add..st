@@ -4,3 +4,4 @@ add: aCookie
 	self cookies copy do: [:cookie|
 		cookie = aCookie ifTrue: [ self cookies remove: cookie]].
 	self cookies add: aCookie
+	

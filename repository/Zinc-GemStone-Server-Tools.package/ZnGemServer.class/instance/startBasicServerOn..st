@@ -4,11 +4,10 @@ startBasicServerOn: port
 
   | server startMessage |
   server := (self serverClass on: port)
-    delegate: self delegate;
     debugMode: self debugMode;
     log: self log;
+    _options: options;
     yourself.
-  self authenticator ifNotNil: [ :auth | server authenticator: auth ].
   startMessage := server printString , ' (native thread: '
     , self activeProcessIsNative printString , ')'.
   Transcript

@@ -6,14 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"delegate",
-		"debugMode",
 		"enableContinuations",
 		"log",
 		"logListener",
 		"logFilter",
 		"breakpointExceptionSet",
-		"authenticator" ],
+		"options" ],
 	"name" : "ZnGemServer",
 	"pools" : [
 		 ],
