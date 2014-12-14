@@ -6,7 +6,7 @@ startBasicServerOn: port
   server := (self serverClass on: port)
     debugMode: self debugMode;
     log: self log;
-    _options: options;
+    gemServerOptions: options;
     yourself.
   startMessage := server printString , ' (native thread: '
     , self activeProcessIsNative printString , ')'.

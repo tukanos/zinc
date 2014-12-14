@@ -16,7 +16,6 @@
 		"stopDefault" : "SvenVanCaekenberghe 12/22/2011 11:29",
 		"unregister:" : "SvenVanCaekenberghe 8/18/2011 14:10" },
 	"instance" : {
-		"_options:" : "dkh 12/14/2014 07:40",
 		"authenticator" : "SvenVanCaekenberghe 9/5/2012 11:17",
 		"authenticator:" : "SvenVanCaekenberghe 9/5/2012 11:17",
 		"bindingAddress" : "SvenVanCaekenberghe 9/5/2012 10:07",
@@ -25,6 +24,7 @@
 		"debugMode:" : "SvenVanCaekenberghe 1/31/2013 11:44",
 		"delegate" : "SvenVanCaekenberghe 9/5/2012 11:17",
 		"delegate:" : "SvenVanCaekenberghe 9/5/2012 11:17",
+		"gemServerOptions:" : "dkh 12/14/2014 09:12",
 		"isListening" : "SvenVanCaekenberghe 12/15/2010 21:22",
 		"isRunning" : "SvenVanCaekenberghe 12/15/2010 15:26",
 		"localUrl" : "JohanBrichau 06/16/2013 15:27",
