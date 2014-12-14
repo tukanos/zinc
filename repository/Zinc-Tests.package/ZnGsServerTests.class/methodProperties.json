@@ -4,6 +4,7 @@
 	"instance" : {
 		"tearDown" : "dkh 12/14/2014 09:37",
 		"testDefault" : "dkh 12/14/2014 07:11",
+		"testLocalUrl" : "dkh 12/14/2014 10:00",
 		"testSessionExpired" : "dkh 12/14/2014 08:03",
 		"testUrl" : "dkh 12/14/2014 08:10",
 		"withServerAuthenticator:do:" : "dkh 12/14/2014 07:41",
