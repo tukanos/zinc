@@ -2,6 +2,7 @@
 	"class" : {
 		"shouldInheritSelectors" : "dkh 12/14/2014 07:21" },
 	"instance" : {
+		"tearDown" : "dkh 12/14/2014 09:37",
 		"testDefault" : "dkh 12/14/2014 07:11",
 		"testSessionExpired" : "dkh 12/14/2014 08:03",
 		"testUrl" : "dkh 12/14/2014 08:10",

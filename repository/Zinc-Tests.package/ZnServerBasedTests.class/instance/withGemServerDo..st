@@ -1,9 +1,7 @@
 private
 withGemServerDo: block
   | gemServer |
-  gemServer := (ZnGemServer
-    register: 'ZnServerBasedTestServer'
-    on: {(self port)})
+  gemServer := (ZnGemServer register: self gemServerName on: {(self port)})
     logToObjectLog;
     logEverything;
     yourself.
