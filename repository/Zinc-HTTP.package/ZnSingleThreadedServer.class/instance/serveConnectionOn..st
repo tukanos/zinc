@@ -12,7 +12,7 @@ serveConnectionOn: listeningSocket
   [ 
   [ 
   [ self executeOneRequestResponseOn: stream ]
-    on: self log breakpointExceptionSet
+    on: self log gemServerExceptionSet
     do: [ :ex | self log handleBreakpointException: ex resumeIfResumable: self debugMode not ] ]
     ensure: [ 
       self log debug: 'Closing stream'.
@@ -20,5 +20,5 @@ serveConnectionOn: listeningSocket
     ifCurtailed: [ 
       self log debug: 'Destroying socket'.
       socket destroy ] ]
-    on: self log breakpointExceptionSet
+    on: self log gemServerExceptionSet
     do: [ :ex | self log handleBreakpointException: ex resumeIfResumable: self debugMode not ]

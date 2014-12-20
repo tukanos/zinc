@@ -10,4 +10,3 @@ start
 		forkAt: Processor highIOPriority 
 		named: self serverProcessName.
 	Processor yield.
-	

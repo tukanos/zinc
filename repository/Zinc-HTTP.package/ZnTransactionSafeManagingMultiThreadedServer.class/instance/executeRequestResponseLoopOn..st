@@ -8,5 +8,5 @@ executeRequestResponseLoopOn: streamTransientStackValue
   ZnCurrentServer
     value: self
     during: [ [ self executeOneRequestResponseOn: streamTransientStackValue ] whileFalse ] ]
-    on: self log breakpointExceptionSet
+    on: self log gemServerExceptionSet
     do: [ :ex | self log handleBreakpointException: ex resumeIfResumable: self debugMode not ]

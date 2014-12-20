@@ -10,7 +10,7 @@
 		"log",
 		"logListener",
 		"logFilter",
-		"breakpointExceptionSet",
+		"gemServerExceptionSet",
 		"options" ],
 	"name" : "ZnGemServer",
 	"pools" : [

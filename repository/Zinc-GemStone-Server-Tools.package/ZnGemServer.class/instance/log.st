@@ -5,6 +5,6 @@ log
       log := ZnGemServerLogSupport new
         enableContinuations: self enableContinuations;
         addListener: self logListener;
-        breakpointExceptionSet: self breakpointExceptionSet;
+        gemServerExceptionSet: self gemServerExceptionSet;
         yourself ].
   ^ log
