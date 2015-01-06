@@ -1,4 +1,4 @@
 Running
 tearDown
   super tearDown.
-  GemServerRegistry removeGemServerNamed: self gemServerName
+  GemServer removeGemServerNamed: self gemServerName
