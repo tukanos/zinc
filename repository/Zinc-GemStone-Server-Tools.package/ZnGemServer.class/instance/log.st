@@ -3,7 +3,7 @@ log
   log
     ifNil: [ 
       log := ZnGemServerLogSupport new
-        enableContinuations: self enableContinuations;
+        enableCreateContinuations: self enableCreateContinuations;
         addListener: self logListener;
         gemServerExceptionSet: self gemServerExceptionSet;
         yourself ].

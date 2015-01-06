@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"enableContinuations",
+		"enableCreateContinuations",
 		"gemServerExceptionSet" ],
 	"name" : "ZnGemServerLogSupport",
 	"pools" : [
