@@ -2,7 +2,9 @@ testing
 testStatus
   | webSocket message gemServer |
   ZnServer defaultServerClass initialize.
-  gemServer := (ZnGemServer register: 'ZnWebSocketTestStatusServer' on: #(1701))
+  gemServer := (ZnGemServer
+    register: 'ZnWebSocketTestStatusServer'
+    on: #(1701))
     logToObjectLog;
     logEverything;
     delegate:

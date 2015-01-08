@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"defaultServerClass" : "dkh 01/07/2015 17:01" },
 	"instance" : {
 		"closeConnections" : "dkh 12/08/2014 15:21",
 		"closeSocketStream:" : "dkh 12/08/2014 15:21",

@@ -8,3 +8,5 @@ testRequests
 		bench writeRepresentation.
 		self assert: (bench read isKindOf: ZnRequest).
 		self assert: bench read equals: bench message ]
+		
+	

@@ -1,0 +1,16 @@
+{
+	"category" : "Zinc-HTTP-Client-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 01/07/2015 16:40",
+	"instvars" : [
+		"lock",
+		"connections",
+		"gemServer" ],
+	"name" : "ZnGemServerManagingMultiThreadedServer",
+	"pools" : [
+		 ],
+	"super" : "ZnMultiThreadedServer",
+	"type" : "normal" }

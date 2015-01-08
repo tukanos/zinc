@@ -4,14 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/07/2015 16:54",
 	"instvars" : [
-		"log",
-		"logListener",
-		"logFilter",
-		"options" ],
+		 ],
 	"name" : "ZnGemServer",
 	"pools" : [
 		 ],
-	"super" : "GemServer",
+	"super" : "ZnAbstractGemServer",
 	"type" : "normal" }

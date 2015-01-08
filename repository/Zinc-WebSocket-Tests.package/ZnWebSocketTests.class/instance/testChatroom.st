@@ -2,7 +2,9 @@ testing
 testChatroom
   | webSocket1 message1 inbox1 webSocket2 message2 inbox2 gemServer |
   ZnServer defaultServerClass initialize.
-  gemServer := (ZnGemServer register: 'ZnWebSocketTestChatServer' on: #(1701))
+  gemServer := (ZnGemServer
+    register: 'ZnWebSocketTestChatServer'
+    on: #(1701))
     logToObjectLog;
     logEverything;
     delegate:
