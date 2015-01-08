@@ -133,7 +133,7 @@ baseline: spec
               spec
                 loads: #('Core');
                 repository:
-                    'github://GsDevKit/gsApplicationTools:dev/repository' ];
+                    'github://GsDevKit/gsApplicationTools:v.1.?/repository' ];
         baseline: 'NeoJSON'
           with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
         yourself.
