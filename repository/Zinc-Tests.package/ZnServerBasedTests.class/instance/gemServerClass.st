@@ -1,3 +1,3 @@
 private
 gemServerClass
-  ^ ZnGemServer
+  self subclassResponsibility

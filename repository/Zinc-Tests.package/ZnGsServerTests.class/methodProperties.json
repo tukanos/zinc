@@ -3,6 +3,7 @@
 		"shouldInheritSelectors" : "dkh 12/14/2014 07:21" },
 	"instance" : {
 		"expectedFailures" : "dkh 12/14/2014 10:35",
+		"gemServerClass" : "dkh 01/09/2015 10:14",
 		"tearDown" : "dkh 01/06/2015 13:44",
 		"testDefault" : "dkh 12/14/2014 07:11",
 		"testLocalUrl" : "dkh 12/14/2014 10:00",
