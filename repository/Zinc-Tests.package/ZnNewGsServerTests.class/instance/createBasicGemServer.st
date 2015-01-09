@@ -2,6 +2,6 @@ private
 createBasicGemServer
   | gemServer |
   gemServer := super createBasicGemServer.
-  self staticRemoteServer
+  self interactiveRemoteServer
     ifTrue: [ gemServer interactiveMode: true ].
   ^ gemServer

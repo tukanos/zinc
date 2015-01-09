@@ -7,6 +7,8 @@ runStaticRemoteGemServer: gemServer during: block
   "limit autoCommit false; eval `System transactionMode: #manualBegin` /home/gemserver/example --start=ZnServerBasedTestServer"
 
   System commitTransaction.
-  self notify: 'Please abort and start static gem server'.
+  self
+    notify:
+      'evaluate on server: abort; /home/gemserver/example --start=ZnServerBasedTestServer'.
   [ block cull: gemServer ]
     ensure: [ gemServer unregister ]

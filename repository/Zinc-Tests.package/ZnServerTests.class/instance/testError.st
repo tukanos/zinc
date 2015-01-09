@@ -18,8 +18,7 @@ testError
             'testError: ' , response isSuccess printString , ' ' , response code printString
                 , ' ' , response contentType printString , ' '
                 , ZnMimeType textPlain printString , ' '
-                ,
-                  (response contentType equals: ZnMimeType textPlain) printString
+                , (response contentType = ZnMimeType textPlain) printString
                 , ' '
                 ,
                   (response entity contents includesSubstring: 'Test Error') printString.

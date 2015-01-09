@@ -2,4 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"handleRequest:gemServer:" : "dkh 01/09/2015 10:21" } }
+		"generateTransactionRequestString:" : "dkh 01/09/2015 10:36",
+		"handleRequest:gemServer:" : "dkh 01/09/2015 10:21",
+		"initialize" : "dkh 01/09/2015 10:35",
+		"transactionRequest:" : "dkh 01/09/2015 11:33" } }
