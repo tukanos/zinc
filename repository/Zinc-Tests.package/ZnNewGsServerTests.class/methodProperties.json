@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"staticRemoteServer" : "dkh 01/08/2015 15:47",
+		"staticRemoteServer:" : "dkh 01/08/2015 16:10" },
+	"instance" : {
+		"createBasicGemServer" : "dkh 01/08/2015 15:54",
+		"gemServerClass" : "dkh 01/08/2015 15:37",
+		"port" : "dkh 01/08/2015 15:41",
+		"runGemServer:during:" : "dkh 01/08/2015 15:55",
+		"runStaticRemoteGemServer:during:" : "dkh 01/08/2015 16:16",
+		"staticRemoteServer" : "dkh 01/08/2015 15:48" } }

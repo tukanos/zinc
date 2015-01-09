@@ -4,7 +4,7 @@ startBasicServerOn: port
 
   | znServer |
   znServer := (self serverClass on: port)
-    debugMode: self debugMode;
+    gemServer: self;
     log: self log;
     gemServerOptions: self options;
     yourself.

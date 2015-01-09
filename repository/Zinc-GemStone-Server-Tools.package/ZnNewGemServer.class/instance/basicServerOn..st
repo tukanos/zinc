@@ -1,14 +1,16 @@
 service instance-server
-basicServerOn: portOrNil
+basicServerOn: port
   "forked by caller"
 
   | znServer |
   znServer := self serverInstance.
-  [ 
+  znServer port: port.
   znServer initializeServerSocket.
+  [ 
+  [ 
   self
     gemServer: [ 
       znServer serverSocket isValid
-        ifTrue: [ znServer serveConnectionsOn: znServer serverSocket ] ]
-    beforeUnwind: znServer releaseServerSocket ]
-    repeat
+        ifTrue: [ znServer serveConnectionsOn: znServer serverSocket ] ] ]
+    repeat ]
+    ifCurtailed: [ znServer releaseServerSocket ]
