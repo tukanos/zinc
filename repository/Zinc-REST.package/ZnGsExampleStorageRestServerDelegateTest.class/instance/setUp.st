@@ -5,11 +5,10 @@ setUp
   ZnServer defaultServerClass initialize.
   port := 1700 + 10 atRandom.
   GemServerRegistry removeGemServerNamed: 'ZnGsExampleStorageRestServer'.
-  gemServer := (ZnGemServer register: 'ZnGsExampleStorageRestServer' on: {port})
+  gemServer := (self createGemServer: port)
     logToTranscript;
     logToObjectLog;
     logEverything;
-    delegate: ZnExampleStorageRestServerDelegate new;
     yourself.
   self startGems.
   client := self

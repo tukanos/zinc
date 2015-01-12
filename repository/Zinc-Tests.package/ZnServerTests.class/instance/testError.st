@@ -22,7 +22,22 @@ testError
                 , ' '
                 ,
                   (response entity contents includesSubstring: 'Test Error') printString.
+      Transcript
+        cr;
+        show: 'testError: [0]'.
       self deny: response isSuccess.
+      Transcript
+        cr;
+        show: 'testError: [1]'.
       self assert: response code equals: 500.
-      self assert: response contentType equals: ZnMimeType textPlain.
-      self assert: (response entity contents includesSubstring: 'Test Error') ]
+      Transcript
+        cr;
+        show: 'testError: [2]'.
+      self assert: response contentType = ZnMimeType textPlain.
+      Transcript
+        cr;
+        show: 'testError: [3]'.
+      self assert: (response entity contents includesSubstring: 'Test Error').
+      Transcript
+        cr;
+        show: 'testError: [4]' ]

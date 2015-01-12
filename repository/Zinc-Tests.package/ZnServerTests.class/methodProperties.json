@@ -10,7 +10,7 @@
 		"testEchoBinary" : "dkh 12/14/2014 07:47",
 		"testEchoLocalInterface" : "dkh 12/14/2014 07:51",
 		"testEntityTooLarge" : "dkh 12/14/2014 07:54",
-		"testError" : "dkh 01/09/2015 11:00",
+		"testError" : "dkh 01/12/2015 11:32",
 		"testGetUnicodeUtf8" : "SvenVanCaekenberghe 8/23/2012 14:34",
 		"testGzipCompressionAndChunking" : "dkh 12/14/2014 07:56",
 		"testHeaderLineTooLong" : "SvenVanCaekenberghe 5/14/2013 12:54",
