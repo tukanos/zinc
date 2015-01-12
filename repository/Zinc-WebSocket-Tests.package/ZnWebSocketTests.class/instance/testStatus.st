@@ -8,8 +8,6 @@ testStatus
   self
     runGemServer: gemServer
     do: [ 
-      gemServer startGems.	"does a commit"
-      (Delay forSeconds: 3) wait.
       webSocket := ZnWebSocket to: 'ws://localhost:1701/ws-status'.
       message := webSocket readMessage.
       self

@@ -14,7 +14,7 @@ startGems: gemServer
 
   self staticRemoteServer
     ifFalse: [ 
-      gemServer startGems.
+      gemServer restartGems.
       (Delay forSeconds: 3) wait.
       ^ self ].
   self

@@ -1,7 +1,7 @@
 private
 createGemServerNamed: gemServerName delegate: delegate
   | gemServer |
-  gemServer := (ZnNewGemServer register: 'gemServerName' on: #(1701))
+  gemServer := (ZnNewGemServer register: self gemServerName on: #(1701))
     logToObjectLog;
     logEverything;
     delegate: delegate;

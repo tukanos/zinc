@@ -8,8 +8,6 @@ testEcho
   self
     runGemServer: gemServer
     do: [ 
-      gemServer startGems.	"does a commit"
-      (Delay forSeconds: 3) wait.
       webSocket := ZnWebSocket to: 'ws://localhost:1701/ws-echo'.
       message := 'Greetings from Gemstone Smalltalk @ '
         , TimeStamp now printString.
