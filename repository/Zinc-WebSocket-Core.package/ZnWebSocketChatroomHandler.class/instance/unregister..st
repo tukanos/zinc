@@ -1,6 +1,3 @@
 protocol
 unregister: clientWebSocket
-  lock
-    critical: [ 
-      GRPlatform current
-        doTransaction: [ webSockets remove: clientWebSocket ifAbsent: [  ] ] ]
+  lock critical: [ webSockets remove: clientWebSocket ifAbsent: [  ] ]
