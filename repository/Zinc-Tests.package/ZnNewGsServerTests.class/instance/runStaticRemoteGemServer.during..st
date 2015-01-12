@@ -1,5 +1,11 @@
 private
 runStaticRemoteGemServer: gemServer during: block
+  "ZnNewGsServerTests staticRemoteServer: true.
+   ZnNewGsServerTests staticRemoteServer: false.
+
+  ZnNewGsServerTests interactiveRemoteServer: true.
+  ZnNewGsServerTests interactiveRemoteServer: false."
+
   "mount @/sys/stone/dirs/GsApplicationTools/tode /home gemserver"
 
   "abort; /home/gemserver/example --start=ZnServerBasedTestServer"
