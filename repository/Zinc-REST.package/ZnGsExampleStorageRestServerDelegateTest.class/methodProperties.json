@@ -2,5 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "dkh 01/07/2015 16:55",
-		"tearDown" : "dkh 12/03/2014 19:27" } }
+		"createGemServer:" : "dkh 01/12/2015 10:47",
+		"gemServerClass" : "dkh 01/12/2015 10:48",
+		"setUp" : "dkh 01/12/2015 10:51",
+		"startGems" : "dkh 01/12/2015 10:51",
+		"stopGems" : "dkh 01/12/2015 10:51",
+		"tearDown" : "dkh 01/12/2015 10:51" } }
