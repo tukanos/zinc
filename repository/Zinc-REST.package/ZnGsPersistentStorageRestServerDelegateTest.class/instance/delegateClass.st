@@ -1,3 +1,0 @@
-private
-delegateClass
-  ^ ZnExampleStorageRestServerDelegate

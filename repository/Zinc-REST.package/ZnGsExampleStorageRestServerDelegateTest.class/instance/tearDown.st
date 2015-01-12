@@ -2,4 +2,4 @@ running
 tearDown
   super tearDown.
   self stopGems.
-  gemServer unregister
+  GemServerRegistry removeGemServerNamed: 'ZnGsExampleStorageRestServer'
