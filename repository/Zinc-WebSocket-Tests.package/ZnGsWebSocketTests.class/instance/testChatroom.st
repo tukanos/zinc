@@ -1,18 +1,18 @@
 testing
 testChatroom
-  | webSocket1 message1 inbox1 webSocket2 message2 inbox2 gemServer |
-  true
-    ifTrue: [ ^ self ].
+  | handler webSocket1 message1 inbox1 webSocket2 message2 inbox2 gemServer |
+  handler := ZnWebSocketChatroomHandler new.
   gemServer := self
-    createGemServerNamed: 'ZnWebSocketTestChatServer'
-    delegate:
-      (ZnWebSocketDelegate map: 'ws-chatroom' to: ZnWebSocketChatroomHandler new).
+    createGemServerWithDelegate:
+      (self delegateClass map: 'ws-chatroom' to: handler).
+  handler gemServer: gemServer.
+  System commitTransaction.
   self
     runGemServer: gemServer
     do: [ 
-      webSocket1 := ZnWebSocket to: 'ws://localhost:1701/ws-chatroom'.
+      webSocket1 := self webSocketClass to: 'ws://localhost:1701/ws-chatroom'.
       message1 := 'Message 1 @ ' , TimeStamp now printString.
-      webSocket2 := ZnWebSocket to: 'ws://localhost:1701/ws-chatroom'.
+      webSocket2 := self webSocketClass to: 'ws://localhost:1701/ws-chatroom'.
       message2 := 'Message 2 @ ' , TimeStamp now printString.
       webSocket1 sendMessage: message1.
       webSocket2 sendMessage: message2.

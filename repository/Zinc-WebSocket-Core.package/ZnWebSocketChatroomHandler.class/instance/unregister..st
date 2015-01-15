@@ -1,3 +1,6 @@
 protocol
 unregister: clientWebSocket
-  lock critical: [ webSockets remove: clientWebSocket ifAbsent: [  ] ]
+  "persist changes to webSockets"
+
+  lock
+    critical: [ self doCommit: [ webSockets remove: clientWebSocket ifAbsent: [  ] ] ]

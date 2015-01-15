@@ -1,16 +1,16 @@
 private
 startGems: gemServer
   "ZnWebSocketTests staticRemoteServer: true.
-   ZnWebSocketTests staticRemoteServer: false.
+   ZnWebSocketTests interactiveRemoteServer: true.
 
-  ZnWebSocketTests interactiveRemoteServer: true.
-  ZnWebSocketTests interactiveRemoteServer: false."
+   ZnWebSocketTests staticRemoteServer: false.
+   ZnWebSocketTests interactiveRemoteServer: false."
 
   "mount @/sys/stone/dirs/GsApplicationTools/tode /home gemserver"
 
-  "abort; /home/gemserver/example --start=Z<gem-server-name>"
+  "abort; /home/gemserver/example --start=ZincWebSocketGemServer"
 
-  "limit autoCommit false; eval `System transactionMode: #manualBegin` /home/gemserver/example --start=<gem-server-name>"
+  "limit autoCommit false; eval `System transactionMode: #manualBegin` /home/gemserver/example --start=ZincWebSocketGemServer"
 
   self staticRemoteServer
     ifFalse: [ 

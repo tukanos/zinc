@@ -4,13 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"instvars" : [
-		"webSockets",
-		"lock",
-		"gemServer" ],
-	"name" : "ZnWebSocketChatroomHandler",
+		 ],
+	"name" : "ZnGsWebSocket",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "ZnWebSocket",
 	"type" : "normal" }

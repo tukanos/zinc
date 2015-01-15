@@ -2,13 +2,12 @@ testing
 testEcho
   | webSocket message gemServer |
   gemServer := self
-    createGemServerNamed: 'ZnWebSocketTestEchoServer'
-    delegate:
-      (ZnWebSocketDelegate map: 'ws-echo' to: ZnWebSocketEchoHandler new).
+    createGemServerWithDelegate:
+      (self delegateClass map: 'ws-echo' to: ZnWebSocketEchoHandler new).
   self
     runGemServer: gemServer
     do: [ 
-      webSocket := ZnWebSocket to: 'ws://localhost:1701/ws-echo'.
+      webSocket := self webSocketClass to: 'ws://localhost:1701/ws-echo'.
       message := 'Greetings from Gemstone Smalltalk @ '
         , TimeStamp now printString.
       webSocket sendMessage: message.

@@ -2,13 +2,12 @@ testing
 testStatus
   | webSocket message gemServer |
   gemServer := self
-    createGemServerNamed: 'ZnWebSocketTestStatusServer'
-    delegate:
-      (ZnWebSocketDelegate map: 'ws-status' to: ZnWebSocketStatusHandler new).
+    createGemServerWithDelegate:
+      (self delegateClass map: 'ws-status' to: ZnWebSocketStatusHandler new).
   self
     runGemServer: gemServer
     do: [ 
-      webSocket := ZnWebSocket to: 'ws://localhost:1701/ws-status'.
+      webSocket := self webSocketClass to: 'ws://localhost:1701/ws-status'.
       message := webSocket readMessage.
       self
         assert:

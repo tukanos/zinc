@@ -1,0 +1,7 @@
+{
+	"class" : {
+		"shouldInheritSelectors" : "dkh 01/14/2015 14:47" },
+	"instance" : {
+		"delegateClass" : "dkh 01/14/2015 14:09",
+		"testChatroom" : "dkh 01/14/2015 16:10",
+		"webSocketClass" : "dkh 01/14/2015 14:11" } }

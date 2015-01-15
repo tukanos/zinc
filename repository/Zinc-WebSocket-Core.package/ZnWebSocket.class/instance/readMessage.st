@@ -4,7 +4,7 @@ readMessage
 	ConnectionClosed is signalled when the other end closes."
 
   | frame bytes isText |
-  self log info: [ self asOop printString , ' read message...' ].
+  self logInfo: [ self asOop printString , ' read message...' ].
   frame := self readFrame.
   frame isFinal
     ifTrue: [ ^ frame contents ].

@@ -1,0 +1,9 @@
+{
+	"class" : {
+		"startServerOn:prefix:do:" : "dkh 01/14/2015 13:28" },
+	"instance" : {
+		"log" : "dkh 01/14/2015 13:37",
+		"log:" : "dkh 01/14/2015 15:04",
+		"logDebug:" : "dkh 01/14/2015 13:43",
+		"logEvent:" : "dkh 01/14/2015 16:09",
+		"logInfo:" : "dkh 01/14/2015 13:44" } }

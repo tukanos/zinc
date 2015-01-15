@@ -5,7 +5,7 @@ readFrame
 
   | frame |
   frame := ZnWebSocketFrame readFrom: self stream.
-  self log info: [ self asOop printString , ' got frame..' ].
+  self logInfo: [ self asOop printString , ' got frame..' ].
   frame isControl
     ifTrue: [ 
       self handleControlFrame: frame.
