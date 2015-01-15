@@ -6,6 +6,7 @@
 		"staticRemoteServer:" : "dkh 01/08/2015 16:10" },
 	"instance" : {
 		"createBasicGemServer" : "dkh 01/09/2015 10:58",
+		"expectedFailures" : "dkh 01/14/2015 18:56",
 		"gemServerClass" : "dkh 01/08/2015 15:37",
 		"interactiveRemoteServer" : "dkh 01/09/2015 10:58",
 		"port" : "dkh 01/08/2015 15:41",
