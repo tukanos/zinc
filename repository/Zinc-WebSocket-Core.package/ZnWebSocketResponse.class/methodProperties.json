@@ -4,5 +4,6 @@
 	"instance" : {
 		"continuation" : "SvenVanCaekenberghe 10/13/2012 17:32",
 		"continuation:" : "SvenVanCaekenberghe 10/13/2012 17:32",
-		"useConnection:" : "SvenVanCaekenberghe 10/13/2012 17:31",
-		"wantsConnectionClose" : "SvenVanCaekenberghe 8/20/2012 16:58" } }
+		"useConnection:" : "dkh 01/14/2015 13:25",
+		"wantsConnectionClose" : "SvenVanCaekenberghe 8/20/2012 16:58",
+		"webSocketClass" : "dkh 01/14/2015 13:25" } }

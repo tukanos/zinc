@@ -1,9 +1,24 @@
 {
 	"class" : {
-		 },
+		"interactiveRemoteServer" : "dkh 01/12/2015 12:52",
+		"interactiveRemoteServer:" : "dkh 01/12/2015 12:52",
+		"isAbstract" : "dkh 01/14/2015 18:05",
+		"staticRemoteServer" : "dkh 01/12/2015 12:52",
+		"staticRemoteServer:" : "dkh 01/12/2015 12:52" },
 	"instance" : {
-		"testChatroom" : "sebastianheidbrink 11/05/2014 13:28",
-		"testEcho" : "sebastianheidbrink 11/05/2014 13:40",
-		"testEchoSecureWebSocketsDotOrg" : "SebastianHeidbrink 11/02/2014 15:53",
-		"testEchoWebSocketsDotOrg" : "SebastianHeidbrink 11/02/2014 12:25",
-		"testStatus" : "sebastianheidbrink 11/05/2014 13:28" } }
+		"createGemServerMap:to:" : "dkh 01/14/2015 17:59",
+		"delegateClass" : "dkh 01/14/2015 14:09",
+		"expectedFailures" : "dkh 11/30/2014 20:23",
+		"gemServerName" : "dkh 01/12/2015 14:33",
+		"interactiveRemoteServer" : "dkh 01/12/2015 12:52",
+		"runGemServer:do:" : "dkh 01/12/2015 15:03",
+		"setUp" : "dkh 11/30/2014 09:50",
+		"startGems:" : "dkh 01/14/2015 17:09",
+		"staticRemoteServer" : "dkh 01/12/2015 12:52",
+		"stopGems:" : "dkh 01/12/2015 12:59",
+		"tearDown" : "dkh 11/30/2014 09:50",
+		"testEcho" : "dkh 01/14/2015 18:01",
+		"testEchoSecureWebSocketsDotOrg" : "dkh 01/14/2015 14:12",
+		"testEchoWebSocketsDotOrg" : "dkh 01/14/2015 14:12",
+		"testStatus" : "dkh 01/14/2015 18:02",
+		"webSocketClass" : "dkh 01/14/2015 14:12" } }

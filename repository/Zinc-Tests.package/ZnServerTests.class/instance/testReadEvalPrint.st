@@ -1,9 +1,9 @@
 testing
 testReadEvalPrint
   self
-    withServerDo: [ :server | 
+    withServerDelegate: ZnReadEvalPrintDelegate new
+    do: [ :server | 
       | x y result |
-      server delegate: ZnReadEvalPrintDelegate new.
       x := 100 atRandom.
       y := 100 atRandom.
       result := ZnClient new

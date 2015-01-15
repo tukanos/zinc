@@ -1,14 +1,20 @@
 accessing
 value: webSocket
-	"I implement a simple chat room service as a server:
+  "I implement a simple chat room service as a server:
 	distributing incoming messages to all known clients"
-	
-	[
-		self register: webSocket.
-		webSocket runWith: [ :message |
-			webSocket log info: [ 'Received message: ', message printString ].
-			self distributeMessage: message ] ] 
-		on: ConnectionClosed 
-		do: [
-			webSocket log debug: 'Connection close, cleaning up'.
-			self unregister: webSocket ]
+
+  [ 
+  webSocket gemServer: self gemServer.
+  webSocket logInfo: [ webSocket asOop printString , ' registering' ].
+  self register: webSocket.
+  webSocket
+    runWith: [ :message | 
+      webSocket
+        logInfo: [ webSocket asOop printString , ' Received message: ' , message printString ].
+      self distributeMessage: message.
+      webSocket
+        logInfo: [ webSocket asOop printString , ' distributed message' ] ] ]
+    on: ConnectionClosed
+    do: [ :ignored | 
+      webSocket logDebug: 'Connection close, cleaning up'.
+      self unregister: webSocket ]

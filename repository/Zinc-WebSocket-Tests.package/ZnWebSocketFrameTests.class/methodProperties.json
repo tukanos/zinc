@@ -5,7 +5,7 @@
 		"testReading256ByteSingleFrameUnmaskedBinaryMessage" : "SvenVanCaekenberghe 8/22/2012 10:46",
 		"testReading256KiBSingleFrameUnmaskedBinaryMessage" : "SvenVanCaekenberghe 8/22/2012 10:46",
 		"testReadingFragmentedUnmaskedTextMessage" : "SvenVanCaekenberghe 8/22/2012 10:29",
-		"testReadingPing" : "SvenVanCaekenberghe 8/22/2012 10:32",
+		"testReadingPing" : "dkh 11/20/2014 19:12",
 		"testReadingPong" : "SvenVanCaekenberghe 8/22/2012 10:32",
 		"testReadingSingleFrameMaskedTextMessage" : "SvenVanCaekenberghe 8/22/2012 10:12",
 		"testReadingSingleFrameUnmaskedTextMessage" : "SvenVanCaekenberghe 8/22/2012 10:12",

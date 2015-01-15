@@ -2,11 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"expectedFailures" : "dkh 11/17/2014 16:48",
-		"setUp" : "SvenVanCaekenberghe 12/10/2012 20:03",
-		"tearDown" : "SvenVanCaekenberghe 12/10/2012 19:18",
-		"testCreate" : "dkh 11/17/2014 16:45",
-		"testDelete" : "SvenVanCaekenberghe 12/12/2012 10:26",
-		"testEmpty" : "SvenVanCaekenberghe 12/10/2012 21:25",
-		"testQuery" : "SvenVanCaekenberghe 12/12/2012 10:27",
-		"testUpdate" : "dkh 11/17/2014 16:46" } }
+		"setUp" : "dkh 12/03/2014 19:50",
+		"tearDown" : "dkh 12/03/2014 19:19" } }

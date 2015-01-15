@@ -1,3 +1,5 @@
 accessing
 event: logEvent
-	Transcript cr; show: logEvent
+  Transcript
+    cr;
+    show: logEvent

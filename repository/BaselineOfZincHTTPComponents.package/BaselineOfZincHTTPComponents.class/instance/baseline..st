@@ -121,22 +121,27 @@ baseline: spec
         configuration: 'GsPharo'
           with: [ 
               spec
-                version: '0.9.2';
+                version: '0.9.3';
                 repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
-        configuration: 'Cryptography'
+        baseline: 'Cryptography'
           with: [ 
               spec
-                versionString: #'stable';
-                repository: 'http://seaside.gemtalksystems.com/ss/Cryptography' ];
+                loads: #('Cryptography');
+                repository: 'github://GsDevKit/Cryptography:master/repository' ];
+        baseline: 'GsApplicationTools'
+          with: [ 
+              spec
+                loads: #('Core');
+                repository:
+                    'github://GsDevKit/gsApplicationTools:v1.?/repository' ];
         baseline: 'NeoJSON'
-          with: [ 
-              spec
-                loads: 'Core';
-                repository: 'github://GsDevKit/NeoJSON:master/repository' ];
+          with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
         yourself.
       spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+        package: 'Zinc-GemStone-Server-Tools'
+          with: [ spec requires: #('GsApplicationTools') ];
         package: 'Zinc-WebSocket-Core'
           with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         package: 'Zinc-HTTP'
@@ -146,7 +151,8 @@ baseline: spec
                 includes: #('SocketStream') ];
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
-        group: 'CI' with: #('REST');
+        group: 'Core' with: #('Zinc-GemStone-Server-Tools');
+        group: 'CI' with: #('REST' 'WebSocket');
         yourself ].
   spec
     for: #'gs2.x'

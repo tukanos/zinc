@@ -1,3 +1,3 @@
 as yet unclassified
 isValid
-	^self underlyingSocket notNil
+  ^ self underlyingSocket notNil and: [ self underlyingSocket isActive ]

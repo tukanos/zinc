@@ -18,8 +18,8 @@ GsDeployer deploy: [
     load: #('CI')
 ].
 
-"Run the Tode tests"
-TravisCIHarness
-  value: #( 'BaselineOfZincHTTPComponents' )
+"Run ALL tests in repository"
+TravisCISuiteHarness
+  value: TestCase suite
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.

@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"server",
-		"client" ],
+		"server" ],
 	"name" : "ZnExampleSumRestCallTest",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "ZnAbstractExampleSumRestCallTest",
 	"type" : "normal" }

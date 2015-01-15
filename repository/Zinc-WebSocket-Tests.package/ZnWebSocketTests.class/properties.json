@@ -3,10 +3,11 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"InteractiveRemoteServer",
+		"StaticRemoteServer" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		 ],
+		"registry" ],
 	"name" : "ZnWebSocketTests",
 	"pools" : [
 		 ],
