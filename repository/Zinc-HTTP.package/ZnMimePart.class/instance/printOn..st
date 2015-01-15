@@ -5,3 +5,4 @@ printOn: stream
 	self hasEntity ifTrue: [ 
 		self entity printContentTypeAndLengthOn: stream ].
 	stream nextPut: $)
+	

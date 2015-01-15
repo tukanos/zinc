@@ -1,10 +1,7 @@
 private
 withGemServerDo: block
   | gemServer |
-  gemServer := (ZnGemServer register: self gemServerName on: {(self port)})
-    logToObjectLog;
-    logEverything;
-    yourself.
+  gemServer := self createBasicGemServer.
   TranscriptProxy proxyTranscript ~~ nil
     ifTrue: [ 
       "interactive tests, log to Object Log ... 

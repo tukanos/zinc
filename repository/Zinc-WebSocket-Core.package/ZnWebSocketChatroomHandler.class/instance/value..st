@@ -4,16 +4,17 @@ value: webSocket
 	distributing incoming messages to all known clients"
 
   [ 
-  webSocket log info: [ webSocket asOop printString , ' registering' ].
+  webSocket gemServer: self gemServer.
+  webSocket logInfo: [ webSocket asOop printString , ' registering' ].
   self register: webSocket.
   webSocket
     runWith: [ :message | 
-      webSocket log
-        info: [ webSocket asOop printString , ' Received message: ' , message printString ].
+      webSocket
+        logInfo: [ webSocket asOop printString , ' Received message: ' , message printString ].
       self distributeMessage: message.
-      webSocket log
-        info: [ webSocket asOop printString , ' distributed message' ] ] ]
+      webSocket
+        logInfo: [ webSocket asOop printString , ' distributed message' ] ] ]
     on: ConnectionClosed
     do: [ :ignored | 
-      webSocket log debug: 'Connection close, cleaning up'.
+      webSocket logDebug: 'Connection close, cleaning up'.
       self unregister: webSocket ]

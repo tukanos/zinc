@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"log",
-		"logListener",
-		"logFilter",
-		"options" ],
+		 ],
 	"name" : "ZnGemServer",
 	"pools" : [
 		 ],
-	"super" : "GemServer",
+	"super" : "ZnAbstractGemServer",
 	"type" : "normal" }

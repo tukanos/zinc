@@ -1,6 +1,6 @@
 protocol
 unregister: clientWebSocket
+  "persist changes to webSockets"
+
   lock
-    critical: [ 
-      GRPlatform current
-        doTransaction: [ webSockets remove: clientWebSocket ifAbsent: [  ] ] ]
+    critical: [ self doCommit: [ webSockets remove: clientWebSocket ifAbsent: [  ] ] ]

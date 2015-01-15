@@ -1,3 +1,3 @@
 accessing
 serverClass
-  ^ ZnServer
+  ^ ZnTransactionSafeManagingMultiThreadedServer

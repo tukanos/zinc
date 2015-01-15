@@ -5,3 +5,4 @@ extendHeaders: headers with: object
 		ifTrue: [ headers addAll: (ZnHeaders readFrom: object readStream) ] 
 		ifFalse: [ headers withAll: object ].
 	^ headers
+	

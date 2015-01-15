@@ -11,6 +11,5 @@ runWith: block
     do: [ :ignored | 
       "Ignore & continue"
       nil ].
-  message
-    ifNotNil: [ GRPlatform current doTransaction: [ block value: message ] ] ]
+  message ifNotNil: [ block value: message ] ]
     repeat

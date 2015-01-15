@@ -17,7 +17,7 @@ setUp
                     yourself);
             yourself);
     yourself.
-  gemServer startGems.
+  gemServer restartGems.
   (Delay forSeconds: 3) wait.
   client := self
     createClientFor:

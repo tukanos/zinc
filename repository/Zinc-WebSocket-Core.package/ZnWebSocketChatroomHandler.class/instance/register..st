@@ -1,4 +1,5 @@
 protocol
 register: clientWebSocket
-  lock
-    critical: [ GRPlatform current doTransaction: [ webSockets add: clientWebSocket ] ]
+  "persist changes to webSockets"
+
+  lock critical: [ self doCommit: [ webSockets add: clientWebSocket ] ]

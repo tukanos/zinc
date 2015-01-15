@@ -10,3 +10,4 @@ mimeDocumentOrErrorStringFrom: response uri: uri
 			String streamContents: [ :stream |
 				stream nextPutAll: 'HTTP request for '; print: uri; nextPutAll: ' failed with '.
 				response statusLine writeOn: stream ] ]
+		

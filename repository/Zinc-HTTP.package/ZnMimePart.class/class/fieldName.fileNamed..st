@@ -9,3 +9,4 @@ fieldName: fieldName fileNamed: fileName
 		stream: fileStream.
 	baseName := ZnFileSystemUtils baseNameFor: fileName.
 	^ self fieldName: fieldName fileName: baseName entity: entity
+	

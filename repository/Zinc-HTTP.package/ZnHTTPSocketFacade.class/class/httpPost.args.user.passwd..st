@@ -7,3 +7,4 @@ httpPost: urlObject args: arguments user: username passwd: password
 		formAddAll: arguments;
 		post.
 	^ self mimeDocumentOrErrorStringFrom: client response uri: client request url
+
