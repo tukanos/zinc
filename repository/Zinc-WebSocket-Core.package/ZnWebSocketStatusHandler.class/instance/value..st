@@ -4,12 +4,13 @@ value: webSocket
 	until ConnectionClosed or no longer isConnected"
 
   [ 
-  webSocket log info: 'Started status streaming'.
+  webSocket gemServer: self gemServer.
+  webSocket logInfo: 'Started status streaming'.
   [ 
   webSocket sendMessage: self status.
   (Delay forSeconds: 1) wait.
   webSocket isConnected ]
     whileTrue ]
     on: ConnectionClosed
-    do: [ :ignored | webSocket log debug: 'Ignoring connection close' ].
-  webSocket log info: 'Stopping status streaming'
+    do: [ :ignored | webSocket logDebug: 'Ignoring connection close' ].
+  webSocket logInfo: 'Stopping status streaming'

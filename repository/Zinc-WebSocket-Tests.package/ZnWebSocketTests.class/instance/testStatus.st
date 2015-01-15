@@ -2,8 +2,8 @@ testing
 testStatus
   | webSocket message gemServer |
   gemServer := self
-    createGemServerWithDelegate:
-      (self delegateClass map: 'ws-status' to: ZnWebSocketStatusHandler new).
+    createGemServerMap: 'ws-status'
+    to: ZnWebSocketStatusHandler new.
   self
     runGemServer: gemServer
     do: [ 

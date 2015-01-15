@@ -4,9 +4,10 @@ value: webSocket
 	reading messages and echoing them back until ConnectionClosed"
 
   [ 
+  webSocket gemServer: self gemServer.
   webSocket
     runWith: [ :message | 
-      webSocket log info: [ 'Received message: ' , message printString , ', echoing' ].
+      webSocket logInfo: [ 'Received message: ' , message printString , ', echoing' ].
       webSocket sendMessage: message ] ]
     on: ConnectionClosed
-    do: [ :ignored | webSocket log debug: 'Ignoring connection close, done' ]
+    do: [ :ignored | webSocket logDebug: 'Ignoring connection close, done' ]

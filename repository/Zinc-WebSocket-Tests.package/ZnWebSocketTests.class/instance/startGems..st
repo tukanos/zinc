@@ -10,7 +10,7 @@ startGems: gemServer
 
   "abort; /home/gemserver/example --start=ZincWebSocketGemServer"
 
-  "limit autoCommit false; eval `System transactionMode: #manualBegin` /home/gemserver/example --start=ZincWebSocketGemServer"
+  "abort;limit autoCommit false; eval `System transactionMode: #manualBegin` /home/gemserver/example --start=ZincWebSocketGemServer"
 
   self staticRemoteServer
     ifFalse: [ 

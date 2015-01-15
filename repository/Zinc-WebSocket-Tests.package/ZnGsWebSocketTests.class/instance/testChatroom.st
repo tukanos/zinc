@@ -1,12 +1,9 @@
 testing
 testChatroom
-  | handler webSocket1 message1 inbox1 webSocket2 message2 inbox2 gemServer |
-  handler := ZnWebSocketChatroomHandler new.
+  | webSocket1 message1 inbox1 webSocket2 message2 inbox2 gemServer |
   gemServer := self
-    createGemServerWithDelegate:
-      (self delegateClass map: 'ws-chatroom' to: handler).
-  handler gemServer: gemServer.
-  System commitTransaction.
+    createGemServerMap: 'ws-chatroom'
+    to: ZnWebSocketChatroomHandler new.
   self
     runGemServer: gemServer
     do: [ 

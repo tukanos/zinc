@@ -4,6 +4,7 @@ value: webSocket
 	distributing incoming messages to all known clients"
 
   [ 
+  webSocket gemServer: self gemServer.
   webSocket logInfo: [ webSocket asOop printString , ' registering' ].
   self register: webSocket.
   webSocket

@@ -1,9 +1,7 @@
 testing
 testEcho
   | webSocket message gemServer |
-  gemServer := self
-    createGemServerWithDelegate:
-      (self delegateClass map: 'ws-echo' to: ZnWebSocketEchoHandler new).
+  gemServer := self createGemServerMap: 'ws-echo' to: ZnWebSocketEchoHandler new.
   self
     runGemServer: gemServer
     do: [ 
