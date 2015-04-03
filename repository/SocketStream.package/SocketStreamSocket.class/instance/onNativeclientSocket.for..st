@@ -7,5 +7,6 @@ onNativeclientSocket: aNativeSocket for: aServerSocket
   communicationDomain := aServerSocket communicationDomain.
   socketType := aServerSocket socketType.
   protocolNumber := aServerSocket protocolNumber.
-  underlyingSocket := TransientStackValue value: aNativeSocket.
+  self _setNoStubbing.	"as long as I am in memory prevent stubbing of my instance variables ... I will stay in memory as long as I am referenced from stack.."
+  underlyingSocket := TransientStackValue value: aNativeSocket.	"if I am committed, then do not persist aNativeSocket"
   ^ self

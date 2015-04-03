@@ -7,4 +7,3 @@ systemVersionInfo
 				print: 'GemStone ', (versionReport at: 'gsRelease'), ' of ', (versionReport at: 'gsBuildDate'), ' build ', (versionReport at: 'gsBuildSerialNum'); 
 				nextPutAll: ' - '; 
 				nextPutAll: ZnConstants defaultServerString ]
-	
