@@ -19,4 +19,3 @@ writeEntity: entity
 		ifNotNil: [ bufferedStream finish ].
 	chunkedStream
 		ifNotNil: [ chunkedStream finish ]
-	

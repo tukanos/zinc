@@ -7,4 +7,3 @@ map: prefix to: handler
 	self prefixMap 
 		at: prefix
 		put: handler
-		
