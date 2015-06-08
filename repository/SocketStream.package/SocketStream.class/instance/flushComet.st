@@ -6,7 +6,7 @@ flushComet
   result := [ 
   self flush.
   true ]
-    on: NetworkError
+    on: NetworkError , SpSocketError
     do: [ :err | false ].
   result := result and: [ self isConnected and: [ self isOtherEndConnected ] ].
   result
