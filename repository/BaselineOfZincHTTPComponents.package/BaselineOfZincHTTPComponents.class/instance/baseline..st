@@ -160,7 +160,7 @@ baseline: spec
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
         group: 'Core' with: #('Zinc-GemStone-Server-Tools');
-        group: 'CI' with: #('REST' 'WebSocket' 'SSL');
+        group: 'CI' with: #('REST' 'WebSocket');
         group: 'SSL' with: #();
         yourself ].
   spec
