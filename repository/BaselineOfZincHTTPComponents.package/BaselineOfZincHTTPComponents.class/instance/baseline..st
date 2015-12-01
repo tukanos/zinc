@@ -25,10 +25,6 @@ baseline: spec
         package: 'Zinc-AWS'
           with: [ spec requires: #('Zinc-HTTP' 'XML Support') ];
         package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
-        package: 'Zinc-Zodiac'
-          with: [ spec requires: #('Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests') ];
-        package: 'Zodiac-Core';
-        package: 'Zodiac-Tests' with: [ spec requires: 'Zodiac-Core' ];
         package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP' ];
         package: 'Zinc-WebSocket-Tests'
           with: [ spec requires: 'Zinc-WebSocket-Core' ];
@@ -81,7 +77,6 @@ baseline: spec
             #('SSO-OAuth1' 'SSO-OAuth2' 'SSO-OpenID' 'SSO-Demo' 'Zinc-SSO-Demo');
         group: 'WWS' with: #('Zinc-WWS-Server' 'Zinc-WWS-Client');
         group: 'REST' with: #('Zinc-REST');
-        group: 'Zodiac' with: #('Zinc-Zodiac');
         yourself ].
   spec
     for: #'squeakCommon'
@@ -93,8 +88,21 @@ baseline: spec
                 versionString: #'stable';
                 repository: 'http://mc.stfx.eu/Neo' ];
         yourself.
-      spec package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ].
-      spec group: 'Patch-HTTPSocket' with: #('Zinc-Patch-HTTPSocket') ].
+      spec
+        package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ];
+        package: 'Zinc-Zodiac'
+          with: [ spec requires: #('Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests') ];
+        package: 'Zodiac-Core';
+        package: 'Zodiac-Tests'
+          with: [ 
+              spec
+                requires: 'Zodiac-Core';
+                yourself ].
+      spec
+        group: 'Patch-HTTPSocket' with: #('Zinc-Patch-HTTPSocket');
+        group: 'Zodiac' with: #('Zinc-Zodiac');
+        group: 'SSL' with: #('Zodiac');
+        yourself ].
   spec
     for: #'pharo1.x'
     do: [ 
@@ -152,7 +160,8 @@ baseline: spec
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
         group: 'Core' with: #('Zinc-GemStone-Server-Tools');
-        group: 'CI' with: #('REST' 'WebSocket');
+        group: 'CI' with: #('REST' 'WebSocket' 'SSL');
+        group: 'SSL' with: #();
         yourself ].
   spec
     for: #'gs2.x'
@@ -196,8 +205,19 @@ baseline: spec
     for: #(#'gs3.2.x' #'gs.3.3.x')
     do: [ 
       spec
+        baseline: 'Zodiac'
+          with: [ 
+              spec
+                loads: #('Core');
+                repository: 'github://GsDevKit/Zodiac:gs_master/repository' ];
+        yourself.
+      spec
+        package: 'Zinc-Zodiac' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
         package: 'Zinc-Character-Encoding-Core'
           with: [ spec includes: 'Zinc-Character-Encoding-GS32-Core' ];
         package: 'Zinc-Character-Encoding-GS32-Core'
           with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
+        yourself.
+      spec
+        group: 'SSL' with: #('Zinc-Zodiac');
         yourself ]
