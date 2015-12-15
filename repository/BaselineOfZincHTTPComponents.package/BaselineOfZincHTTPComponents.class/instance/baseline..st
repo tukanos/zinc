@@ -202,7 +202,16 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
         yourself ].
   spec
-    for: #(#'gs3.2.x' #'gs.3.3.x')
+    for: #(#'gs3.2.x' #'gs3.3.x')
+    do: [ 
+      spec
+        package: 'Zinc-Character-Encoding-Core'
+          with: [ spec includes: 'Zinc-Character-Encoding-GS32-Core' ];
+        package: 'Zinc-Character-Encoding-GS32-Core'
+          with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
+        yourself ].
+  spec
+    for: #(#'gs3.3.x')
     do: [ 
       spec
         baseline: 'Zodiac'
@@ -213,10 +222,6 @@ baseline: spec
         yourself.
       spec
         package: 'Zinc-Zodiac' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
-        package: 'Zinc-Character-Encoding-Core'
-          with: [ spec includes: 'Zinc-Character-Encoding-GS32-Core' ];
-        package: 'Zinc-Character-Encoding-GS32-Core'
-          with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
         yourself.
       spec
         group: 'SSL' with: #('Zinc-Zodiac');
