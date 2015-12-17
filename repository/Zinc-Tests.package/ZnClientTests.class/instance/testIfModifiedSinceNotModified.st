@@ -5,7 +5,7 @@ testIfModifiedSinceNotModified
   [ 
   response := client
     url: '/small.html';
-    setIfModifiedSince: (Date year: 2011 month: 1 day: 1);
+    setIfModifiedSince: (Date year: 2012 month: 9 day: 1);
     get;
     response.
   self assert: response isNotModified.
