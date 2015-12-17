@@ -16,7 +16,7 @@
 		"testIfFailNonExistingHost" : "SvenVanCaekenberghe 11/8/2011 22:16",
 		"testIfFailNotFound" : "SvenVanCaekenberghe 11/8/2011 22:16",
 		"testIfFailWrongType" : "SvenVanCaekenberghe 11/8/2011 22:16",
-		"testIfModifiedSinceNotModified" : "SvenVanCaekenberghe 11/8/2011 22:16",
+		"testIfModifiedSinceNotModified" : "dkh 12/16/2015 12:17",
 		"testLogging" : "SvenVanCaekenberghe 11/8/2011 22:16",
 		"testPostForm" : "dkh 06/27/2014 14:18",
 		"testPostMultipart" : "dkh 06/27/2014 14:31",
