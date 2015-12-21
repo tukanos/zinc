@@ -202,7 +202,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
         yourself ].
   spec
-    for: #(#'gs3.2.x' #'gs3.3.x')
+    for: #(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         package: 'Zinc-Character-Encoding-Core'
