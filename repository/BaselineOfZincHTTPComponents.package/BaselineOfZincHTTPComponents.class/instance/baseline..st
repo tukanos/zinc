@@ -211,7 +211,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.3.x')
+    for: #(#'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         baseline: 'Zodiac'
