@@ -150,7 +150,7 @@ baseline: spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
         package: 'Zinc-GemStone-Server-Tools'
-          with: [ spec requires: #('GsApplicationTools') ];
+          with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
         package: 'Zinc-WebSocket-Core'
           with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         package: 'Zinc-HTTP'
