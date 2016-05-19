@@ -142,7 +142,7 @@ baseline: spec
               spec
                 loads: #('Core');
                 repository:
-                    'github://GsDevKit/gsApplicationTools:v1.?/repository' ];
+                    'github://GsDevKit/gsApplicationTools:master/repository' ];
         baseline: 'NeoJSON'
           with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
         yourself.
@@ -150,7 +150,7 @@ baseline: spec
         package: 'SocketStream';
         package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
         package: 'Zinc-GemStone-Server-Tools'
-          with: [ spec requires: #('GsApplicationTools') ];
+          with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
         package: 'Zinc-WebSocket-Core'
           with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
         package: 'Zinc-HTTP'
@@ -203,7 +203,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
         yourself ].
   spec
-    for: #(#'gs3.2.x' #'gs3.3.x')
+    for: #(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         package: 'Zinc-Character-Encoding-Core'
@@ -212,7 +212,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.3.x')
+    for: #(#'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         baseline: 'Zodiac'

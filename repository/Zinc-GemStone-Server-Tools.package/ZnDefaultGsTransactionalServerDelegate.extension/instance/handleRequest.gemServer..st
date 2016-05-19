@@ -1,4 +1,4 @@
-public
+*zinc-gemstone-server-tools
 handleRequest: request gemServer: gemServer
   "compatability with ZnGemServerManagingMultiThreadedServer"
 

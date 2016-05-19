@@ -1,5 +1,8 @@
 testing
 expectedFailures
-  ((System gemVersionReport at: #'gsVersion') beginsWith: '3.2')
-    ifTrue: [ ^ #() ].
-  ^ #(#'testGzippedAndChunked')	"not failing consistently, but I distrust this test .. this test gone in future versions of Zinc"
+  | vers |
+  vers := System gemVersionReport at: #'gsVersion'.
+  ((vers beginsWith: '2')
+    or: [ (vers beginsWith: '3.0') or: [ vers beginsWith: '3.1' ] ])
+    ifTrue: [ ^ #(#'testGzippedAndChunked') ].
+  ^ #()	"should be passing consistently from 3.2 onward"
