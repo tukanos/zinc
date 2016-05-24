@@ -5,7 +5,7 @@ baseline: spec
     for: #'common'
     do: [ 
       spec
-        configuration: 'XML Support'
+        configuration: 'XMLSupport'
           with: [ 
               spec
                 versionString: #'stable';
@@ -23,7 +23,7 @@ baseline: spec
           with: [ spec requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
         package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ];
         package: 'Zinc-AWS'
-          with: [ spec requires: #('Zinc-HTTP' 'XML Support') ];
+          with: [ spec requires: #('Zinc-HTTP' 'XMLSupport') ];
         package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP' ];
         package: 'Zinc-WebSocket-Tests'
@@ -33,7 +33,7 @@ baseline: spec
         package: 'Zinc-SSO-OAuth2-Core'
           with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
         package: 'Zinc-SSO-OpenID-Core'
-          with: [ spec requires: #('Zinc-HTTP' 'XML Support') ];
+          with: [ spec requires: #('Zinc-HTTP' 'XMLSupport') ];
         package: 'Zinc-SSO-Demo'
           with: [ 
               spec
