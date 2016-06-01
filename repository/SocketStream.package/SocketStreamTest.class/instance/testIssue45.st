@@ -6,7 +6,7 @@ testIssue45
 
   | in out result p1 p2 sema stoneVersion |
   stoneVersion := (System stoneVersionAt: 'gsVersion') asMetacelloVersionNumber.
-  (stoneVersion > '3.3.1' asMetacelloVersionNumber
+  (stoneVersion >= '3.3.1' asMetacelloVersionNumber
     or: [ 
       stoneVersion < '3.3.0' asMetacelloVersionNumber
         and: [ stoneVersion > '3.2.15' asMetacelloVersionNumber ] ])
