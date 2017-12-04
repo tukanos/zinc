@@ -118,9 +118,8 @@ baseline: spec
         package: 'Zinc-FileSystem';
         package: 'Zinc-HTTP' with: [ spec requires: 'Zinc-FileSystem' ] ].
   spec
-    for: #'gemstone'
+    for: #'glass'
     do: [ 
-      spec repository: 'github://GsDevKit/zinc:gs_master/repository'.
       spec
         baseline: 'GLASS1'
           with: [ 
@@ -132,6 +131,20 @@ baseline: spec
               spec
                 version: '0.9.3';
                 repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
+        yourself.
+      spec
+        package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+        package: 'Zinc-HTTP'
+          with: [ 
+              spec
+                requires: #('GLASS1');
+                includes: #('SocketStream') ];
+        yourself ].
+  spec
+    for: #'gemstone'
+    do: [ 
+      spec repository: 'github://GsDevKit/zinc:gs_master/repository'.
+      spec
         baseline: 'Cryptography'
           with: [ 
               spec
@@ -148,7 +161,7 @@ baseline: spec
         yourself.
       spec
         package: 'SocketStream';
-        package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+        package: 'Zinc-FileSystem-Legacy';
         package: 'Zinc-GemStone-Server-Tools'
           with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
         package: 'Zinc-WebSocket-Core'
@@ -156,7 +169,7 @@ baseline: spec
         package: 'Zinc-HTTP'
           with: [ 
               spec
-                requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
+                requires: #('Zinc-FileSystem-Legacy');
                 includes: #('SocketStream') ];
         package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
       spec
@@ -203,7 +216,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
         yourself ].
   spec
-    for: #(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x')
+    for: #(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x')
     do: [ 
       spec
         package: 'Zinc-Character-Encoding-Core'
@@ -212,7 +225,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.3.x' #'gs3.4.x')
+    for: #(#'gs3.3.x' #'gs3.4.x' #'gs3.5.x')
     do: [ 
       spec
         baseline: 'Zodiac'
