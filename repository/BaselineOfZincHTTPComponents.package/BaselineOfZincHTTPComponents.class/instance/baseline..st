@@ -216,7 +216,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
         yourself ].
   spec
-    for: #(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x')
+    for: #(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         package: 'Zinc-Character-Encoding-Core'
@@ -225,7 +225,7 @@ baseline: spec
           with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
         yourself ].
   spec
-    for: #(#'gs3.3.x' #'gs3.4.x' #'gs3.5.x')
+    for: #(#'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
     do: [ 
       spec
         baseline: 'Zodiac'
