@@ -139,6 +139,29 @@ baseline: spec
               spec
                 requires: #('GLASS1');
                 includes: #('SocketStream') ];
+        package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ];
+        yourself ].
+  spec
+    for: #'gsdevkit'
+    do: [ 
+      spec
+        baseline: 'GsDevKit'
+          with: [ 
+              spec
+                loads: #('Base' 'Announcements');
+                repository: 'github://GsDevKit/GsDevKit:master/repository' ];
+        baseline: 'PharoCompatibility'
+          with: [ spec repository: 'github://glassdb/PharoCompatibility:master/repository' ];
+        yourself.
+      spec
+        package: 'Zinc-FileSystem-Legacy'
+          with: [ spec requires: #('GsDevKit') ];
+        package: 'Zinc-HTTP'
+          with: [ 
+              spec
+                requires: #('GsDevKit');
+                includes: #('SocketStream') ];
+        package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ];
         yourself ].
   spec
     for: #'gemstone'
@@ -171,7 +194,8 @@ baseline: spec
               spec
                 requires: #('Zinc-FileSystem-Legacy');
                 includes: #('SocketStream') ];
-        package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
+        package: 'Zinc-Tests';
+        yourself.
       spec
         group: 'Core' with: #('Zinc-GemStone-Server-Tools');
         group: 'CI' with: #('REST' 'WebSocket');
