@@ -5,6 +5,10 @@ testIssue45
   "should be fixed in 3.3.1 and 3.2.16"
 
   | in out result p1 p2 sema stoneVersion |
+  (System gemConfigurationAt: 'GEM_TEMPOBJ_CACHE_SIZE') < 500000000
+    ifTrue: [ 
+      "if we don't have around .5G TOC, we'll blow memory"
+      ^ self ].
   stoneVersion := (System stoneVersionAt: 'gsVersion') asMetacelloVersionNumber.
   (stoneVersion >= '3.3.1' asMetacelloVersionNumber
     or: [ 
