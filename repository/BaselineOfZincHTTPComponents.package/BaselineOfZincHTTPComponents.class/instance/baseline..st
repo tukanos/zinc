@@ -219,7 +219,7 @@ baseline: spec
           with: [ 
               spec
                 loads: #('Core');
-                repository: 'github://GsDevKit/Zodiac:gs_master/repository' ];
+                repository: 'github://GsDevKit/zodiac:gs_master/repository' ];
         yourself.
       spec
         package: 'Zinc-Zodiac' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
