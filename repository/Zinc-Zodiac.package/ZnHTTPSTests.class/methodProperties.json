@@ -5,6 +5,7 @@
 	"instance" : {
 		"disabledTestPayPal" : "SvenVanCaekenberghe 10/2/2012 14:55",
 		"ensureSocketStreamFactory" : "SvenVanCaekenberghe 7/4/2012 11:32",
+		"expectedFailures" : "dkh 01/26/2019 15:00",
 		"isNativeSSLPluginPresent" : "dkh 12/15/2015 11:47",
 		"setUp" : "dkh 12/15/2015 12:49",
 		"testAmazonAWS" : "SvenVanCaekenberghe 8/23/2012 14:34",
