@@ -1,6 +1,10 @@
 testing
 testGetPharoVersion
   | client lastBuildVersion version |
+  true
+    ifTrue: [ 
+      "https://ci.inria.fr/pharo/job/Pharo-6.0/lastSuccessfulBuild/api/xml?xpath=/*/fullDisplayName gets error when hit from web browser, so this url isn't a good test case anymore"
+      ^ self ].
   self ensureSocketStreamFactory.
   self isNativeSSLPluginPresent
     ifFalse: [ ^ self ].
