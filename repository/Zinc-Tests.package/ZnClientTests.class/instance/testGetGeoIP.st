@@ -10,6 +10,13 @@ testGetGeoIP
     ifFail: [ :ex | 
           Transcript
             cr;
+            show:
+                'testGetGeoIP ZdcSecureSocketStream: '
+                    ,
+                      (Smalltalk globals at: #'ZdcSecureSocketStream' ifAbsent: [ 'not found' ])
+                        printString.
+          Transcript
+            cr;
             show: 'testGetGeoIP FAIL: ' , ex description.
           ^ self fail ];
     get.
