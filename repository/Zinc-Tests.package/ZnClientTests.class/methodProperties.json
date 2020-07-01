@@ -2,11 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
+		"setUp" : "dkh 07/01/2020 12:24",
 		"testConstruction" : "SvenVanCaekenberghe 11/8/2011 22:16",
 		"testCookies" : "SvenVanCaekenberghe 5/14/2012 17:15",
 		"testDownloadSmallHTML" : "SvenVanCaekenberghe 8/23/2012 14:34",
 		"testGetAfterPost" : "SvenVanCaekenberghe 12/11/2012 21:19",
-		"testGetGeoIP" : "dkh 07/01/2020 11:52",
+		"testGetGeoIP" : "dkh 07/01/2020 12:26",
 		"testGetSmallHTML" : "SvenVanCaekenberghe 8/23/2012 14:34",
 		"testGetSmallHTMLOneShot" : "SvenVanCaekenberghe 8/23/2012 14:34",
 		"testGetSmallHTMLStreaming" : "SvenVanCaekenberghe 8/23/2012 14:34",
