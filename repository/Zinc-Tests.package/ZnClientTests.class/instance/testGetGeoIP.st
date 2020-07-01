@@ -1,10 +1,10 @@
 testing
 testGetGeoIP
   | result client |
-  Smalltalk
-    at: #'GsSecureSocket'
-    ifAbsent: [ 
-      "no secure socket implementation, skip the test"
+  (System stoneVersionReport at: 'gsVersion') asMetacelloVersionNumber
+    <= '3.3.1' asMetacelloVersionNumber
+    ifTrue: [ 
+      "skip the test"
       ^ self ].
   result := (client := ZnClient new)
     systemPolicy;
