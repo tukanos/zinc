@@ -1,21 +1,27 @@
 testing
 testGetGeoIP
   | result client |
-  [ 
+  Transcript
+    cr;
+    show: 'testGetGeoIP debugging:'.
   result := (client := ZnClient new)
     systemPolicy;
     url: 'http://easy.t3-platform.net/rest/geo-ip';
     queryAt: 'address' put: '81.83.7.35';
     accept: ZnMimeType applicationJson;
-    contentReader: [ :entity | STON fromString: entity contents ];
+    contentReader: [ :entity | 
+          Transcript
+            cr;
+            show: 'ENTITY:' , entity contents asString.
+          STON fromString: entity contents ];
     ifFail: [ :ex | ^ self fail ];
     get.
-  self assert: result isDictionary.
-  self assert: (result at: 'country') = 'BE'.
-  client close ]
-    on: Error
-    do: [ :ex | 
-      "fails on travis not locally"
+  result
+    keysAndValuesDo: [ :key :value | 
       Transcript
         cr;
-        show: 'testGetGeoIP failure: ' , ex description printString ]
+        tab;
+        show: key printString , ' -> ' , value printString ].
+  self assert: result isDictionary.
+  self assert: (result at: 'country') = 'BE'.
+  client close
