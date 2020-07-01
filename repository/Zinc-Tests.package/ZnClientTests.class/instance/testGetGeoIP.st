@@ -1,6 +1,11 @@
 testing
 testGetGeoIP
   | result client |
+  Smalltalk
+    at: #'GsSecureSocket'
+    ifAbsent: [ 
+      "no secure socket implementation, skip the test"
+      ^ self ].
   result := (client := ZnClient new)
     systemPolicy;
     url: 'http://easy.t3-platform.net/rest/geo-ip';
