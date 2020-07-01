@@ -1,6 +1,11 @@
 testing
 testPostMultipart
   | client filename |
+  (System stoneVersionReport at: 'gsVersion') asMetacelloVersionNumber
+    <= '3.1.0' asMetacelloVersionNumber
+    ifTrue: [ 
+      "skip the test for pre-3.1 GemStone versions"
+      ^ self ].
   ZnFileSystemUtils deleteIfExists: 'testPostMultiPart.txt'.
   filename := ZnFileSystemUtils fullNameFor: 'testPostMultiPart.txt'.
   ZnFileSystemUtils
