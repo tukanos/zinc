@@ -1,20 +1,17 @@
 testing
 testGetGeoIP
   | result client |
-  Transcript
-    cr;
-    show: 'testGetGeoIP debugging:'.
   result := (client := ZnClient new)
     systemPolicy;
     url: 'http://easy.t3-platform.net/rest/geo-ip';
     queryAt: 'address' put: '81.83.7.35';
     accept: ZnMimeType applicationJson;
-    contentReader: [ :entity | 
+    contentReader: [ :entity | STON fromString: entity contents ];
+    ifFail: [ :ex | 
           Transcript
             cr;
-            show: 'ENTITY:' , entity contents asString.
-          STON fromString: entity contents ];
-    ifFail: [ :ex | ^ self fail ];
+            show: 'testGetGeoIP FAIL: ' , ex description.
+          ^ self fail ];
     get.
   result
     keysAndValuesDo: [ :key :value | 
