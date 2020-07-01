@@ -1,6 +1,11 @@
 testing
 testIfModifiedSinceNotModified
   | client request response |
+  (System stoneVersionReport at: 'gsVersion') asMetacelloVersionNumber
+    <= '3.1.0' asMetacelloVersionNumber
+    ifTrue: [ 
+      "skip the test for pre-3.1 GemStone versions"
+      ^ self ].
   (client := ZnClient new) host: 'stfx.eu'.
   [ 
   response := client
