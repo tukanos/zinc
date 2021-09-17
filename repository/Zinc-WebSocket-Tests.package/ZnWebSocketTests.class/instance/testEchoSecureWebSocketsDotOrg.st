@@ -3,7 +3,7 @@ testEchoSecureWebSocketsDotOrg
 	| webSocket message |
 	true
 		ifTrue: [ 
-			"Service is no longer available. See https://github.com/GsDevKit/zinc/issues/96"
+			"echo.websocket.org is no longer available. See https://github.com/GsDevKit/zinc/issues/96"
 			^ self ].
 	(Smalltalk at: #'GsSecureSocket') disableCertificateVerificationOnClient.
 	webSocket := self webSocketClass to: 'wss://echo.websocket.org'.
