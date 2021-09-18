@@ -6,7 +6,6 @@ executeOneRequestResponseOn: streamTransientStackValue
 	#readRequest: #handleRequest: and #writeResponse:on:
 	Return true when the outer loop we are in should stop."
 
-  [ 
   self
     serve: [ 
       | request response |
@@ -27,5 +26,4 @@ executeOneRequestResponseOn: streamTransientStackValue
       response useConnection: streamTransientStackValue value.
       (request wantsConnectionClose or: [ response wantsConnectionClose ])
         ifTrue: [ ^ self ] ]
-    ensure: [ self closeSocketStream: streamTransientStackValue value ] ]
-    repeat
+    ensure: [ self closeSocketStream: streamTransientStackValue value ]
