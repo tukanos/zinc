@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Zinc-Server-HTTP",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"requestDuration",
+		"handlerDuration",
+		"responseDuration"
+	],
+	"name" : "ZnServerTransactionTiming",
+	"type" : "normal"
+}
