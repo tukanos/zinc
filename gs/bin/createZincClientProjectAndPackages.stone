@@ -36,6 +36,7 @@ definedProjectForCommon: projectName
 	^ (Rowan newProjectNamed: projectName)
 		gemstoneSetDefaultSymbolDictNameTo: 'Globals';
 		repoType: #git;	
+		projectAlias: 'zinc_rowan';
 		customConditionalAttributes: #('tests' );
 		packageFormat: 'tonel';
 		packageConvention: 'Monticello';

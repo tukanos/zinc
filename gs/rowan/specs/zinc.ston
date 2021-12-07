@@ -1,5 +1,6 @@
 RwLoadSpecificationV2 {
 	#projectName : 'zinc',
+	#projectAlias : 'zinc_rowan',
 	#projectSpecFile : 'gs/rowan/project.ston',
 	#componentNames : [
 		'Core'

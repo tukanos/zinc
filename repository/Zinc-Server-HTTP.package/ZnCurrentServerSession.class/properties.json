@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ProcessLocalVariable",
-	"category" : "Zinc-HTTP-Variables",
+	"category" : "Zinc-Server-HTTP",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

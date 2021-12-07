@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ZnServer",
-	"category" : "Zinc-HTTP-Client-Server",
+	"category" : "Zinc-Server-HTTP",
 	"classinstvars" : [
 		"default"
 	],

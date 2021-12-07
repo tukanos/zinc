@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ZnSingleThreadedServer",
-	"category" : "Zinc-HTTP-Client-Server",
+	"category" : "Zinc-Server-HTTP",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
