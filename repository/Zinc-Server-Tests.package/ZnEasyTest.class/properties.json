@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "Zinc-HTTP-Client-Server",
+	"super" : "TestCase",
+	"category" : "Zinc-Server-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ZnEasy",
+	"name" : "ZnEasyTest",
 	"type" : "normal"
 }

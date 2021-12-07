@@ -116,6 +116,17 @@ createMissingClasses
 		'GZipReadStream' .
 		'ZnByteStringBecameWideString'.
 		'WideString'.
+		'ModificationForbidden' .
+		'NetNameResolver' .
+		'SocketAddress' .
+		'NameLookupFailure' .
+		'NetworkSystemSettings' .
+		'SocketStream' .
+		'Socket' .
+		'ConnectionTimedOut' .
+		'ZnCurrentServerSession' .
+		'NotFound' .
+		'ZnServer' . "need to weed through the ZnClientTests to replace tests that use ZnServer with an appropriate replacement"
 	} do: [:className |
 		Object
 			subclass: className 
