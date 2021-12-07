@@ -130,6 +130,14 @@ createMissingClasses
 		'ZnDefaultServerDelegate' .
 		'ZnUrlTest' .	"a test extension ... ZnUrl is in another project?"
 		'ZnServer' . "need to weed through the ZnClientTests to replace tests that use ZnServer with an appropriate replacement"
+		"Zinc-WebDAV, Zinc-Resource-Meta-Tests, and Zinc-Zodiac-Tests added"
+		'AssertionFailure' .
+    'ZdcSecureSocketStream' .
+		'ZdcPluginSSLSession' .
+		'ZdcPluginMissing' .
+		'OSPlatform' .
+		'XMLDOMParser' .
+		'XMLWriter' . 
 	} do: [:className |
 		Object
 			subclass: className 

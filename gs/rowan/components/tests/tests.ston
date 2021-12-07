@@ -4,7 +4,9 @@ RwSimpleNestedProjectLoadComponentV2 {
 	#projectNames : [ ],
 	#componentNames : [ ],
 	#packageNames : [
-		'Zinc-Tests'
+		'Zinc-Resource-Meta-Tests',
+		'Zinc-Tests',
+		'Zinc-Zodiac-Tests'
 	],
 	#comment : ''
 }

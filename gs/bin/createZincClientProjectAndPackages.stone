@@ -65,9 +65,12 @@ doit
 	commonPackageNames := 	{
 			'Zinc-HTTP'.
 			'Zinc-Resource-Meta-Core' .
+			'Zinc-WebDAV' .
 		}.
 	testPackageNames := { 
-			'Zinc-Tests'.
+			'Zinc-Tests' .
+			'Zinc-Resource-Meta-Tests' .
+			'Zinc-Zodiac-Tests' .
 		}.
 
 	('$ROWAN_PROJECTS_HOME' asFileReference / projectAlias / 'gs' / 'rowan') ensureDeleteAll.

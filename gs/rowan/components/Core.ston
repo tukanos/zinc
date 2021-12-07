@@ -7,7 +7,8 @@ RwSimpleProjectLoadComponentV2 {
 	],
 	#packageNames : [
 		'Zinc-HTTP',
-		'Zinc-Resource-Meta-Core'
+		'Zinc-Resource-Meta-Core',
+		'Zinc-WebDAV'
 	],
 	#comment : ''
 }
