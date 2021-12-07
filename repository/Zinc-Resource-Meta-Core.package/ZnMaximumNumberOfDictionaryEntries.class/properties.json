@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "DynamicVariable",
-	"category" : "Zinc-Resource-Meta-Server",
+	"category" : "Zinc-Resource-Meta-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

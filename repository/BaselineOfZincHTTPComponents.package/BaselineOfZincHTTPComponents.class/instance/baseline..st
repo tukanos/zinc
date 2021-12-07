@@ -10,7 +10,6 @@ baseline: spec
 			package: 'Zinc-Character-Encoding-Core';
 			package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
 			package: 'Zinc-Resource-Meta-Core' with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
-			package: 'Zinc-Resource-Meta-Server' with: [ spec requires: 'Zinc-Resource-Meta-Core' ];
 			package: 'Zinc-Resource-Meta-Tests' with: [ spec requires: 'Zinc-Resource-Meta-Core' ];
 			package: 'Zinc-HTTP' with: [ spec requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
 			package: 'Zinc-HTTP-Server' with: [ spec requires: #('Zinc-HTTP') ];

@@ -104,6 +104,16 @@ createMissingClasses
 		'SmalltalkImage' .
 		'ZnDefaultCharacterEncoder' .
 		'SystemVersion' . 
+		'DomainError' .
+		'NetworkError' .
+		'ImageReadWriter' .
+		'ByteString' .
+		'FileDoesNotExist' .
+		'HTTPProgress' .
+		'PrimitiveFailed' .
+		'ZnBase64Encoder' .
+		'ZnNullEncoder' .
+		'GZipReadStream' .
 	} do: [:className |
 		Object
 			subclass: className 
