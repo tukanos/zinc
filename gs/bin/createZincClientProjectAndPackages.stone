@@ -56,19 +56,21 @@ definedProjectForFiletree: projectName
 		yourself.
 %
 doit
-	| projectName componentName commonPackageNames definedProject testPackageNames
+	| projectName projectAlias componentName commonPackageNames definedProject testPackageNames
 		testsComponent resolvedProject projectDefinition |
 
 	projectName := 'zinc'.
+	projectAlias := 'zinc_rowan'.
 	componentName := 'Core'.
 	commonPackageNames := 	{
 			'Zinc-HTTP'.
+			'Zinc-Resource-Meta-Core' .
 		}.
 	testPackageNames := { 
 			'Zinc-Tests'.
 		}.
 
-	('$ROWAN_PROJECTS_HOME' asFileReference / projectName / 'gs' / 'rowan') ensureDeleteAll.
+	('$ROWAN_PROJECTS_HOME' asFileReference / projectAlias / 'gs' / 'rowan') ensureDeleteAll.
 
 	definedProject := self definedProjectForFiletree: projectName.
 	definedProject addTopLevelComponentNamed: componentName.
@@ -89,6 +91,7 @@ doit
 		addComponentNamed: testsComponent name 
 		toComponentNamed: componentName.
 
+	
 	resolvedProject := definedProject resolve _resolvedProject.
 	Rowan projectTools createV2
 		createResolvedProjectRepository: resolvedProject repository.

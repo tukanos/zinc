@@ -50,9 +50,71 @@ RwLoadSpecificationV2 {
 		}
 	},
 	#comment : ''
-}]
+},
+RwLoadSpecificationV2 {
+	#specName : 'Announcements',
+	#projectName : 'Announcements',
+	#gitUrl : 'git@github.com:GemTalk/Announcements.git',
+	#revision : 'main',
+	#projectSpecFile : 'rowan/project.ston',
+	#componentNames : [
+		'Announcements'
+	],
+	#customConditionalAttributes : [ ],
+	#platformProperties : {
+		'gemstone' : {
+			'allusers' : {
+				#defaultSymbolDictName : 'Globals'
+			}
+		}
+	},
+	#comment : 'Announcements development load spec'
+},
+RwLoadSpecificationV2 {
+	#projectName : 'OrderedDictionary',
+	#gitUrl : 'git@github.com:GsDevKit/OrderedDictionary.git',
+	#revision : 'rowanize',
+	#projectSpecFile : 'rowan/project.ston',
+	#componentNames : [
+		'Core'
+	],
+	#customConditionalAttributes : [ ],
+	#platformProperties : {
+		'gemstone' : {
+			'allusers' : {
+				#defaultSymbolDictName : 'Globals'
+			}
+		}
+	},
+	#comment : ''
+}
+]
+%
+method
+createMissingClasses
+	"just a temporary patch, to get the Zinc Client classes loaded"
+	{
+		'DynamicVariable' .
+		'KeyNotFound' .
+		'Smalltalk' .
+		'SmallDictionary' .
+		'ZnPercentEncoder' .
+		'GZipWriteStream' .
+		'MCWorkingCopy' .
+		'SmalltalkImage' .
+		'ZnDefaultCharacterEncoder' .
+		'SystemVersion' . 
+	} do: [:className |
+		Object
+			subclass: className 
+			instVarNames: #() 
+			classVars: #() 
+			classInstVars: #() 
+			poolDictionaries: #() 
+			inDictionary: Globals ].
 %
 doit
+	self createMissingClasses.
 	self preDoitSpecLoad. "load the zinc project using spec"
 	self stdout nextPutAll: 'zinc project loaded'; lf.
 	^ System commit
