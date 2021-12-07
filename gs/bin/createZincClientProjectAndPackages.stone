@@ -31,8 +31,32 @@ EXAMPLES
   $basename -- -l -I .topazini
 -----
 %
+method
+definedProjectForCommon: projectName
+	^ (Rowan newProjectNamed: projectName)
+		gemstoneSetDefaultSymbolDictNameTo: 'Globals';
+		repoType: #git;	
+		customConditionalAttributes: #('tests' );
+		packageFormat: 'tonel';
+		packageConvention: 'Monticello';
+		projectSpecPath: 'gs/rowan';	
+		projectsPath: 'gs/rowan/projects';
+		specsPath: 'gs/rowan/specs';
+		projectsPath: 'gs/rowan/projects';
+		projectSpecFile: 'gs/rowan/project.ston';
+		packagesPath: 'repository';
+		componentsPath: 'gs/rowan/components';
+		yourself.
+%
+method
+definedProjectForFiletree: projectName
+	^ (self definedProjectForCommon: projectName)
+		packageFormat: 'filetree';
+		yourself.
+%
 doit
-	| projectName componentName commonPackageNames definedProject testPackageNames |
+	| projectName componentName commonPackageNames definedProject testPackageNames
+		testsComponent resolvedProject projectDefinition |
 
 	projectName := 'zinc'.
 	componentName := 'Core'.
@@ -45,21 +69,7 @@ doit
 
 	('$ROWAN_PROJECTS_HOME' asFileReference / projectName / 'gs' / 'rowan') ensureDeleteAll.
 
-	definedProject := Rowan newProjectNamed: projectName.
-	definedProject
-		gemstoneSetDefaultSymbolDictNameTo: 'Globals';
-		repoType: #git;	
-		customConditionalAttributes: #('tests' );
-		packageFormat: 'tonel';
-		packageConvention: 'Monticello';
-		projectSpecPath: 'gs/rowan';	
-		projectsPath: 'gs/rowan/projects';
-		specsPath: 'gs/rowan/specs';
-		projectsPath: 'gs/rowan/projects';
-		projectSpecFile: 'gs/rowan/project.ston';
-		packagesPath: 'gs/repository';
-		componentsPath: 'gs/rowan/components';
-		yourself.
+	definedProject := self definedProjectForFiletree: projectName.
 	definedProject addTopLevelComponentNamed: componentName.
 	commonPackageNames do: [:packageName |
 			definedProject 
@@ -78,12 +88,26 @@ doit
 		addComponentNamed: testsComponent name 
 		toComponentNamed: componentName.
 
-	definedProject 
-		addComponentNamed: pharoComponent name 
-		toComponentNamed: componentName.
+	resolvedProject := definedProject resolve _resolvedProject.
+	Rowan projectTools createV2
+		createResolvedProjectRepository: resolvedProject repository.
+	resolvedProject 
+		exportProjectSpecification;
+		exportProjects;
+		exportComponents;
+		yourself.
+	resolvedProject read.
+	projectDefinition := resolvedProject _projectDefinition copy.
 
-	definedProject resolve	"create or attach to existing repository"
-	write.									"write to disk"
+	"convert to tonel packages and write"
+	definedProject
+		packageFormat: 'tonel';
+		packagesPath: 'gs/rowan/src';
+		yourself.
+
+	resolvedProject := definedProject resolve.
+	resolvedProject _resolvedProject _projectDefinition: projectDefinition.
+	resolvedProject write.
 
 	^ self noResult
 %
