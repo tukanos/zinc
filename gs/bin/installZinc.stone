@@ -50,43 +50,6 @@ RwLoadSpecificationV2 {
 		}
 	},
 	#comment : ''
-},
-RwLoadSpecificationV2 {
-	#specName : 'Announcements',
-	#projectName : 'Announcements',
-	#gitUrl : 'git@github.com:GemTalk/Announcements.git',
-	#revision : 'main',
-	#projectSpecFile : 'rowan/project.ston',
-	#componentNames : [
-		'Announcements'
-	],
-	#customConditionalAttributes : [ ],
-	#platformProperties : {
-		'gemstone' : {
-			'allusers' : {
-				#defaultSymbolDictName : 'Globals'
-			}
-		}
-	},
-	#comment : 'Announcements development load spec'
-},
-RwLoadSpecificationV2 {
-	#projectName : 'OrderedDictionary',
-	#gitUrl : 'git@github.com:GsDevKit/OrderedDictionary.git',
-	#revision : 'rowanize',
-	#projectSpecFile : 'rowan/project.ston',
-	#componentNames : [
-		'Core'
-	],
-	#customConditionalAttributes : [ ],
-	#platformProperties : {
-		'gemstone' : {
-			'allusers' : {
-				#defaultSymbolDictName : 'Globals'
-			}
-		}
-	},
-	#comment : ''
 }
 ]
 %

@@ -1,0 +1,142 @@
+#!/usr/bin/env superdoit_solo
+options
+{
+	SuperDoitOptionalOptionWithNoArg long: 'notPassingReport'.
+	SuperDoitOptionalOptionWithNoArg long: 'skipInitialization'.
+}
+%
+usage
+-----
+USAGE $basename [--help | -h] [--debug | -D]
+
+DESCRIPTION
+  Run the CI tests for zinc
+
+OPTIONS
+  -h, --help                 display usage message
+  -D, --debug                bring up topaz debugger in the event of a script error
+
+EXAMPLES
+  $basename --help
+  $basename -h
+  $basename --debug
+  $basename -D --skipInitialization --notPassingReport # skip class initialization during project load, report only errors
+  $basename -D                                         # run tests and report detail on all tests
+  $basename -D --notPassingReport                      # run tests and report detail on only failing tests
+-----
+%
+specs
+[
+RwLoadSpecificationV2 {
+	#specName : 'GsTestStats',
+	#projectName : 'GsTestStats',
+	#gitUrl : 'https://github.com/dalehenrich/GsTestStats',
+	#revision : 'v1',
+	#projectSpecFile : 'rowan/project.ston',
+	#componentNames : [
+		'Samples'
+	],
+	#customConditionalAttributes : [ ],
+	#comment : 'test results tracking'
+}
+]
+%
+specUrls
+file:$GITHUB_WORKSPACE/gs/rowan/specs/zinc.ston
+%
+method
+createMissingClasses
+	"just a temporary patch, to get the Zinc Client classes loaded"
+	{
+		'DynamicVariable' .
+		'KeyNotFound' .
+		'Smalltalk' .
+		'SmallDictionary' .
+		'ZnPercentEncoder' .
+		'GZipWriteStream' .
+		'MCWorkingCopy' .
+		'SmalltalkImage' .
+		'ZnDefaultCharacterEncoder' .
+		'SystemVersion' . 
+		'DomainError' .
+		'NetworkError' .
+		'ImageReadWriter' .
+		'ByteString' .
+		'FileDoesNotExist' .
+		'HTTPProgress' .
+		'PrimitiveFailed' .
+		'ZnBase64Encoder' .
+		'ZnNullEncoder' .
+		'GZipReadStream' .
+		'ZnByteStringBecameWideString'.
+		'WideString'.
+		'ModificationForbidden' .
+		'NetNameResolver' .
+		'SocketAddress' .
+		'NameLookupFailure' .
+		'NetworkSystemSettings' .
+		'SocketStream' .
+		'Socket' .
+		'ConnectionTimedOut' .
+		'ZnCurrentServerSession' .
+		'ZnCurrentServer' .
+		'NotFound' .
+		'ZnDefaultServerDelegate' .
+		'ZnUrlTest' .	"a test extension ... ZnUrl is in another project?"
+		'ZnServer' . "need to weed through the ZnClientTests to replace tests that use ZnServer with an appropriate replacement"
+		"Zinc-WebDAV, Zinc-Resource-Meta-Tests, and Zinc-Zodiac-Tests added"
+		'AssertionFailure' .
+    'ZdcSecureSocketStream' .
+		'ZdcPluginSSLSession' .
+		'ZdcPluginMissing' .
+		'OSPlatform' .
+		'XMLDOMParser' .
+		'XMLWriter' . 
+	} do: [:className |
+		Object
+			subclass: className 
+			instVarNames: #() 
+			classVars: #() 
+			classInstVars: #() 
+			poolDictionaries: #() 
+			inDictionary: Globals ].
+%
+method
+classInitializationNotificationClass
+	^ Rowan globalNamed: 'RwExecuteClassInitializeMethodsAfterLoadNotification'
+%
+method
+runnerClass
+	^Rowan globalNamed: 'GsTestStatsCITestRunner'
+%
+method
+reporterClass
+	^ Rowan globalNamed: 'GsTestStatsCITestReporterStdout'
+%
+doit
+	| runnerClass runner reporter result suite |
+	self createMissingClasses.	"synchronize with installZinc.stone"
+	[
+		self preDoitSpecLoad: [:loadSpec |
+			loadSpec projectName = 'zinc'
+				ifTrue: [ 
+					loadSpec 
+						customConditionalAttributes: (loadSpec customConditionalAttributes, #('tests'));
+						projectsHome: '$GITHUB_WORKSPACE/..' ] ] ]
+							on: self classInitializationNotificationClass
+							do: [:ex |
+								(self skipInitialization and: [ ex candidateClass rowanProjectName = 'zinc' ])
+									ifTrue: [ ex resume: false ]
+									ifFalse: [ ex resume: true ] ].
+	suite := (Rowan projectNamed: 'zinc') testSuite.
+	runnerClass := self runnerClass.
+	runner := self debug
+		ifTrue: [ runnerClass debugSuite: suite ]
+		ifFalse: [ runnerClass runSuite: suite ].
+	reporter := self notPassingReport
+		ifTrue: [  self reporterClass reportNotPassing: runner ]
+		ifFalse: [ self reporterClass report: runner ].
+	runner isSuccessful
+		ifFalse: [ self exitWithStatus: 1 ].
+	^ self noResult
+%
