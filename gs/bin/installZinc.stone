@@ -125,7 +125,10 @@ createMissingClasses
 		'Socket' .
 		'ConnectionTimedOut' .
 		'ZnCurrentServerSession' .
+		'ZnCurrentServer' .
 		'NotFound' .
+		'ZnDefaultServerDelegate' .
+		'ZnUrlTest' .	"a test extension ... ZnUrl is in another project?"
 		'ZnServer' . "need to weed through the ZnClientTests to replace tests that use ZnServer with an appropriate replacement"
 	} do: [:className |
 		Object
@@ -138,7 +141,13 @@ createMissingClasses
 %
 doit
 	self createMissingClasses.
-	self preDoitSpecLoad. "load the zinc project using spec"
+	[ 
+		"load the zinc project using spec"
+		self preDoitSpecLoad. ]
+			on: RwExecuteClassInitializeMethodsAfterLoadNotification 
+			do: [:ex | 
+				"avoid initialization errors"
+				ex resume: false ].
 	self stdout nextPutAll: 'zinc project loaded'; lf.
 	^ System commit
 %
