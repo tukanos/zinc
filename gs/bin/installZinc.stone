@@ -114,6 +114,8 @@ createMissingClasses
 		'ZnBase64Encoder' .
 		'ZnNullEncoder' .
 		'GZipReadStream' .
+		'ZnByteStringBecameWideString'.
+		'WideString'.
 	} do: [:className |
 		Object
 			subclass: className 
