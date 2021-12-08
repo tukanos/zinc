@@ -48,7 +48,7 @@ method
 createMissingClasses
 	"just a temporary patch, to get the Zinc Client classes loaded"
 	{
-		'DynamicVariable' .
+"		'DynamicVariable' ."
 		'KeyNotFound' .
 		'Smalltalk' .
 		'SmallDictionary' .

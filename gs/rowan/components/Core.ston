@@ -9,6 +9,7 @@ RwSimpleProjectLoadComponentV2 {
 		'tests/tests'
 	],
 	#packageNames : [
+		'Zinc-GemStone',
 		'Zinc-HTTP',
 		'Zinc-Resource-Meta-Core',
 		'Zinc-WebDAV'
