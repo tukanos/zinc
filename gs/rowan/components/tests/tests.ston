@@ -4,6 +4,7 @@ RwSimpleNestedProjectLoadComponentV2 {
 	#projectNames : [ ],
 	#componentNames : [ ],
 	#packageNames : [
+		'Zinc-Resource-Meta-Encoder-Tests',
 		'Zinc-Tests'
 	],
 	#comment : ''

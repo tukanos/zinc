@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "Zinc-Character-Encoding-Core",
+	"category" : "Zinc-Resource-Meta-Encoder",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
