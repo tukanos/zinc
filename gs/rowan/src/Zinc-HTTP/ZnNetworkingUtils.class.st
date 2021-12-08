@@ -215,7 +215,7 @@ ZnNetworkingUtils >> proxyUrl [
 
 { #category : 'accessing' }
 ZnNetworkingUtils >> secureSocketStreamClass [
-	^ secureSocketStreamClass ifNil: [ secureSocketStreamClass := GsSecureSocket ]
+	^ secureSocketStreamClass ifNil: [ secureSocketStreamClass := Rowan classNamed: 'ZdcSecureSocketStream' ]
 ]
 
 { #category : 'initialize-release' }
