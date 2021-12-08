@@ -20,9 +20,11 @@ EXAMPLES
   $basename --help
   $basename -h
   $basename --debug
-  $basename -D --skipInitialization --notPassingReport # skip class initialization during project load, report only errors
-  $basename -D                                         # run tests and report detail on all tests
-  $basename -D --notPassingReport                      # run tests and report detail on only failing tests
+  $basename -D --skipInitialization --notPassingReport              # skip class initialization during project load, report only errors
+  $basename -D                                                      # run tests and report detail on all tests
+  $basename -D --notPassingReport                                   # run tests and report detail on only failing tests
+  $basename -D ZnHTTPSTests                                         # run listed test cases
+  $basename -D ZnHTTPSTests --skipInitialization --notPassingReport # run listed test cases skip class initialization during project load, report only errors
 -----
 %
 specs
@@ -114,7 +116,7 @@ reporterClass
 	^ Rowan globalNamed: 'GsTestStatsCITestReporterStdout'
 %
 doit
-	| runnerClass runner reporter result suite |
+	| runnerClass runner reporter result suite testClasses |
 	self createMissingClasses.	"synchronize with installZinc.stone"
 	[
 		self preDoitSpecLoad: [:loadSpec |
@@ -128,11 +130,18 @@ doit
 								(self skipInitialization and: [ ex candidateClass rowanProjectName = 'zinc' ])
 									ifTrue: [ ex resume: false ]
 									ifFalse: [ ex resume: true ] ].
-	suite := (Rowan projectNamed: 'zinc') testSuite.
 	runnerClass := self runnerClass.
-	runner := self debug
-		ifTrue: [ runnerClass debugSuite: suite ]
-		ifFalse: [ runnerClass runSuite: suite ].
+	testClasses := self positionalArgs collect: [:className | Rowan globalNamed: className ].
+	testClasses isEmpty
+		ifTrue: [ 
+			suite := (Rowan projectNamed: 'zinc') testSuite.
+			runner := self debug
+				ifTrue: [ runnerClass debugSuite: suite ]
+				ifFalse: [ runnerClass runSuite: suite ] ]
+		ifFalse: [
+			runner := self debug
+				ifTrue: [ runnerClass debugClasses: testClasses named: 'debug test classes from command line' ]
+				ifFalse: [ runnerClass runClasses: testClasses named: 'run test classes from command line' ] ].
 	reporter := self notPassingReport
 		ifTrue: [  self reporterClass reportNotPassing: runner ]
 		ifFalse: [ self reporterClass report: runner ].

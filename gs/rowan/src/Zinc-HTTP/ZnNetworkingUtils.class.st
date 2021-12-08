@@ -215,8 +215,7 @@ ZnNetworkingUtils >> proxyUrl [
 
 { #category : 'accessing' }
 ZnNetworkingUtils >> secureSocketStreamClass [
-	^ secureSocketStreamClass ifNil: [ 
-		secureSocketStreamClass := Smalltalk globals at: #ZdcSecureSocketStream ifAbsent: [ nil ] ]
+	^ secureSocketStreamClass ifNil: [ secureSocketStreamClass := GsSecureSocket ]
 ]
 
 { #category : 'initialize-release' }
