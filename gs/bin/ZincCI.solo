@@ -88,7 +88,7 @@ createMissingClasses
 		'ZnServer' . "need to weed through the ZnClientTests to replace tests that use ZnServer with an appropriate replacement"
 		"Zinc-WebDAV, Zinc-Resource-Meta-Tests, and Zinc-Zodiac-Tests added"
 		'AssertionFailure' .
-    'ZdcSecureSocketStream' .
+"    'ZdcSecureSocketStream' ."
 		'ZdcPluginSSLSession' .
 		'ZdcPluginMissing' .
 		'OSPlatform' .

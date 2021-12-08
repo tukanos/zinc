@@ -11,6 +11,10 @@ DESCRIPTION
   Script to create the Rowan project metadata for the Zinc project ... include pharo-specific
   packages in the Rowan project, so that repackaging can be done programmatically.
 
+	MOVING FORWARD THIS SCRIPT SHOULD ONLY BE USED AFTER A MERGE FROM MASTER INTO THE tonelize
+  BRANCH AND AFTER THE REBUILDING OF THE ROWAN META DATA MERGE THE RESULT INTO THE rowanize
+  BRANCH WHERE CONFILCTS WILL BE DUE TO GEMSTONE SPECIFIC CHANGES.
+
 OPTIONS
   <stone-name>               Name of the GsDevKit_home stone. <stone-name> argument
                              may be skipped if the script is run in a GsDevKit_home
