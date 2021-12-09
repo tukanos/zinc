@@ -61,7 +61,6 @@ createMissingClasses
 		'KeyNotFound' .
 		'Smalltalk' .
 		'SmallDictionary' .
-		'ZnPercentEncoder' .
 		'GZipWriteStream' .
 		'MCWorkingCopy' .
 		'SmalltalkImage' .

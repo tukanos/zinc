@@ -9,8 +9,10 @@ baseline: spec
 		spec
 			package: 'Zinc-Character-Encoding-Core';
 			package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
-			package: 'Zinc-Resource-Meta-Core' with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
+			package: 'Zinc-Resource-Meta-Core' with: [ spec requires: #( 'Zinc-Resource-Meta-Encoder' 'Zinc-Character-Encoding-Core' ) ];
 			package: 'Zinc-Resource-Meta-Tests' with: [ spec requires: 'Zinc-Resource-Meta-Core' ];
+			package: 'Zinc-Resource-Meta-Encoder';
+			package: 'Zinc-Resource-Meta-Encoder-Tests' with: [ spec requires: 'Zinc-Resource-Meta-Encoder' ];
 			package: 'Zinc-HTTP' with: [ spec requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
 			package: 'Zinc-HTTP-Server' with: [ spec requires: #('Zinc-HTTP') ];
 			package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP') ];
@@ -36,7 +38,7 @@ baseline: spec
 		spec
 			group: 'default' with: #('Core' 'Tests');
 			group: 'Core' with: #('Zinc-HTTP' 'Zinc-HTTP-Server' 'Zinc-HTTP-Examples' 'Zinc-Zodiac-Core');
-			group: 'Tests' with: #('Zinc-Tests' 'Zinc-Server-Tests' 'Zinc-Character-Encoding-Tests' 'Zinc-Resource-Meta-Tests' 'Zodiac-Tests' 'Zinc-Zodiac-Tests');
+			group: 'Tests' with: #('Zinc-Tests' 'Zinc-Server-Tests' 'Zinc-Character-Encoding-Tests' 'Zinc-Resource-Meta-Tests' 'Zodiac-Tests' 'Zinc-Zodiac-Tests' 'Zinc-Resource-Meta-Encoder-Tests');
 			group: 'Character-Encoding' with: #('Zinc-Character-Encoding-Core' 'Zinc-Character-Encoding-Tests');
 			group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
 			group: 'Zodiac' with: #('Zodiac-Core' 'Zodiac-Tests');

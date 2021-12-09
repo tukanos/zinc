@@ -12,6 +12,7 @@ RwSimpleProjectLoadComponentV2 {
 		'Zinc-GemStone',
 		'Zinc-HTTP',
 		'Zinc-Resource-Meta-Core',
+		'Zinc-Resource-Meta-Encoder',
 		'Zinc-WebDAV'
 	],
 	#comment : ''
