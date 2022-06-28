@@ -1,3 +1,3 @@
 *zinc-http
 isStreamingResponse
-	^false
+  ^ false

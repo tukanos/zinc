@@ -46,4 +46,5 @@
 		"stop:" : "dkh 12/06/2014 15:00",
 		"stopLogging" : "SvenVanCaekenberghe 10/4/2011 12:35",
 		"withMaximumEntitySizeDo:" : "SvenVanCaekenberghe 9/5/2012 12:49",
-		"writeResponse:on:" : "PaulDeBruicker 6/24/2022 17:06" } }
+		"write:duringTransactionOn:" : "PaulDeBruicker 06/28/2022 14:25",
+		"writeResponse:on:" : "PaulDeBruicker 06/28/2022 14:22" } }
