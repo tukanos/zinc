@@ -14,6 +14,7 @@ Metacello image
 	baseline: #('ZincHTTPComponents');
 	silently;
 	get.
+
 Metacello image
 	baseline: #('ZincHTTPComponents');
 	silently;
