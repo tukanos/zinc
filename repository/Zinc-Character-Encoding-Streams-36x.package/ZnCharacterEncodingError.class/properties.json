@@ -1,5 +1,5 @@
 {
-	"category" : "Zinc-Character-Encoding-Core",
+	"category" : "Zinc-Character-Encoding-Streams-36x",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		 ],
-	"name" : "ZnNullEncoder",
+	"name" : "ZnCharacterEncodingError",
 	"pools" : [
 		 ],
-	"super" : "ZnCharacterEncoder",
+	"super" : "Error",
 	"type" : "normal" }

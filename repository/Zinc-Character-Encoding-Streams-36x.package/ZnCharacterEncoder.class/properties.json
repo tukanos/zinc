@@ -1,15 +1,13 @@
 {
-	"category" : "Zinc-Character-Encoding-Core",
+	"category" : "Zinc-Character-Encoding-Streams-36x",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"stream",
-		"encoder",
-		"peekedCharacter" ],
-	"name" : "ZnCharacterReadStream",
+		 ],
+	"name" : "ZnCharacterEncoder",
 	"pools" : [
 		 ],
 	"super" : "Object",

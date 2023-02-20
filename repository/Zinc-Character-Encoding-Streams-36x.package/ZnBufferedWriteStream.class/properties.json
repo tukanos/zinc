@@ -1,13 +1,15 @@
 {
-	"category" : "Zinc-Character-Encoding-Core",
+	"category" : "Zinc-Character-Encoding-Streams-36x",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		 ],
-	"name" : "ZnCharacterEncoder",
+		"stream",
+		"buffer",
+		"position" ],
+	"name" : "ZnBufferedWriteStream",
 	"pools" : [
 		 ],
 	"super" : "Object",
