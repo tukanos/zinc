@@ -1,0 +1,17 @@
+{
+	"category" : "Zinc-Character-Encoding-Streams-37x",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ByteTextConverters" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"identifier",
+		"byteToUnicode",
+		"unicodeToByte",
+		"strict" ],
+	"name" : "ZnByteEncoder",
+	"pools" : [
+		 ],
+	"super" : "ZnCharacterEncoder",
+	"type" : "normal" }
