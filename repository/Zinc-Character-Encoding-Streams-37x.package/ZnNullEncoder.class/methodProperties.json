@@ -1,7 +1,8 @@
 {
 	"class" : {
 		"handlesEncoding:" : "SvenVanCaekenberghe 12/17/2012 13:24",
-		"newForEncoding:" : "SvenVanCaekenberghe 1/25/2011 11:19" },
+		"newForEncoding:" : "SvenVanCaekenberghe 1/25/2011 11:19",
+		"newForEncoding:stringClass:" : "dkh 02/21/2023 14:03" },
 	"instance" : {
 		"decodeBytes:" : "SvenVanCaekenberghe 5/3/2012 11:32",
 		"encodeString:" : "SvenVanCaekenberghe 5/3/2012 11:32",
