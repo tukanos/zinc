@@ -4,7 +4,7 @@
 		"cp1252Mapping" : "SvenVanCaekenberghe 12/15/2012 19:39",
 		"cp1253Mapping" : "SvenVanCaekenberghe 12/15/2012 19:35",
 		"generateByteToUnicodeSpec:" : "SvenVanCaekenberghe 12/15/2012 20:02",
-		"handlesEncoding:" : "SvenVanCaekenberghe 1/25/2011 13:02",
+		"handlesEncoding:" : "dkh 02/21/2023 13:51",
 		"initialize" : "SvenVanCaekenberghe 1/15/2013 17:03",
 		"initializeByteTextConverters" : "SvenVanCaekenberghe 1/15/2013 17:01",
 		"iso885915Mapping" : "SvenVanCaekenberghe 12/15/2012 19:37",
