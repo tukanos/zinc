@@ -197,6 +197,8 @@ baseline: spec
                 includes: 'Zinc-Character-Encoding-Streams-36x' ];
         package: 'Zinc-Character-Encoding-GS24-Core'
           with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
+        package: 'Zinc-Character-Encoding-Tests'
+          with: [ spec requires: 'Zinc-Character-Encoding-Streams-36x' ];
         yourself ].
   spec
     for: #(#'gs2.x' #'gs3.0.x' #'gs3.1.x')
@@ -234,6 +236,8 @@ baseline: spec
                 includes: 'Zinc-Character-Encoding-Streams-37x' ];
         package: 'Zinc-Character-Encoding-GS32-Core'
           with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
+        package: 'Zinc-Character-Encoding-Tests'
+          with: [ spec requires: 'Zinc-Character-Encoding-Streams-37x' ];
         yourself ].
   spec
     for:
