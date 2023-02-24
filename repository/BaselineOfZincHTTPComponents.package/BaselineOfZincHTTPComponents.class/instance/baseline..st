@@ -197,13 +197,29 @@ baseline: spec
 				yourself ].
 	spec
 		for:
-			#(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x' #'gs3.7.x' #'gs3.8.x' #'gs3.9.x')
+			#(#'gs3.2.x' #'gs3.3.x' #'gs3.4.x' #'gs3.5.x' #'gs3.6.x')
 		do: [ 
 			spec
 				package: 'Zinc-Character-Encoding-Core'
 					with: [ spec includes: 'Zinc-Character-Encoding-GS32-Core' ];
 				package: 'Zinc-Character-Encoding-GS32-Core'
 					with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
+				yourself ].
+	spec
+		for:
+			#(#'gs3.7.x' #'gs3.8.x' #'gs3.9.x')
+		do: [ 
+			spec
+				package: 'Zinc-Character-Encoding-Core'
+					with: [ 
+						spec 
+							file: 'Zinc-Character-Encoding-Core.v37';
+							includes: 'Zinc-Character-Encoding-GS32-Core' ];
+				package: 'Zinc-Character-Encoding-GS32-Core'
+					with: [ 
+						spec 
+							file: 'Zinc-Character-Encoding-GS32-Core.v37';
+							requires: 'Zinc-Character-Encoding-Core' ];
 				yourself ].
 	spec
 		for:
