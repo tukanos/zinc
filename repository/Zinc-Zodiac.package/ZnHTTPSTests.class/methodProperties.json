@@ -5,11 +5,10 @@
 	"instance" : {
 		"disabledTestPayPal" : "SvenVanCaekenberghe 10/2/2012 14:55",
 		"ensureSocketStreamFactory" : "SvenVanCaekenberghe 7/4/2012 11:32",
-		"expectedFailures" : "dkh 10/12/2021 14:07",
 		"isNativeSSLPluginPresent" : "dkh 12/15/2015 11:47",
 		"setUp" : "dkh 12/15/2015 12:49",
 		"testAmazonAWS" : "dkh 03/17/2020 10:20",
-		"testGForceInria" : "dkh 12/15/2015 14:32",
+		"testGForceInria" : "dkh 04/19/2023 10:44",
 		"testGetPharoVersion" : "dkh 03/17/2020 10:24",
 		"testGmailEncrypted" : "dkh 10/26/2021 13:42",
 		"testGoogleEncrypted" : "dkh 10/26/2021 13:41",

@@ -1,10 +1,6 @@
 testing
 testGForceInria
-  | client |
-  self ensureSocketStreamFactory.
-  self isNativeSSLPluginPresent
-    ifFalse: [ ^ self ].
-  (client := ZnClient new) get: 'http://gforge.inria.fr/frs/?group_id=1299'.
-  self assert: client isSuccess.
-  self assert: (client contents includesSubstring: 'inria').
-  client close
+  "https://github.com/svenvc/zinc/commit/9707b755e5ae340ef54b56367ea2063c358f795e"
+
+  "TL;DR  Add dummy ZnHTTPSTests>>#testGForceInria (to fix spurious issue on Pharo 7) Oct. 9, 2021"
+
