@@ -10,11 +10,11 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-20.04
     strategy:
+      fail-fast: false
       matrix:
-        os: [ ubuntu-20.04 ]
         smalltalk: [ GemStone64-3.7.0, GemStone64-3.5.8,  GemStone64-3.6.8 ]
-    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: hpi-swa/setup-smalltalkCI@v1
