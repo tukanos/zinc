@@ -16,7 +16,7 @@ jobs:
         smalltalk: [ GemStone64-3.7.0, GemStone64-3.5.8,  GemStone64-3.6.8 ]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: ${{ matrix.smalltalk }}
