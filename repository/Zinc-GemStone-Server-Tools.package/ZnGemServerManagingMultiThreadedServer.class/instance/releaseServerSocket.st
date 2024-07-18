@@ -1,8 +1,14 @@
 private
 releaseServerSocket
-  "Release our server socket"
+	"Release our server socket"
 
-  serverSocket value ifNil: [ ^ self ].
-  self log debug: 'Releasing server socket'.
-  serverSocket value destroy.
-  serverSocket := nil
+	(SessionTemps current
+		at: #ZnGemServerManagingMultiThreadedServer_serverSocket
+		ifAbsent:[]
+	) ifNil:[ ^self ].
+
+	self log debug: 'Releasing server socket'.
+	(SessionTemps current at: #ZnGemServerManagingMultiThreadedServer_serverSocket) destroy.
+	SessionTemps current
+		at: #ZnGemServerManagingMultiThreadedServer_serverSocket
+		put: nil
