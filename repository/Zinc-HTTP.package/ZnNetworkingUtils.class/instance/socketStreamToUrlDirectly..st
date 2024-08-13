@@ -5,7 +5,11 @@ socketStreamToUrlDirectly: url
 	stream := (self streamClassForScheme: url scheme) 
 		openConnectionToHost: address
 		port: url portOrDefault
-		timeout: self timeout.  
-	self setSocketStreamParameters: stream.  
-	(#(https wss) includes: url scheme) ifTrue: [ stream connect ].  
+		timeout: self timeout.	
+	self setSocketStreamParameters: stream.	
+	(#(https wss) includes: url scheme)
+		ifTrue:
+			[stream
+				serverNameIndication: url host;
+				connect].	
 	^ stream
