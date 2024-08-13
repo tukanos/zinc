@@ -3,4 +3,6 @@ serverSocket
   "Return the server socket that I am using.
 	Will be nil when I am not running"
 
-  ^ serverSocket value
+	^ SessionTemps current
+		at: #ZnGemServerManagingMultiThreadedServer_serverSocket
+		ifAbsent:[]
