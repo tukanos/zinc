@@ -10,6 +10,9 @@ socketStreamToUrlDirectly: url
 	(#(https wss) includes: url scheme)
 		ifTrue:
 			[stream
-				serverNameIndication: url host;
+				"Avoid warning about unimplemented selector when Zodiac is not loaded."
+				perform: #serverNameIndication:
+				with: url host.
+			stream
 				connect].	
 	^ stream
