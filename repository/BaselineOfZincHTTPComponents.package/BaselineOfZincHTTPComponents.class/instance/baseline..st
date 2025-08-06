@@ -114,7 +114,6 @@ baseline: spec
 	spec
 		for: #'gemstone'
 		do: [ 
-			spec repository: 'github://GsDevKit/zinc:gs_master/repository'.
 			spec
 				baseline: 'GLASS1'
 					with: [ 
