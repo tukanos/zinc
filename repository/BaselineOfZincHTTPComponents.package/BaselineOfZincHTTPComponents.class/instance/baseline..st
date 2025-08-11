@@ -114,18 +114,17 @@ baseline: spec
 	spec
 		for: #'gemstone'
 		do: [ 
-			spec repository: 'github://GsDevKit/zinc:gs_master/repository'.
 			spec
 				baseline: 'GLASS1'
 					with: [ 
 							spec
 								loads: #('Base' 'Announcements');
 								repository: 'github://glassdb/glass:master/repository' ];
-				configuration: 'GsPharo'
+				baseline: 'PharoCompatibility'
 					with: [ 
 							spec
-								version: '0.9.3';
-								repository: 'http://seaside.gemtalksystems.com/ss/PharoCompat' ];
+								loads: #('Core');
+								repository: 'github://GsDevKit/PharoCompatibility:master/repository' ];
 				baseline: 'Cryptography'
 					with: [ 
 							spec
@@ -151,7 +150,7 @@ baseline: spec
 							spec
 								requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
 								includes: #('SocketStream') ];
-				package: 'Zinc-Tests' with: [ spec requires: #('GsPharo') ].
+				package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ].
 			spec
 				group: 'Core' with: #('Zinc-GemStone-Server-Tools');
 				group: 'CI' with: #('REST' 'WebSocket');
