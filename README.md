@@ -15,6 +15,7 @@ to deal with the HTTP networking protocol.
 
 [MIT Licensed](https://github.com/svenvc/zinc/blob/master/license.txt)
 
+
 ## Loading into GemStone
 
 1. Upgrade to the latest version of Metacello and Grease using [GsUpgrader](https://github.com/GsDevKit/gsUpgrader#gsupgrader-):
