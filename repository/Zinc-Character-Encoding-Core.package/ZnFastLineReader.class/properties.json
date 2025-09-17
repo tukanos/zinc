@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Zinc-Character-Encoding-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"readStream",
+		"cr",
+		"lf",
+		"bufferStream"
+	],
+	"name" : "ZnFastLineReader",
+	"type" : "normal"
+}

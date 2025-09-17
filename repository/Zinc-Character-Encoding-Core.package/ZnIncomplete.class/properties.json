@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnCharacterEncodingError",
+	"category" : "Zinc-Character-Encoding-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZnIncomplete",
+	"type" : "normal"
+}

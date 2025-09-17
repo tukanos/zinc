@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "JanVanDeSandt 3/21/2014 14:34",
+	"super" : "ZnOAuth2Session",
+	"category" : "Zinc-SSO-OAuth2-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"discoveryDocument",
+		"authenticationState",
+		"extraAuthenticationParameters"
+	],
+	"name" : "ZnOpenIDConnectSession",
+	"type" : "normal"
+}

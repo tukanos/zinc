@@ -1,3 +1,7 @@
 testing
 isExpired
-	^ (self expiresTimeStamp asUTC < TimeStamp current asUTC) or: [ self expires = 0 ]
+	| expirationTimeStamp |
+	(self hasAttribute: 'expire') ifFalse: [ ^ false ].
+	[ expirationTimeStamp := self expiresTimeStamp ] on: Error do: [ ^ false ].
+	"note that max-age (#maxage) is not used"
+	^ expirationTimeStamp asUTC < DateAndTime now asUTC

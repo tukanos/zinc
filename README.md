@@ -1,56 +1,142 @@
 # Zinc HTTP Components
 
-
 Zinc HTTP Components is an open-source Smalltalk framework 
 to deal with the HTTP networking protocol.
 
+Based on core classes modelling all main HTTP concepts, 
+a full featured HTTP client and server are provided.
 
-<http://zn.stfx.eu>
+Zinc is part of any [Pharo Smalltalk](https://www.pharo.org) version since 1.3.
 
 
-## Please read the [Zinc HTTP Components](https://github.com/svenvc/zinc/blob/master/zinc-http-components-paper.md) paper
+## CI Actions
+
+[![CI](https://github.com/svenvc/zinc/actions/workflows/CI.yml/badge.svg)](https://github.com/svenvc/zinc/actions/workflows/CI.yml)
+[![Pharo 7.0](https://img.shields.io/badge/Pharo-7.0-informational)](https://pharo.org)
+[![Pharo 8.0](https://img.shields.io/badge/Pharo-8.0-informational)](https://pharo.org)
+[![Pharo 9.0](https://img.shields.io/badge/Pharo-9.0-informational)](https://pharo.org)
+[![Pharo 10](https://img.shields.io/badge/Pharo-10-informational)](https://pharo.org)
+[![Pharo 11](https://img.shields.io/badge/Pharo-11-informational)](https://pharo.org)
+[![Pharo 12](https://img.shields.io/badge/Pharo-12-informational)](https://pharo.org)
+[![Pharo 13](https://img.shields.io/badge/Pharo-13-informational)](https://pharo.org)
 
 
-*Sven Van Caekenberghe* 
+## API
+
+Here are a couple of simple examples to give an impression of the API.
+You start a default (easy to reference) HTTP server with just one line of code.
+
+```Smalltalk
+ZnServer startDefaultOn: 1701.
+```
+
+Now you can browse locally to http://localhost:1701 - in particular 
+have a look at the `/routes` section and `/echo` - these are part of a set of demonstration handlers.
+
+Accessing the server that we just started from code is easy too.
+
+```Smalltalk
+ZnClient new 
+  url: ZnServer default localUrl; 
+  addPathSegment: #echo; 
+  entity: (ZnEntity text: 'Hello'); 
+  post.
+```
+
+This builds an HTTP POST to our server's `/echo` handler with a simple text as resource. 
+The server will echo information about the request it received, including the text resource that you posted.
+
+By default, the demonstration server has a couple of handlers, mostly for testing.
+You can add your own, to do additions (sum two numbers), for example.
+
+
+```Smalltalk
+ZnServer default delegate 
+  map: #adder to: [ :request | | x y sum |
+    x := (request uri queryAt: #x) asNumber.
+    y := (request uri queryAt: #y) asNumber.
+    sum := x + y.
+    ZnResponse ok: (ZnEntity text: sum asString) ].
+```
+
+This creates a new handler `/adder` that will take 2 query arguments, converts them to numbers and returns the result of adding them together.
+
+Using the full client, we can test our new functionality.
+
+```Smalltalk
+ZnClient new 
+  url: ZnServer default localUrl; 
+  addPathSegment: #adder;
+  queryAt: #x put: 1;
+  queryAt: #y put: 2;
+  get.
+```
+
+This builds an appropriate request to our `/adder` and executes it.
+By entering the proper URL directly, this becomes a one liner.
+
+```Smalltalk
+'http://localhost:1701/adder?x=1&y=2' asUrl retrieveContents.
+```
+
+
+## Documentation
+
+
+Over the years, various documentation has been written about Zinc HTTP Components. 
+Some of it is somewhat outdated. We list the most recent first.
+
+The code base has decent class and method comments, as well as unit tests and examples.
+
+The best starter documentation can be found in the 
+[Pharo Enterprise](http://books.pharo.org/enterprise-pharo/) book.
+
+In particular, in the following chapters (these no longer seem to exist):
+- [Client](https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Zinc-HTTP-Client/Zinc-HTTP-Client.html)
+- [Server](https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Zinc-HTTP-Server/Zinc-HTTP-Server.html)
+- [WebApp](https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/WebApp/WebApp.html)
+- [TeaPot](https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Teapot/Teapot.html)
+- [Encoding](https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/Zinc-Encoding-Meta/Zinc-Encoding-Meta.html)
+- [WebSockets](https://ci.inria.fr/pharo-contribution/job/EnterprisePharoBook/lastSuccessfulBuild/artifact/book-result/WebSockets/WebSockets.html)
+
+A live website can be found at [http://zn.stfx.eu](http://zn.stfx.eu). You can run part of this website locally.
+
+The original [Zinc HTTP Components](doc/zinc-http-components-paper.md) paper.
+
+The [Building and deploying your first web app with Pharo](doc/build-and-deploy-1st-webapp/build-deploy-1st-webapp.md) tutorial.
+
+There is a separate [GemStone README](README-gemstone.md).
+
+## Loading
+
+```Smalltalk
+Metacello new
+  repository: 'github://svenvc/zinc/repository';
+  baseline: 'ZincHTTPComponents';
+  load.
+```
+
+
+## Ethymology
+
+Any project needs a name. We also needed a namespace prefix for our Smalltalk classes. 
+We choose `Zinc` and `Zn` or `zn` respectively.
+
+```
+zinc |zi ng k|
+noun
+the chemical element of atomic number 30, a silvery-white metal 
+that is a constituent of brass and is used for coating (galvanizing) 
+iron and steel to protect against corrosion. (Symbol: Zn)
+ORIGIN mid 17th cent.: from German Zink, of unknown origin.
+```
+
+Here is the Wikipedia entry: [Zinc](http://en.wikipedia.org/wiki/Zinc).
+Apart from the fact that this is a nice name, don't go searching for a hidden meaning:
+there is none.
+
+
+*Sven Van Caekenberghe*
 
 
 [MIT Licensed](https://github.com/svenvc/zinc/blob/master/license.txt)
-
-## Loading into GemStone
-
-1. Upgrade to GLASS 1.0-beta.9.3
-   
-    ```Smalltalk
-    | glassVersion |
-    glassVersion := ConfigurationOfGLASS project currentVersion.
-    glassVersion versionNumber < '1.0-beta.9.3' asMetacelloVersionNumber
-      ifTrue: [
-        Transcript
-          cr;
-          show: '-----Upgrading GLASS to 1.0-beta.9.3'.
-        GsDeployer deploy: [
-          Gofer new
-            package: 'ConfigurationOfGLASS';
-            url: 'http://seaside.gemtalksystems.com/ss/MetacelloRepository';
-            load.
-          (((System stoneVersionAt: 'gsVersion') beginsWith: '2.') and: [glassVersion versionNumber < '1.0-beta.9.2' asMetacelloVersionNumber])
-            ifTrue: [
-              ((Smalltalk at: #ConfigurationOfGLASS) project version: '1.0-beta.9.2') load ].
-          ((Smalltalk at: #ConfigurationOfGLASS) project version: '1.0-beta.9.3') load.
-        ] ]
-      ifFalse: [
-        Transcript
-          cr;
-          show: '-----GLASS already upgraded to 1.0-beta.9.3' ].
-   ```
-2. Install Zinc (will install [GLASS](https://github.com/glassdb/glass)):
-
-    ```Smalltalk
-    Metacello new
-      baseline: 'Zinc';
-      repository: 'github://GsDevKit/zinc:gs_master/repository';
-      load: 'Tests'.
-    ```
-
-## Travis Status [![Build Status](https://travis-ci.org/GsDevKit/zinc.png?branch=gs_master)](https://travis-ci.org/gs_master/zinc)
-

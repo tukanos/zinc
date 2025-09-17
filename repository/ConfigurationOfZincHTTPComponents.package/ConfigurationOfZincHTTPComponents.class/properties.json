@@ -1,14 +1,15 @@
 {
-	"category" : "ConfigurationOfZincHTTPComponents",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		"LastVersionLoad" ],
-	"commentStamp" : "<historical>",
-	"instvars" : [
-		"project" ],
-	"name" : "ConfigurationOfZincHTTPComponents",
-	"pools" : [
-		 ],
+	"commentStamp" : "SvenVanCaekenberghe 3/14/2018 16:56",
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "ConfigurationOfZincHTTPComponents",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"LastVersionLoad"
+	],
+	"instvars" : [
+		"project"
+	],
+	"name" : "ConfigurationOfZincHTTPComponents",
+	"type" : "normal"
+}

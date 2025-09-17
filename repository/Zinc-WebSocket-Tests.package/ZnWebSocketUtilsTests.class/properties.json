@@ -1,14 +1,11 @@
 {
-	"category" : "Zinc-WebSocket-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "ZnWebSocketUtilsTests",
-	"pools" : [
-		 ],
+	"commentStamp" : "SvenVanCaekenberghe 2/24/2020 11:25",
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Zinc-WebSocket-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZnWebSocketUtilsTests",
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
+	"commentStamp" : "",
+	"super" : "OrderedDictionary",
 	"category" : "Zinc-Resource-Meta-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
-		"limit" ],
+		"limit"
+	],
 	"name" : "ZnMultiValueDictionary",
-	"pools" : [
-		 ],
-	"super" : "Dictionary",
-	"type" : "normal" }
+	"type" : "normal"
+}

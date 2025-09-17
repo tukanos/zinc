@@ -1,10 +1,11 @@
 initialize-release
 readFrom: stream
 	"We parse from stream, limited to content length if available."
-	
-	| readStream |
+
+	| rawStream readStream |
 	representation := nil.
-	contentLength isNil
-		ifTrue: [ readStream := ZnCharacterReadStream on: stream encoding: 'ascii' ]
-		ifFalse: [ (readStream := ZnLimitedReadStream on: stream limit: contentLength) ascii ].
+	rawStream := contentLength
+		ifNil: [ stream ]
+		ifNotNil: [ ZnLimitedReadStream on: stream limit: contentLength ].
+	readStream := ZnCharacterReadStream on: rawStream encoding: 'ascii'.
 	fields := ZnResourceMetaUtils parseQueryFrom: readStream

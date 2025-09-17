@@ -1,4 +1,4 @@
-accessing-path
+accessing - path
 closePath
-	self isSlash
-		ifFalse: [ self addPathSegment: #/ ]
+	self isDirectoryPath
+		ifFalse: [ self addPathSegment: $/ ]

@@ -1,13 +1,13 @@
 accessing
 acceptEntityDescription: entity
 	"Take over the content type and length from entity"
-	
-	entity 
+
+	entity
 		ifNotNil: [
 			self
-				at: 'Content-Type' put: entity contentType printString;
-				at: 'Content-Length' put: entity contentLength printString ]
+				contentType: entity contentType;
+				contentLength: entity contentLength ]
 		ifNil: [
-			self 
-				clearContentType; 
+			self
+				clearContentType;
 				clearContentLength ]

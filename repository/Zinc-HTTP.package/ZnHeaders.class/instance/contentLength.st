@@ -1,7 +1,7 @@
 accessing
 contentLength
 	"We allow multiple content-length headers provided they are identical."
-	
+
 	| value |
 	(value := self headers at: 'Content-Length') isString
 		ifFalse: [

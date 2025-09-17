@@ -4,12 +4,10 @@ executeOneRequestResponseOn: stream
 	#readRequest: #handleRequest: and #writeResponse:on:
 	Indicate that we intend to close the connection afterwards"
 
-	| request response |
-	self log debug: 'Executing 1 request/response cycle'.
-	ZnCurrentServer
-		value: self
-		during: [ 
-			request := self readRequest: stream.
-			response := self handleRequest: request.
-			response setConnectionClose.
-			self writeResponse: response on: stream ]
+	| request response timing |
+	timing := ZnServerTransactionTiming new.
+	request := self readRequest: stream timing: timing.
+	response := self handleRequest: request timing: timing.
+	response setConnectionClose.
+	self writeResponse: response on: stream timing: timing.
+	self logServerTransactionRequest: request response: response timing: timing

@@ -1,3 +1,5 @@
-initialize-release
+initialization
 initialize
-	request := ZnRequest empty
+	super initialize.
+	request := ZnRequest empty.
+	self loggingOn

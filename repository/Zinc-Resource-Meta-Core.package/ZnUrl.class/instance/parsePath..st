@@ -5,9 +5,9 @@ parsePath: stream
 		segment := String streamContents: [ :stringStream |
 			[ stream atEnd not and: [ stream peek ~= $/ ] ] whileTrue: [
 				stringStream nextPut: stream next ] ].
-		(segment isEmpty or: [ segment = '.' ])
+		segment = '.'
 			ifFalse: [
-				segment = '..' 
+				segment = '..'
 					ifTrue: [ self removeLastPathSegment ]
 					ifFalse: [ self addPathSegment: (self decodePercent: segment) ] ].
 		((stream peekFor: $/) and: [ stream atEnd ])

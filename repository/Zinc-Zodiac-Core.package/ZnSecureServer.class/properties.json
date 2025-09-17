@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnMultiThreadedServer",
+	"category" : "Zinc-Zodiac-Core-Zinc-Zodiac-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"certificate"
+	],
+	"name" : "ZnSecureServer",
+	"type" : "normal"
+}

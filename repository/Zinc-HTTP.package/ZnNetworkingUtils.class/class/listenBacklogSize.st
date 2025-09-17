@@ -1,5 +1,6 @@
 constants
 listenBacklogSize
-	"Server socket backlog size (number of pending connection waiting to be accepted)"
-	
-	^ 32
+	"Server socket listen backlog size.
+	The number of pending connections queued up, waiting to be accepted, at any one time."
+
+	^ ZnCurrentOptions at: #listenBacklogSize

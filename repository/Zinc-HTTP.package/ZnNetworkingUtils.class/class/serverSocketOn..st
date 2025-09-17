@@ -1,4 +1,4 @@
 networking
 serverSocketOn: port
-	^ self default 
+	^ self default
 		serverSocketOn: port

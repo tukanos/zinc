@@ -1,3 +1,5 @@
 accessing
-processId 
+processId
+	"Return a numeric process id"
+	
 	^ processId

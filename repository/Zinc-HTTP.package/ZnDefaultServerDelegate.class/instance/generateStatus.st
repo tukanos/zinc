@@ -1,19 +1,13 @@
 private
 generateStatus
 	"Generate an HTML page with the state of the server"
-	
-	^ String streamContents: [ :stream |
-		stream << ZnConstants standardHtmlDocType.
-		stream nextPutAll: '<html><head><title>ZnServer Status</title></head>'.
-		stream nextPutAll: '<body><h1>ZnServer Status</h1>'.
-		stream nextPutAll: '<p>I am '; print: ZnCurrentServer value; nextPutAll: '</p>'.
-		stream nextPutAll: '<p>'; nextPutAll: self systemVersionInfo; nextPutAll: '</p>'.
-		stream nextPutAll: '<pre>'; nextPutAll: self vmStats; nextPutAll: '</pre>'.  
-		stream nextPutAll: '<h1>Processes</h1><ol>'.
-		self processes do: [ :each |
-			stream 
-				nextPutAll: '<li>'; 
-				nextPutAll: each name; space; nextPut: $[; print: each priority; nextPut: $]; nextPutAll: '<br/>'; nextPutAll: each printString;
-				nextPutAll: '</li>' ].
-		stream nextPutAll: '</ol>'.  
-		stream nextPutAll: '</body></html>' ]
+
+	^ self brandedPage: 'ZnServer Status' do: [ :html |
+		html tag: #p do: [ html << 'I am '; print: ZnCurrentServer value ].
+		html tag: #ul do: [ 
+			html tag: #li with: self serverVersion.
+			html tag: #li with: self uptime.
+			html tag: #li with: self memoryStatistics.
+			html tag: #li with: self serverClock ].
+		html tag: #h1 with: 'Processes'.
+		self processesOn: html ]

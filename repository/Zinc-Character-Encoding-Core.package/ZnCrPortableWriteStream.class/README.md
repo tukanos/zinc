@@ -1,0 +1,1 @@
+This class has been replaced by ZnNewLineWriterStream

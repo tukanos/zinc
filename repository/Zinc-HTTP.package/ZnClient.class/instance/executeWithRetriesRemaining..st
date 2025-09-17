@@ -1,11 +1,13 @@
-private protocol
+private - protocol
 executeWithRetriesRemaining: retryCount
-	^ [ self executeWithRedirectsRemaining: self maxNumberOfRedirects ]
-		on: NetworkError, ZnParseError, ZnCharacterEncodingError, ZnUnknownScheme, ZnPortNotANumber
+	^ [ self 
+			executeWithRedirectsRemaining: self maxNumberOfRedirects
+			trail: OrderedCollection new ]
+		on: self retryExceptionSet
 		do: [ :exception |
 			retryCount > 0
 				ifTrue: [
-					self 
+					self
 						handleRetry: exception;
 						executeWithRetriesRemaining: retryCount - 1 ]
 				ifFalse: [

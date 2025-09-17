@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnLogEvent",
+	"category" : "Zinc-HTTP-Logging",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"serverId"
+	],
+	"name" : "ZnServerLogEvent",
+	"type" : "normal"
+}

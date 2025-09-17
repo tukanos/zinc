@@ -1,3 +1,3 @@
-private
-processId: integer
-	processId := integer
+initialize
+processId: anObject
+	processId := anObject

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Notification",
+	"category" : "Zinc-HTTP-Exceptions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"response"
+	],
+	"name" : "ZnRespond",
+	"type" : "normal"
+}

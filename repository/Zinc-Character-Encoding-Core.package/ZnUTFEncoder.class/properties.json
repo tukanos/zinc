@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnCharacterEncoder",
+	"category" : "Zinc-Character-Encoding-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ignoreByteOrderMark"
+	],
+	"name" : "ZnUTFEncoder",
+	"type" : "normal"
+}

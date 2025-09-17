@@ -1,15 +1,13 @@
 {
-	"category" : "Zinc-HTTP-Support",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		"DefaultMaximumEntitySize",
-		"HTTPStatusCodes" ],
-	"commentStamp" : "SvenVanCaekenberghe 1/18/2011 11:01",
-	"instvars" : [
-		 ],
-	"name" : "ZnConstants",
-	"pools" : [
-		 ],
+	"commentStamp" : "",
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "Zinc-HTTP-Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"HTTPStatusCodes"
+	],
+	"instvars" : [ ],
+	"name" : "ZnConstants",
+	"type" : "normal"
+}

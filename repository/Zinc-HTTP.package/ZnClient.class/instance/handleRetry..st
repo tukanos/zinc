@@ -1,5 +1,5 @@
-private protocol
+private - protocol
 handleRetry: exception
-	self noteRetrying: exception.
+	self logRetrying: exception.
 	self close.
-	(Delay forSeconds: self retryDelay) wait.
+	(Delay forSeconds: self retryDelay) wait

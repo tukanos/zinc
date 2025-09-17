@@ -1,5 +1,6 @@
-initialize-release
-initialize 
-	self timeStamp: TimeStamp now.
-	self category: #info.  
-	self processId: ZnUtils currentProcessID
+initialization
+initialize
+	super initialize.
+	timestamp := DateAndTime now.
+	id := self nextId.
+	processId := ZnUtils currentProcessID

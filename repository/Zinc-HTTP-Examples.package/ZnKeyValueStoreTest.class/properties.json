@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Zinc-HTTP-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"client",
+		"server"
+	],
+	"name" : "ZnKeyValueStoreTest",
+	"type" : "normal"
+}

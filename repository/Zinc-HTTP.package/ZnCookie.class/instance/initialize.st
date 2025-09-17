@@ -1,3 +1,3 @@
-initialize-release
-initialize 
-	attributes := Dictionary new.
+initialization
+initialize
+	attributes := Dictionary new

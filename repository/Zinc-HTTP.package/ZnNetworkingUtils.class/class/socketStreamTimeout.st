@@ -1,6 +1,5 @@
 constants
 socketStreamTimeout
-	"Access the current timeout in seconds for SocketStream IO"
-	
-	^ ZnConnectionTimeout value 
-		ifNil: [ ZnNetworkingUtils defaultSocketStreamTimeout ]
+	"Return the timeout in seconds for network socket stream operations like connecting, reading and writing."
+
+	^ ZnCurrentOptions at: #socketStreamTimeout 

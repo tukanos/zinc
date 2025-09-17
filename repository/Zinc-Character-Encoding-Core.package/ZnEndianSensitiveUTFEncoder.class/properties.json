@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnUTFEncoder",
+	"category" : "Zinc-Character-Encoding-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"endianness",
+		"identifier"
+	],
+	"name" : "ZnEndianSensitiveUTFEncoder",
+	"type" : "normal"
+}

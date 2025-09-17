@@ -8,11 +8,10 @@ serveConnectionOn: listeningSocket
 	socket := listeningSocket waitForAcceptFor: self acceptWaitTimeout.
 	socket ifNil: [ ^ self noteAcceptWaitTimedOut ].
 	stream := self socketStreamOn: socket.
-	[ 
+	[
 	[ self executeOneRequestResponseOn: stream ]
-		ensure: [ 
-			self log debug: 'Closing stream'.
+		ensure: [
+			self logConnectionClosed: stream.
 			stream close ] ]
-		ifCurtailed: [ 
-			self log debug: 'Destroying socket'.
+		ifCurtailed: [
 			socket destroy ]

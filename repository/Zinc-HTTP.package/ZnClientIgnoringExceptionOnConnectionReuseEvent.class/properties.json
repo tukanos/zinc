@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnClientLogEvent",
+	"category" : "Zinc-HTTP-Logging",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exception"
+	],
+	"name" : "ZnClientIgnoringExceptionOnConnectionReuseEvent",
+	"type" : "normal"
+}
