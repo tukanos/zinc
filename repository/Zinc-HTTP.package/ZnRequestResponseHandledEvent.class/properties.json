@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnServerLogEvent",
+	"category" : "Zinc-HTTP-Logging",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"request",
+		"response",
+		"duration"
+	],
+	"name" : "ZnRequestResponseHandledEvent",
+	"type" : "normal"
+}

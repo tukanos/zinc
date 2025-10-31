@@ -1,15 +1,14 @@
 {
+	"commentStamp" : "",
+	"super" : "Error",
 	"category" : "Zinc-Character-Encoding-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"byteString",
-		"wideString" ],
+		"wideString"
+	],
 	"name" : "ZnByteStringBecameWideString",
-	"pools" : [
-		 ],
-	"super" : "Notification",
-	"type" : "normal" }
+	"type" : "normal"
+}

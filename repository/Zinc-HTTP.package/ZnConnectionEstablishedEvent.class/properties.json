@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnClientLogEvent",
+	"category" : "Zinc-HTTP-Logging",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hostname",
+		"port",
+		"address",
+		"duration",
+		"proxy"
+	],
+	"name" : "ZnConnectionEstablishedEvent",
+	"type" : "normal"
+}

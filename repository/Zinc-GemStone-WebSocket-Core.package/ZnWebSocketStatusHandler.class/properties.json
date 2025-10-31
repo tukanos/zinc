@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "<historical>",
+<<<<<<< HEAD
+	"instvars" : [
+		"gemServer" ],
+	"name" : "ZnWebSocketStatusHandler",
+	"pools" : [
+		 ],
+=======
+>>>>>>> upstream/master
+	"super" : "Object",
+	"category" : "Zinc-WebSocket-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZnWebSocketStatusHandler",
+	"type" : "normal"
+}

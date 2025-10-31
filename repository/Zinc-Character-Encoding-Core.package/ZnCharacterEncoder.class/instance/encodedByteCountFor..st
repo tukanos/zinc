@@ -1,5 +1,7 @@
-converting
+encoding - decoding
 encodedByteCountFor: character
 	"Return how many bytes are needed to encode character"
-	
-	self subclassResponsibility
+
+	"We should use #codePoint but #asInteger is faster"
+
+	^ self encodedByteCountForCodePoint: character asInteger

@@ -1,16 +1,17 @@
 {
+	"commentStamp" : "",
+	"super" : "Object",
 	"category" : "Zinc-HTTP-Support",
-	"classinstvars" : [
-		 ],
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [
-		"Default",
-		"DefaultSocketStreamTimeout" ],
-	"commentStamp" : "<historical>",
+		"Default"
+	],
 	"instvars" : [
 		"socketStreamClass",
-		"secureSocketStreamClass" ],
+		"secureSocketStreamClass",
+		"sslSessionClass"
+	],
 	"name" : "ZnNetworkingUtils",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

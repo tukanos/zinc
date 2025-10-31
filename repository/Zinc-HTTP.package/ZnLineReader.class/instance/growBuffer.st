@@ -1,7 +1,7 @@
 private
 growBuffer
 	| newBuffer |
-	buffer size >= limit 
+	buffer size >= limit
 		ifTrue: [
 			(ZnLineTooLong limit: limit) signal ].
 	newBuffer := String new: buffer size * 2.

@@ -1,9 +1,9 @@
-as yet unclassified
+converting
 parseHttpDate: string
 	"self parseHttpDate: 'Tue, 13 Sep 2011 08:04:49 GMT'."
 	"self parseHttpDate: 'Tue, 13-Sep-2011 08:04:51 GMT'."
 	"self parseHttpDate: 'Tue Jan 01 00:00:01 2036 GMT'."
-	
+
 	| tokens day month year hour minute second months map yearToken |
 	tokens := (string findTokens: #( $ $- $: $, )) allButFirst.
 	tokens last = 'GMT' ifTrue: [ tokens := tokens allButLast ].
@@ -27,4 +27,4 @@ parseHttpDate: string
 	hour := Integer readFrom: (tokens at: map fourth) ifFail: [ 0 ].
 	minute := Integer readFrom: (tokens at: map fifth) ifFail: [ 0 ].
 	second := Integer readFrom: (tokens at: map sixth) ifFail: [ 0 ].
-	^ TimeStamp year: year month: month day: day hour: hour minute: minute second: second offset: Duration zero
+	^ DateAndTime year: year month: month day: day hour: hour minute: minute second: second offset: Duration zero

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Zinc-Resource-Meta-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"globalDefault"
+	],
+	"instvars" : [
+		"options",
+		"parent",
+		"writable"
+	],
+	"name" : "ZnOptions",
+	"type" : "normal"
+}

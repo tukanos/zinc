@@ -1,4 +1,5 @@
 class initialization
 initialize
-	self initializeMimeTypes.
-	self initializeExtensionsMap
+	"Last forced update: 20170829"
+
+	self initializeTextSubTypeFragments

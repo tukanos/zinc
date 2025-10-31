@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "HolgerHansPeterFreyther 11/11/2015 14:25",
+	"super" : "ZnExampleStorageRestCall",
+	"category" : "Zinc-REST-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZnExampleStorageNotificationRestCall",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"category" : "Zinc-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ZnGsPersistentServerTest",
+	"pools" : [
+		 ],
+	"super" : "ZnNewGsServerTest",
+	"type" : "normal" }

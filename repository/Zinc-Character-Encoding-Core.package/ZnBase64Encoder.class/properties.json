@@ -1,18 +1,22 @@
 {
+	"commentStamp" : "",
+	"super" : "Object",
 	"category" : "Zinc-Character-Encoding-Core",
-	"classinstvars" : [
-		 ],
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [
 		"DefaultAlphabet",
-		"DefaultInverse" ],
-	"commentStamp" : "<historical>",
+		"DefaultInverse"
+	],
 	"instvars" : [
 		"alphabet",
 		"inverse",
 		"lineLength",
-		"lineEnd" ],
+		"lineEnd",
+		"whitespace",
+		"padding",
+		"strict"
+	],
 	"name" : "ZnBase64Encoder",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

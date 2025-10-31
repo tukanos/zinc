@@ -1,4 +1,4 @@
 networking
 serverSocketOn: port interface: address
-	^ self default 
+	^ self default
 		serverSocketOn: port interface: address

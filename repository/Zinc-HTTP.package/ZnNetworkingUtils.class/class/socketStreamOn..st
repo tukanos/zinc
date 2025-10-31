@@ -1,4 +1,4 @@
 networking
 socketStreamOn: socket
-	^ self default 
+	^ self default
 		socketStreamOn: socket

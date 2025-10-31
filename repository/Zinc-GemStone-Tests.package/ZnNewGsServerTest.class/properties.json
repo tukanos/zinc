@@ -1,0 +1,15 @@
+{
+	"category" : "Zinc-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"InteractiveRemoteServer",
+		"StaticRemoteServer" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ZnNewGsServerTest",
+	"pools" : [
+		 ],
+	"super" : "ZnGsServerTest",
+	"type" : "normal" }

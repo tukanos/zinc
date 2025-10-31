@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnEncodedStream",
+	"category" : "Zinc-Character-Encoding-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"peeked"
+	],
+	"name" : "ZnEncodedReadStream",
+	"type" : "normal"
+}

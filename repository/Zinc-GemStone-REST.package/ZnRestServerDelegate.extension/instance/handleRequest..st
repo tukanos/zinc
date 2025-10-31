@@ -1,0 +1,15 @@
+*zinc-gemstone-rest
+handleRequest: request
+  "Protocol: public"
+  | call |
+  (call := self match: request) ifNil: [ ^ self noHandlerFound: request ].
+  (self authenticate: call)
+    ifFalse: [ ^ self callUnauthorized: request ].
+  ^ [ self execute: call ]
+    on: Error
+    do: [ :exception | 
+      request server debugMode
+        ifTrue: [ exception pass ]
+        ifFalse: [ 
+          request server logServerError: exception.
+          self serverError: request exception: exception ] ]

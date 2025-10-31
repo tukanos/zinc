@@ -1,3 +1,5 @@
-conversions
+converting
 decodePercent: string
-	^ ZnPercentEncoder new decode: string
+	^ ZnPercentEncoder new
+		decodePlusAsSpace: false;
+		decode: string

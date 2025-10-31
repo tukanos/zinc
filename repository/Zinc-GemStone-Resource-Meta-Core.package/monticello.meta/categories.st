@@ -1,0 +1,1 @@
+self packageOrganizer ensurePackage: #'Zinc-GemStone-Resource-Meta-Core' withTags: #()!

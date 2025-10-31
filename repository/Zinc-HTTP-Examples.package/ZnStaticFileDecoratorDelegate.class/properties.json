@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Zinc-HTTP-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"delegate",
+		"staticDelegate"
+	],
+	"name" : "ZnStaticFileDecoratorDelegate",
+	"type" : "normal"
+}
