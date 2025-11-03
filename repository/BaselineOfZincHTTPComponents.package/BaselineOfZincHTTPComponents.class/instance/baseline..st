@@ -4,28 +4,28 @@ baseline: spec
     spec for: #common do: [
         spec
             package: 'Zinc-Character-Encoding-Core';
-            package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
-            package: 'Zinc-Resource-Meta-Core' with: [ spec requires: 'Zinc-Character-Encoding-Core' ];
-            package: 'Zinc-Resource-Meta-Tests' with: [ spec requires: 'Zinc-Resource-Meta-Core' ];
+            package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
+            package: 'Zinc-Resource-Meta-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
+            package: 'Zinc-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP' with: [ 
                 spec postLoadDoIt: #recompileZnLogEventHierarchy; requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP') ];
-            package: 'Zinc-Tests' with: [ spec requires: 'Zinc-HTTP' ].
+            package: 'Zinc-Tests' with: [ spec requires: #('Zinc-HTTP') ].
         spec
             package: 'Zinc-AWS' with: [ spec requires: #('Zinc-HTTP' 'XMLParser') ];
             package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
-            package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP' ];
-            package: 'Zinc-WebSocket-Tests' with: [ spec requires: 'Zinc-WebSocket-Core' ];
+            package: 'Zinc-WebSocket-Core' with: [ spec requires: #('Zinc-HTTP') ];
+            package: 'Zinc-WebSocket-Tests' with: [ spec requires: #('Zinc-WebSocket-Core') ];
             package: 'Zinc-SSO-OAuth1-Core' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
             package: 'Zinc-SSO-OAuth2-Core' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
             package: 'Zinc-SSO-OpenID-Core' with: [ spec requires: #('Zinc-HTTP' 'XMLParser') ];
             package: 'Zinc-SSO-Demo' with: [ spec requires: #('Zinc-SSO-OAuth1-Core' 'Zinc-SSO-OAuth2-Core' 'Zinc-SSO-OpenID-Core') ];
             package: 'Zinc-SSO-OAuth1-Tests' with: [ spec requires: #('Zinc-SSO-OAuth1-Core') ];
             package: 'Zinc-SSO-OpenID-Tests' with: [ spec requires: #('Zinc-SSO-OpenID-Core') ];
-            package: 'Zinc-WebDAV' with: [ spec requires: 'Zinc-HTTP' ];
-            package: 'Zinc-WWS-Server' with: [ spec requires: 'Zinc-HTTP' ];
-            package: 'Zinc-WWS-Client' with: [ spec requires: 'Zinc-HTTP' ];
-            package: 'Zinc-Server-Sent-Events' with: [ spec requires: 'Zinc-HTTP' ].
+            package: 'Zinc-WebDAV' with: [ spec requires: #('Zinc-HTTP') ];
+            package: 'Zinc-WWS-Server' with: [ spec requires: #('Zinc-HTTP') ];
+            package: 'Zinc-WWS-Client' with: [ spec requires: #('Zinc-HTTP') ];
+            package: 'Zinc-Server-Sent-Events' with: [ spec requires: #('Zinc-HTTP') ].
         spec
             group: 'default' with: #('Core' 'Tests');
             group: 'Core' with: #('Zinc-HTTP' 'Zinc-HTTP-Examples');
@@ -61,16 +61,20 @@ baseline: spec
                                     loads: #('Core' 'Tests');
                                     repository: 'github://svenvc/zodiac:master/repository' ].
                 spec
-                    package: 'Zinc-Pharo-Character-Encoding-Core' with: [ spec requires:  #('Zinc-Character-Encoding-Core') ];
-                    package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec
-                                                                               requires:  #('Zinc-Character-Encoding-Tests'
-                                                                                            'Zinc-Pharo-Character-Encoding-Core') ];
-                    package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: 'Zinc-HTTP-Examples' ];
-                    package: 'Zinc-Pharo-HTTP' with: [ spec requires: 'Zinc-HTTP' ];
+                    package: 'Zinc-Character-Encoding-Core' with: [ spec includes: #('Zinc-Pharo-Character-Encoding-Core') ];
+                    package: 'Zinc-Character-Encoding-Tests' with: [ spec includes: #('Zinc-Pharo-Character-Encoding-Tests') ];
+                    package: 'Zinc-Resource-Meta-Core' with: [ spec includes: #('Zinc-Pharo-Resource-Meta-Core') ];
+                    package: 'Zinc-HTTP' with: [ spec includes: #('Zinc-Pharo-HTTP') ];
+                    package: 'Zinc-HTTP-Examples' with: [ spec includes: #('Zinc-HTTP-Examples') ];
+
+                    package: 'Zinc-Pharo-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
+                    package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests') ];
+                    package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
+                    package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
+                    package: 'Zinc-Pharo-HTTP' with: [ spec requires: #('Zinc-HTTP') ];
                     package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
-                    package: 'Zinc-Zodisac-Tests' with: [ spec requires:  #('Zinc-Zodiac-Core') ].
+                    package: 'Zinc-Zodiac-Tests' with: [ spec includes: #('Zinc-Zodiac-Core') ].
                 spec
-                    "group: 'Tests' with: #('Zinc-Zodiac-Tests');"
                     group: 'ZodiacSSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests').
                     "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')"  "alias" ].
 
@@ -111,8 +115,8 @@ baseline: spec
                     package: 'Zinc-GemStone-Character-Encoding-Tests' with: [ spec
                                                                                   requires:  #('Zinc-Character-Encoding-Tests'
                                                                                              'Zinc-GemStone-Character-Encoding-Core') ];
-                    package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: 'Zinc-HTTP-Examples' ];
-                    package: 'Zinc-GemStone-HTTP' with: [ spec requires: 'Zinc-HTTP' ];
+                    package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
+                    package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-HTTP') ];
                     package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
                     package: 'Zinc-Zodiac-Tests' with: [ spec requires:  #('Zinc-Zodiac-Core') ];
                     package: 'SocketStream';
@@ -136,9 +140,9 @@ baseline: spec
             do: [
                 spec
                     package: 'Zinc-Character-Encoding-Tests'
-                        with: [ spec includes: 'Zinc-Character-Encoding-GS3-Tests' ];
+                        with: [ spec includes: #('Zinc-Character-Encoding-GS3-Tests') ];
                     package: 'Zinc-Character-Encoding-GS3-Tests'
-                        with: [ spec requires: 'Zinc-Character-Encoding-Tests' ];
+                        with: [ spec requires: #('Zinc-Character-Encoding-Tests') ];
                     package: 'Zinc-WebSocket-Core'
                         with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ] ].
         spec
@@ -148,8 +152,8 @@ baseline: spec
                     package: 'Zinc-Character-Encoding-Core'
                         with: [ spec
                                     file: 'Zinc-Character-Encoding-Core.v37';
-                                    includes: 'Zinc-Character-Encoding-GS32-Core' ];
+                                    includes: #('Zinc-Character-Encoding-GS32-Core') ];
                     package: 'Zinc-Character-Encoding-GS32-Core'
                         with: [ spec 
                                     file: 'Zinc-Character-Encoding-GS32-Core.v37';
-                                    requires: 'Zinc-Character-Encoding-Core' ] ].
+                                    requires: #('Zinc-Character-Encoding-Core') ] ].
