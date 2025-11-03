@@ -68,11 +68,11 @@ baseline: spec
                     package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: 'Zinc-HTTP-Examples' ];
                     package: 'Zinc-Pharo-HTTP' with: [ spec requires: 'Zinc-HTTP' ];
                     package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
-                    package: 'Zinc-Zodiac-Tests' with: [ spec requires:  #('Zinc-Zodiac-Core') ].
+                    package: 'Zinc-Zodisac-Tests' with: [ spec requires:  #('Zinc-Zodiac-Core') ].
                 spec
-                    group: 'Tests' with: #('Zodiac-Tests');
-                    group: 'SSL' with: #('Zodiac-Core' 'Zodiac-Tests');
-                    group: 'Zodiac' with: #('SSL') ]. "alias"
+                    "group: 'Tests' with: #('Zinc-Zodiac-Tests');"
+                    group: 'ZodiacSSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests').
+                    "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')"  "alias" ].
 
         spec
             for: #'gemstone'
@@ -129,8 +129,8 @@ baseline: spec
                 spec
                     group: 'Core' with: #('Zinc-GemStone-Server-Tools');
                     group: 'CI' with: #('REST' 'WebSocket');
-                    group: 'SSL' with: #('Zinc-Zodiac-Core''Zodiac');
-                    group: 'Zodiac' with: #('SSL') ]. "alias"
+                    group: 'SSL' with: #('Zinc-Zodiac-Core''Zodiac').
+                    "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')" "alias" ].
         spec
             for: #'gs3.x'
             do: [
