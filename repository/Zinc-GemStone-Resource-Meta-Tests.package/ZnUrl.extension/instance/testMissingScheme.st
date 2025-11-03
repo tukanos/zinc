@@ -1,5 +1,6 @@
-testing
+*zinc-gemstone-tests
 testMissingScheme
+	"Protocol: testing"
 	| url |
 	url := 'www.example.com' asZnUrl.
 	self assert: url hasHost not.
