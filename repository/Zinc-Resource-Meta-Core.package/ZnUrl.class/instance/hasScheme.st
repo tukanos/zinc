@@ -1,3 +1,3 @@
 testing
 hasScheme
-	^ scheme isNotNil
+	^ scheme notNil

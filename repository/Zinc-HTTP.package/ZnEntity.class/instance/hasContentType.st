@@ -1,3 +1,3 @@
 testing
 hasContentType
-	^ contentType isNotNil
+	^ contentType notNil

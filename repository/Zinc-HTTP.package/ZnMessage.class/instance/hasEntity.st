@@ -1,3 +1,3 @@
 testing
 hasEntity
-	^ self entity isNotNil
+	^ self entity notNil

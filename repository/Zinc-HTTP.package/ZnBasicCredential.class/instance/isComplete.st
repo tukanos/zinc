@@ -1,3 +1,3 @@
 testing
 isComplete
-	^ username isNotNil & password isNotNil
+	^ username notNil & password notNil

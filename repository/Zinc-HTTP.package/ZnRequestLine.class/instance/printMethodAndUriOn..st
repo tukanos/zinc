@@ -1,6 +1,6 @@
 printing
 printMethodAndUriOn: stream
-	(self method isNotNil and: [ self uri isNotNil ])
+	(self method notNil and: [ self uri notNil ])
 		ifFalse: [ ^ self ].
 	stream
 		nextPutAll: self method;

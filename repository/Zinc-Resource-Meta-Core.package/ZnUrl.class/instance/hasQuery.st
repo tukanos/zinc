@@ -1,4 +1,4 @@
 testing
 hasQuery
 
-	^ query isNotNil and: [ query isNotEmpty ]
+	^ query notNil and: [ query isNotEmpty ]

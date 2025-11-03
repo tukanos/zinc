@@ -1,3 +1,3 @@
 testing
 isStreaming
-	^ streaming isNotNil and: [ streaming ]
+	^ streaming notNil and: [ streaming ]

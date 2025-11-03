@@ -1,3 +1,3 @@
 testing
 hasFragment
-	^ fragment isNotNil
+	^ fragment notNil

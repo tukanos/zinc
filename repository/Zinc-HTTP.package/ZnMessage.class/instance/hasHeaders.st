@@ -1,4 +1,4 @@
 testing
 hasHeaders
 
-	^ headers isNotNil and: [ self headers isEmpty not ]
+	^ headers notNil and: [ self headers isEmpty not ]

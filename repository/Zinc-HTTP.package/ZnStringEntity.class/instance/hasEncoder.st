@@ -1,3 +1,3 @@
 private
 hasEncoder
-	^ encoder isNotNil
+	^ encoder notNil
