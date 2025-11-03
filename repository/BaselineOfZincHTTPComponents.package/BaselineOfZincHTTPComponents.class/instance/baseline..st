@@ -10,7 +10,7 @@ baseline: spec
             package: 'Zinc-HTTP' with: [ 
                 spec postLoadDoIt: #recompileZnLogEventHierarchy; requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP') ];
-            package: 'Zinc-Tests' with: [ spec requires: 'Zinc-HTTP' ];
+            package: 'Zinc-Tests' with: [ spec requires: 'Zinc-HTTP' ].
         spec
             package: 'Zinc-AWS' with: [ spec requires: #('Zinc-HTTP' 'XMLParser') ];
             package: 'Zinc-REST' with: [ spec requires: #('Zinc-HTTP' 'NeoJSON') ];
