@@ -28,8 +28,8 @@ baseline: spec
             package: 'Zinc-Server-Sent-Events' with: [ spec requires: 'Zinc-HTTP' ].
         spec
             group: 'default' with: #('Core' 'Tests');
-            group: 'Core' with: #('Zinc-HTTP' 'Zinc-HTTP-Examples' 'Zinc-Zodiac-Core');
-            group: 'Tests' with: #('Zinc-Tests' 'Zinc-Character-Encoding-Tests' 'Zinc-Resource-Meta-Tests' 'Zinc-Zodiac-Tests');
+            group: 'Core' with: #('Zinc-HTTP' 'Zinc-HTTP-Examples');
+            group: 'Tests' with: #('Zinc-Tests' 'Zinc-Character-Encoding-Tests' 'Zinc-Resource-Meta-Tests');
             group: 'Character-Encoding' with: #('Zinc-Character-Encoding-Core' 'Zinc-Character-Encoding-Tests');
             group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
             group: 'AWS' with: #('Zinc-AWS');
