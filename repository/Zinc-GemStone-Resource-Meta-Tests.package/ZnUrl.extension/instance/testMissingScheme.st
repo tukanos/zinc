@@ -1,4 +1,4 @@
-*zinc-gemstone-tests
+*zinc-gemstone-resource-meta-tests
 testMissingScheme
 	"Protocol: testing"
 	| url |
