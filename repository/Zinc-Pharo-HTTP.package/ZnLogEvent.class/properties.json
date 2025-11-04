@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Announcement",
-	"category" : "Zinc-HTTP-Logging",
+	"category" : "Zinc-Pharo-HTTP",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [

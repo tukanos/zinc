@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "Object",
-	"category" : "Zinc-WebSocket-Core",
+	"category" : "Zinc-Pharo-WebSocket-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

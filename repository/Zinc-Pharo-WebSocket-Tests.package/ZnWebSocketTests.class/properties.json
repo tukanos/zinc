@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "TestCase",
-	"category" : "Zinc-WebSocket-Tests",
+	"category" : "Zinc-Pharo-WebSocket-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "TestCase",
-	"category" : "Zinc-REST-Tests",
+	"category" : "Zinc-Pharo-REST",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
