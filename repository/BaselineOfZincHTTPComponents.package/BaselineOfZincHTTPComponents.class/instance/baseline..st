@@ -66,7 +66,6 @@ baseline: spec
                     package: 'Zinc-Resource-Meta-Core' with: [ spec requires: #('Zinc-Pharo-Resource-Meta-Core') ];
                     package: 'Zinc-HTTP' with: [ spec requires: #('Zinc-Pharo-HTTP') ];
                     package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-Pharo-HTTP-Examples') ];
-
                     package: 'Zinc-Pharo-Character-Encoding-Core';
                     package: 'Zinc-Pharo-Character-Encoding-Tests';
                     package: 'Zinc-Pharo-Resource-Meta-Core';
