@@ -1,5 +1,6 @@
-private
+*zinc-pharo-tests
 usingClassicSocketStreamsOnWindowsDo: block
+	"Protocol: private"
 	| originalSocketStreamClass |
 	originalSocketStreamClass := ZnNetworkingUtils default socketStreamClass.
 	self runningOnWindows

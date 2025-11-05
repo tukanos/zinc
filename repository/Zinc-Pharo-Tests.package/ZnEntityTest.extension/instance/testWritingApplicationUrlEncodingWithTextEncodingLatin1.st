@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-tests
 testWritingApplicationUrlEncodingWithTextEncodingLatin1
+	"Protocol: testing"
 	| entity bytes |
 	entity := ZnApplicationFormUrlEncodedEntity new.
 	entity contentType charSet: 'iso-8859-1'.

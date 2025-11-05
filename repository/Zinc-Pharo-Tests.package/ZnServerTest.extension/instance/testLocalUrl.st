@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-tests
 testLocalUrl
+	"Protocol: testing"
 	self withServerDo: [ :server |
 		self assert: server localUrl scheme equals: #http.
 		self assert: server localUrl host equals: NetNameResolver loopBackName.

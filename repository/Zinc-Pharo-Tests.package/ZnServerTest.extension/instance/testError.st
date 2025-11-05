@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-tests
 testError
+	"Protocol: testing"
 	self withServerDo: [ :server | | url response |
 		self deny: server debugMode.
 		url := server localUrl

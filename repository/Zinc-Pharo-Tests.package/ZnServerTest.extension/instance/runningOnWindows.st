@@ -1,5 +1,6 @@
-private
+*zinc-pharo-tests
 runningOnWindows
+	"Protocol: private"
 	"Pharo 3+"
 	[ ^ OSPlatform current isWindows ] on: MessageNotUnderstood do: [ ].
 	"Pharo 2-"
