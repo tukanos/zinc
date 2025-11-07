@@ -62,17 +62,26 @@ baseline: spec
                                     repository: 'github://svenvc/zodiac:master/repository' ].
                 spec
                     package: 'Zinc-Character-Encoding-Core' with: [ spec requires: #('Zinc-Pharo-Character-Encoding-Core') ];
-                    package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Pharo-Character-Encoding-Tests') ];
-                    package: 'Zinc-Resource-Meta-Core' with: [ spec requires: #('Zinc-Pharo-Resource-Meta-Core') ];
-                    package: 'Zinc-HTTP' with: [ spec requires: #('Zinc-Pharo-HTTP') ];
-                    package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-Pharo-HTTP-Examples') ];
-                    package: 'Zinc-Tests' with: [ spec requires: #('Zinc-Pharo-Tests') ];
                     package: 'Zinc-Pharo-Character-Encoding-Core';
+
+                    package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Pharo-Character-Encoding-Tests') ];
                     package: 'Zinc-Pharo-Character-Encoding-Tests';
+
+                    package: 'Zinc-Resource-Meta-Core' with: [ spec requires: #('Zinc-Pharo-Resource-Meta-Core') ];
                     package: 'Zinc-Pharo-Resource-Meta-Core';
-                    package: 'Zinc-Pharo-HTTP-Examples';
+
+                    package: 'Zinc-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Pharo-Resource-Meta-Tests') ];
+                    package: 'Zinc-Pharo-Resource-Meta-Tests';
+
+                    package: 'Zinc-HTTP' with: [ spec includes: #('Zinc-Pharo-HTTP') ];
                     package: 'Zinc-Pharo-HTTP';
+
+                    package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-Pharo-HTTP-Examples') ];
+                    package: 'Zinc-Pharo-HTTP-Examples';
+
+                    package: 'Zinc-Tests' with: [ spec requires: #('Zinc-Pharo-Tests') ];
                     package: 'Zinc-Pharo-Tests'.
+
                 spec
                     package: 'Zinc-Zodiac-Core';
                     package: 'Zinc-Zodiac-Tests' with: [ spec includes: #('Zinc-Zodiac-Core') ].
