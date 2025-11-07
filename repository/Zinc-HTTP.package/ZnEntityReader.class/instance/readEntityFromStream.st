@@ -6,7 +6,7 @@ readEntityFromStream
 		ifTrue: [
 			self hasContentLength ifTrue: [ stream := ZnLimitedReadStream on: stream limit: self contentLength ].
 			decodedEntityLength := nil.
-			stream := (Smalltalk at: #GZipReadStream) on: stream ]
+			stream := GZipReadStream on: stream ]
 		ifFalse: [ decodedEntityLength := self contentLength ].
 	entity := self readFrom: stream usingType: self contentType andLength: decodedEntityLength.
 	isChunked ifTrue: [
