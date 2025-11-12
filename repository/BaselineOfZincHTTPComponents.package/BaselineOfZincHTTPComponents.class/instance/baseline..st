@@ -63,11 +63,11 @@ baseline: spec
                 spec
                     package: 'Zinc-Pharo-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
                     package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests') ];
-                    package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
-                    package: 'Zinc-Pharo-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Resource-Meta-Tests') ];
+                    package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-Pharo-Character-Encoding-Core') ];
+                    package: 'Zinc-Pharo-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Resource-Meta-Tests' 'Zinc-Pharo-Resource-Meta-Core') ];
                     package: 'Zinc-Pharo-HTTP' with: [ spec requires: #('Zinc-HTTP') ];
                     package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
-                    package: 'Zinc-Pharo-Tests' with: [ spec includes: #('Zinc-Tests') ].
+                    package: 'Zinc-Pharo-Tests' with: [ spec requires: #('Zinc-Tests') ].
                 spec
                     group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
                     group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests' 'Zinc-Pharo-Resource-Meta-Tests');
