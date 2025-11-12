@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testUTF8ByteOrderMark
+	"Protocol: testing"
 	"The Unicode Byte Order Mark (BOM) should be skipped."
 
 	| bom string bytes encoder decodedString |
