@@ -61,32 +61,23 @@ baseline: spec
                                     loads: #('Core' 'Tests');
                                     repository: 'github://svenvc/zodiac:master/repository' ].
                 spec
-                    package: 'Zinc-Character-Encoding-Core' with: [ spec includes: #('Zinc-Pharo-Character-Encoding-Core') ];
-                    package: 'Zinc-Pharo-Character-Encoding-Core';
-
-                    package: 'Zinc-Character-Encoding-Tests' with: [ spec includes: #('Zinc-Pharo-Character-Encoding-Tests') ];
-                    package: 'Zinc-Pharo-Character-Encoding-Tests';
-
-                    package: 'Zinc-Resource-Meta-Core' with: [ spec includes: #('Zinc-Pharo-Resource-Meta-Core') ];
-                    package: 'Zinc-Pharo-Resource-Meta-Core';
-
-                    package: 'Zinc-Resource-Meta-Tests' with: [ spec includes: #('Zinc-Pharo-Resource-Meta-Tests') ];
-                    package: 'Zinc-Pharo-Resource-Meta-Tests';
-
-                    package: 'Zinc-HTTP' with: [ spec includes: #('Zinc-Pharo-HTTP') ];
-                    package: 'Zinc-Pharo-HTTP';
-
-                    package: 'Zinc-HTTP-Examples' with: [ spec includes: #('Zinc-Pharo-HTTP-Examples') ];
-                    package: 'Zinc-Pharo-HTTP-Examples';
-
-                    package: 'Zinc-Tests' with: [ spec includes: #('Zinc-Pharo-Tests') ];
-                    package: 'Zinc-Pharo-Tests'.
-
+                    package: 'Zinc-Pharo-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
+                    package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests') ];
+                    package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
+                    package: 'Zinc-Pharo-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Resource-Meta-Tests') ];
+                    package: 'Zinc-Pharo-HTTP' with: [ spec requires: #('Zinc-HTTP') ];
+                    package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
+                    package: 'Zinc-Pharo-Tests' with: [ spec includes: #('Zinc-Tests') ].
                 spec
+                    group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
+                    group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests' 'Zinc-Pharo-Resource-Meta-Tests');
+                    group: 'Character-Encoding' with: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Character-Encoding-Tests');
+                    group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests').
+                "spec
                     package: 'Zinc-Zodiac-Core';
                     package: 'Zinc-Zodiac-Tests' with: [ spec includes: #('Zinc-Zodiac-Core') ].
                 spec
-                    group: 'ZodiacSSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests').
+                    group: 'ZodiacSSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests')."
                     "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')"  "alias" ].
 
         spec
