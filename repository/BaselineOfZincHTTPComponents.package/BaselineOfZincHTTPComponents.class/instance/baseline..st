@@ -55,8 +55,9 @@ baseline: spec
                         with: [ spec
                                     loads: #('Core');
                                     repository: 'github://pharo-contributions/XML-XMLParser:master/src' ];
-                    baseline: 'Zodiac'
+                    baseline: 'Zodiac Project'
                         with: [ spec
+                                    className: 'BaselineOfZodiac';
                                     loads: #('Core' 'Tests');
                                     repository: 'github://svenvc/zodiac:master/repository' ].
                 spec
@@ -69,13 +70,18 @@ baseline: spec
                     package: 'Zinc-Pharo-Tests' with: [ spec requires: #('Zinc-Tests') ].
                 spec
                     package: 'Zinc-Pharo-WebSocket-Core' with: [ spec requires: #('Zinc-Pharo-HTTP') ];
-                    package: 'Zinc-Pharo-WebSocket-Tests' with: [ spec requires: #('Zinc-Pharo-WebSocket-Core') ].
+                    package: 'Zinc-Pharo-WebSocket-Tests' with: [ spec requires: #('Zinc-Pharo-WebSocket-Core') ];
+                    package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
+                    package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
+                    package: 'Zinc-Pharo-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ].
                 spec
                     group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
                     group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests');
                     group: 'Character-Encoding' with: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Character-Encoding-Tests');
                     group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
-                    group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests').
+                    group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests');
+                    group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-Pharo-Zodiac-Tests');
+                    group: 'Zodiac' with: #('SSL').  "alias"
                 "spec
                     package: 'Zinc-Zodiac-Core';
                     package: 'Zinc-Zodiac-Tests' with: [ spec includes: #('Zinc-Zodiac-Core') ].
