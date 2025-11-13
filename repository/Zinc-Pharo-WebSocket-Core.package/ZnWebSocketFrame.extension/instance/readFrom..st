@@ -1,4 +1,4 @@
-*zinc-pharo-tests
+*zinc-pharo-websocket-core
 readFrom: stream
 	"Protocol: reading"
 	| byte size mask |

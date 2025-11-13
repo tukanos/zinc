@@ -1,4 +1,4 @@
-*zinc-pharo-tests
+*zinc-pharo-websocket-tests
 testReadingPing
 	"Protocol: testing"
 	"Fourth example from RFC 6455 section 5.7"

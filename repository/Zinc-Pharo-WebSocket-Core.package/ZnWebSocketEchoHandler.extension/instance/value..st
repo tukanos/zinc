@@ -1,5 +1,6 @@
-accessing
+*zinc-pharo-websocket-core
 value: webSocket
+  "Protocol: accessing"
   "I implement an echo service conversation as a server:
   reading messages and echoing them back until ConnectionClosed"
 	[ 

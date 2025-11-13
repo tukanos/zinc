@@ -1,5 +1,6 @@
-protocol
+*zinc-pharo-websocket-core
 handleControlFrameNoWait
+	"Protocol: protocol"
 	"Peek for a control frame if any and handle it. Do not wait.
 	Return true when a control frame was handled, false otherwise."
 	
