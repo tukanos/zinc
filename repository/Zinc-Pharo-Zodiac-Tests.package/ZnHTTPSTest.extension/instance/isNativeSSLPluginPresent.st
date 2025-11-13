@@ -1,4 +1,4 @@
-*zinc-pharo-tests
+*zinc-pharo-zodiac-tests
 isNativeSSLPluginPresent
 	"Protocol: private"
 	"Return whether the SSL VM plugin can be instanciated and intialized."
