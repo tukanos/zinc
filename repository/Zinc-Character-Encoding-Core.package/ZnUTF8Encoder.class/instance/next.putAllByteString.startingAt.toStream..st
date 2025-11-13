@@ -1,6 +1,5 @@
-*zinc-pharo-character-encoding-core
+private
 next: count putAllByteString: string startingAt: offset toStream: stream
-	"Protocol: private"
 	"A faster version when string is a ByteString"
 
 	| lastIndex nextIndex |
