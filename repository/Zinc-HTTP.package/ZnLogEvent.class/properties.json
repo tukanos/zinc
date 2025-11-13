@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Announcement",
+	"category" : "Zinc-HTTP",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"IdCounter",
+		"LogEventAnnouncer"
+	],
+	"instvars" : [
+		"id",
+		"processId",
+		"timestamp"
+	],
+	"name" : "ZnLogEvent",
+	"type" : "normal"
+}
