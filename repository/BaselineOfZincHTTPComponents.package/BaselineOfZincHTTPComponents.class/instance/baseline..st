@@ -7,7 +7,8 @@ baseline: spec
             package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
             package: 'Zinc-Resource-Meta-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
             package: 'Zinc-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
-            package: 'Zinc-HTTP' with: [ spec requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
+            package: 'Zinc-HTTP' with: [ spec postLoadDoIt: #recompileZnLogEventHierarchy; 
+                                              requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP') ];
             package: 'Zinc-Tests' with: [ spec requires: #('Zinc-HTTP') ].
         spec
