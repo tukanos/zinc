@@ -68,10 +68,14 @@ baseline: spec
                     package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
                     package: 'Zinc-Pharo-Tests' with: [ spec requires: #('Zinc-Tests') ].
                 spec
+                    package: 'Zinc-Pharo-WebSocket-Core' with: [ spec requires: #('Zinc-Pharo-HTTP') ];
+                    package: 'Zinc-Pharo-WebSocket-Tests' with: [ spec requires: #('Zinc-Pharo-WebSocket-Core') ].
+                spec
                     group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
                     group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests');
                     group: 'Character-Encoding' with: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Character-Encoding-Tests');
-                    group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests').
+                    group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
+                    group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests').
                 "spec
                     package: 'Zinc-Zodiac-Core';
                     package: 'Zinc-Zodiac-Tests' with: [ spec includes: #('Zinc-Zodiac-Core') ].
