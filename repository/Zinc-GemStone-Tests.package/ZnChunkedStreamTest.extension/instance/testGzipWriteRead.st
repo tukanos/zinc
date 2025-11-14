@@ -1,6 +1,6 @@
 *zinc-gemstone-tests
 testGzipWriteRead
-  "Protocol: testing"
+	"Protocol: testing"
 	| data written read |
 	data := String streamContents: [ :out |
 		{ Collection. Stream. Exception. Magnitude } do: [ :cls |
