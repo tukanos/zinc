@@ -7,8 +7,7 @@ baseline: spec
             package: 'Zinc-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
             package: 'Zinc-Resource-Meta-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
             package: 'Zinc-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
-            package: 'Zinc-HTTP' with: [ spec postLoadDoIt: #recompileZnLogEventHierarchy; 
-                                              requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
+            package: 'Zinc-HTTP' with: [ spec requires: #('Zinc-Character-Encoding-Core' 'Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP') ];
             package: 'Zinc-Tests' with: [ spec requires: #('Zinc-HTTP') ].
         spec
@@ -83,13 +82,6 @@ baseline: spec
                     group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests');
                     group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-Pharo-Zodiac-Tests');
                     group: 'Zodiac' with: #('SSL').  "alias"
-                "spec
-                    package: 'Zinc-Zodiac-Core';
-                    package: 'Zinc-Zodiac-Tests' with: [ spec includes: #('Zinc-Zodiac-Core') ].
-                spec
-                    group: 'ZodiacSSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests')."
-                    "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')"  "alias" ].
-
         spec
             for: #'gemstone'
             do: [
