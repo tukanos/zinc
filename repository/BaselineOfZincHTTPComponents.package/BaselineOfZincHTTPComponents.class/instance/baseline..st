@@ -43,102 +43,95 @@ baseline: spec
             group: 'REST' with: #('Zinc-REST');
             group: 'Server-Sent-Events' with: #('Zinc-Server-Sent-Events') ].
 
+    spec for: #'pharo' do: [
+        spec baseline: 'NeoJSON'
+                 with: [ spec
+                             loads: #('Core');
+                             repository: 'github://svenvc/NeoJSON:master/repository' ];
+             baseline: 'XMLParser'
+                 with: [ spec
+                             loads: #('Core');
+                             repository: 'github://pharo-contributions/XML-XMLParser:master/src' ];
+            baseline: 'Zodiac Project'
+                with: [ spec
+                            className: 'BaselineOfZodiac';
+                            loads: #('Core' 'Tests');
+                            repository: 'github://svenvc/zodiac:master/repository' ].
         spec
-            for: #'pharo'
-            do: [
-                spec
-                    baseline: 'NeoJSON'
-                        with: [ spec
-                                    loads: #('Core');
-                                    repository: 'github://svenvc/NeoJSON:master/repository' ];
-                    baseline: 'XMLParser'
-                        with: [ spec
-                                    loads: #('Core');
-                                    repository: 'github://pharo-contributions/XML-XMLParser:master/src' ];
-                    baseline: 'Zodiac Project'
-                        with: [ spec
-                                    className: 'BaselineOfZodiac';
-                                    loads: #('Core' 'Tests');
-                                    repository: 'github://svenvc/zodiac:master/repository' ].
-                spec
-                    package: 'Zinc-Pharo-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
-                    package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests') ];
-                    package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-Pharo-Character-Encoding-Core') ];
-                    package: 'Zinc-Pharo-HTTP' with: [ spec postLoadDoIt: #recompileZnLogEventHierarchy;
-                                                            requires: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Resource-Meta-Core' 'Zinc-HTTP') ];
-                    package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
-                    package: 'Zinc-Pharo-Tests' with: [ spec requires: #('Zinc-Tests') ].
-                spec
-                    package: 'Zinc-Pharo-WebSocket-Core' with: [ spec requires: #('Zinc-Pharo-HTTP') ];
-                    package: 'Zinc-Pharo-WebSocket-Tests' with: [ spec requires: #('Zinc-Pharo-WebSocket-Core') ];
-                    package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
-                    package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
-                    package: 'Zinc-Pharo-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ].
-                spec
-                    group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
-                    group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests');
-                    group: 'Character-Encoding' with: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Character-Encoding-Tests');
-                    group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
-                    group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests');
-                    group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-Pharo-Zodiac-Tests');
-                    group: 'Zodiac' with: #('SSL').  "alias"
+            package: 'Zinc-Pharo-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
+            package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests') ];
+            package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-Pharo-Character-Encoding-Core') ];
+            package: 'Zinc-Pharo-HTTP' with: [ spec postLoadDoIt: #recompileZnLogEventHierarchy;
+                                                    requires: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Resource-Meta-Core' 'Zinc-HTTP') ];
+            package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
+            package: 'Zinc-Pharo-Tests' with: [ spec requires: #('Zinc-Tests') ].
         spec
-            for: #'gemstone'
-            do: [
-                spec
-                    baseline: 'GLASS1'
-                        with: [ spec
-                                    loads: #('Base' 'GsMisc');
-                                    repository: 'github://glassdb/glass:master/repository' ];
-                    baseline: 'PharoCompatibility'
-                        with: [ spec
-                                    loads: #('Core');
-                                    repository: 'github://GsDevKit/PharoCompatibility:master/repository' ];
-                    baseline: 'NeoJSON'
-                        with: [ spec
-                                    loads: #('Core');
-                                    repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
-                    baseline: 'Cryptography'
-                        with: [ spec
-                                    loads: #('Cryptography');
-                                    repository: 'github://GsDevKit/Cryptography:master/repository' ];
-                    baseline: 'GsApplicationTools'
-                        with: [ spec
-                                    loads: #('Core');
-                                    repository: 'github://GsDevKit/gsApplicationTools:master/repository' ];
-                    baseline: 'XMLParser'
-                        with: [ spec
-                                    loads: #('Core');
-                                    repository: 'github://GsDevKit/XML-XMLParser:gemstone/src' ];
-                    baseline: 'Zodiac'
-                        with: [ spec
-                                    loads: #('Core');
-                                    repository: 'github://GsDevKit/zodiac:gs_master/repository' ].
-                spec
-                    package: 'Zinc-GemStone-Character-Encoding-Core' with: [ spec requires:  #('Zinc-Character-Encoding-Core') ];
-                    package: 'Zinc-GemStone-Character-Encoding-Tests' with: [ spec
-                                                                                  requires:  #('Zinc-Character-Encoding-Tests'
-                                                                                             'Zinc-GemStone-Character-Encoding-Core') ];
-                    package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
-                    package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-HTTP') ];
-                    package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
-                    package: 'Zinc-Zodiac-Tests' with: [ spec requires:  #('Zinc-Zodiac-Core') ];
-                    package: 'SocketStream';
-                    package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
-                    package: 'Zinc-GemStone-Server-Tools'
-                        with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
-                    package: 'Zinc-WebSocket-Core'
-                        with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
-                    package: 'Zinc-HTTP'
-                        with: [ spec
-                                    requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
-                                    includes: #('SocketStream') ];
-                    package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ].
-                spec
-                    group: 'Core' with: #('Zinc-GemStone-Server-Tools');
-                    group: 'CI' with: #('REST' 'WebSocket');
-                    group: 'SSL' with: #('Zinc-Zodiac-Core''Zodiac').
-                    "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')" "alias" ].
+            package: 'Zinc-Pharo-WebSocket-Core' with: [ spec requires: #('Zinc-Pharo-HTTP') ];
+            package: 'Zinc-Pharo-WebSocket-Tests' with: [ spec requires: #('Zinc-Pharo-WebSocket-Core') ];
+            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
+            package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
+            package: 'Zinc-Pharo-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ].
+        spec
+            group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
+            group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests');
+            group: 'Character-Encoding' with: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Character-Encoding-Tests');
+            group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
+            group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests');
+            group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-Pharo-Zodiac-Tests');
+            group: 'Zodiac' with: #('SSL') ].  "alias"
+
+    spec for: #'gemstone' do: [
+        spec baseline: 'GLASS1'
+                 with: [ spec
+                             loads: #('Base' 'GsMisc');
+                             repository: 'github://glassdb/glass:master/repository' ];
+             baseline: 'PharoCompatibility'
+                 with: [ spec
+                             loads: #('Core');
+                             repository: 'github://GsDevKit/PharoCompatibility:master/repository' ];
+             baseline: 'NeoJSON'
+                 with: [ spec
+                             loads: #('Core');
+                             repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
+             baseline: 'Cryptography'
+                 with: [ spec
+                             loads: #('Cryptography');
+                             repository: 'github://GsDevKit/Cryptography:master/repository' ];
+             baseline: 'GsApplicationTools'
+                 with: [ spec
+                             loads: #('Core');
+                             repository: 'github://GsDevKit/gsApplicationTools:master/repository' ];
+             baseline: 'XMLParser'
+                 with: [ spec
+                             loads: #('Core');
+                             repository: 'github://GsDevKit/XML-XMLParser:gemstone/src' ];
+             baseline: 'Zodiac'
+                 with: [ spec
+                             loads: #('Core');
+                             repository: 'github://GsDevKit/zodiac:gs_master/repository' ].
+        spec
+            package: 'Zinc-GemStone-Character-Encoding-Core' with: [ spec requires:  #('Zinc-Character-Encoding-Core') ];
+            package: 'Zinc-GemStone-Character-Encoding-Tests' with: [ spec
+                                                                          requires:  #('Zinc-Character-Encoding-Tests'
+                                                                                       'Zinc-GemStone-Character-Encoding-Core') ];
+            package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
+            package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-HTTP') ];
+            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
+            package: 'Zinc-Zodiac-Tests' with: [ spec requires:  #('Zinc-Zodiac-Core') ];
+            package: 'SocketStream';
+            package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+            package: 'Zinc-GemStone-Server-Tools' with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
+            package: 'Zinc-WebSocket-Core' with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
+            package: 'Zinc-HTTP' with: [ spec
+                                             requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
+                                             includes: #('SocketStream') ];
+            package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ].
+        spec
+            group: 'Core' with: #('Zinc-GemStone-Server-Tools');
+            group: 'CI' with: #('REST' 'WebSocket');
+            group: 'SSL' with: #('Zinc-Zodiac-Core''Zodiac').
+                "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')" "alias" ].
+
         spec
             for: #'gs3.x'
             do: [
