@@ -1,6 +1,5 @@
-*zinc-pharo-http-examples
+public
 startInServerOn: port
-	"Protocol: public"
 	"Start a new server bound to port on the local network running a REPL web service"
 
 	"self startInServerOn: 1701"
