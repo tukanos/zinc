@@ -10,7 +10,7 @@ validateAuthResponse: anAuthResponse
 		ifTrue: [ self authenticationError: 'openid.clamied_id must be present in OpenID2 auth responses' ].
 	anAuthResponse responseNonce isNil
 		ifTrue: [ self authenticationError: 'openid.response_nonce is required in OpenID2 auth responses' ].
-	signedFields := anAuthResponse signed subStrings: ','.
+	signedFields := anAuthResponse signed substrings: ','.
 	requiredFields := #( 'return_to' 'response_nonce' 'op_endpoint' 'assoc_handle' 'identity' 'claimed_id' ).
 	requiredFields
 		do: [ :each | 
