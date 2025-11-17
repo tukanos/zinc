@@ -118,7 +118,7 @@ baseline: spec
             package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-GemStone-Character-Encoding-Core') ];
             package: 'Zinc-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
                                               includes: #('SocketStream') ];
-            package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ].
+            package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ];
             package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-GemStone-Character-Encoding-Core' 'Zinc-GemStone-Resource-Meta-Core' 'Zinc-HTTP') ];
             package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
             package: 'Zinc-GemStone-Tests' with: [ spec requires: #('Zinc-Tests') ].
@@ -127,10 +127,9 @@ baseline: spec
             package: 'Zinc-GemStone-WebSocket-Tests' with: [ spec requires: #('Zinc-GemStone-WebSocket-Core') ];
             package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
             package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
-            package: 'Zinc-GemStone-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests')];
+            package: 'Zinc-GemStone-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ];
             package: 'SocketStream';
             package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
-
             package: 'Zinc-GemStone-Server-Tools' with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
             package: 'Zinc-WebSocket-Core' with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ].
         spec
