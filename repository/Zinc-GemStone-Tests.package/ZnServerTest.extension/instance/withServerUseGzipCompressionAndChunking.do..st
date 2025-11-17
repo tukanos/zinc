@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-tests
 withServerUseGzipCompressionAndChunking: useGzipCompressionAndChunking do: block
+  "Protocol: private"
   | server |
   server := super withServerDo: block.
   server useGzipCompressionAndChunking: useGzipCompressionAndChunking.

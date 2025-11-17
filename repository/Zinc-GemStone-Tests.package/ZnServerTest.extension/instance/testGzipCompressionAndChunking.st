@@ -1,5 +1,6 @@
-testing
+*zinc-gemstone-tests
 testGzipCompressionAndChunking
+  "Protocol: testing"
   self
     withServerUseGzipCompressionAndChunking: true
     do: [ :server | 

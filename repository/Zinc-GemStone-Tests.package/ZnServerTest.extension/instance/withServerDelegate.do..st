@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-tests
 withServerDelegate: delegate do: block
+  "Protocol: private"
   | server |
   server := super withServerDo: block.
   server delegate: delegate.

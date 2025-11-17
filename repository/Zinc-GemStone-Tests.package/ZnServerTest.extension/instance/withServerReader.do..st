@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-tests
 withServerReader: reader do: block
+  "Protocol: private"
   | server |
   server := super withServerDo: block.
   server reader: reader.

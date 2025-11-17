@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-tests
 withServerMaximumEntitySize: maximumEntitySize do: block
+  "Protocol: private"
   | server |
   server := super withServerDo: block.
   server maximumEntitySize: maximumEntitySize.

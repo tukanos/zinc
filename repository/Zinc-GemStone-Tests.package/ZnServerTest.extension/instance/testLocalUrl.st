@@ -1,5 +1,6 @@
-testing
+*zinc-gemstone-tests
 testLocalUrl
+  "Protocol: testing"
 	self
 		withServerDo: [ :server | 
 			self assert: server localUrl scheme equals: #'http'.

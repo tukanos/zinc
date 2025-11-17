@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-tests
 runGemServer: gemServer during: block
+  "Protocol: private"
   [ 
   gemServer restartGems.
   (Delay forSeconds: 3) wait.

@@ -1,5 +1,6 @@
-testing
+*zinc-gemstone-tests
 testError
+  "Protocol: testing"
   Transcript
     cr;
     show: 'testError: ' , self class name printString.

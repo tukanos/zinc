@@ -1,0 +1,31 @@
+From a64afc16027d8f03b34b5eec4f632f8e488041d4 Mon Sep 17 00:00:00 2001
+From: Patrik <development@finworks.biz>
+Date: Mon, 17 Nov 2025 13:23:08 +0000
+Subject: [PATCH 7/9] Symbol must be in certain form in GemStone
+
+---
+ .../ZnClientTest.class/instance/testGetGeoIP.st               | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/repository/Zinc-Tests.package/ZnClientTest.class/instance/testGetGeoIP.st b/repository/Zinc-Tests.package/ZnClientTest.class/instance/testGetGeoIP.st
+index 120c6330..583c5c7d 100644
+--- a/repository/Zinc-Tests.package/ZnClientTest.class/instance/testGetGeoIP.st
++++ b/repository/Zinc-Tests.package/ZnClientTest.class/instance/testGetGeoIP.st
+@@ -8,11 +8,11 @@ testGetGeoIP
+ 		accept: ZnMimeType applicationJson;
+ 		contentReader: [ :entity |
+ 					self class environment
+-						at: #NeoJSONReader
++						at: #'NeoJSONReader'
+ 						ifPresent: [ :parserClass | parserClass fromString: entity contents ]
+ 						ifAbsent: [ ^ self ] ];
+ 		ifFail: [ ^ self fail ];
+ 		get.
+ 	self assert: result isDictionary.
+ 	self assert: (result at: 'country') equals: 'BE'.
+-	client close
+\ No newline at end of file
++	client close
+-- 
+2.34.1
+

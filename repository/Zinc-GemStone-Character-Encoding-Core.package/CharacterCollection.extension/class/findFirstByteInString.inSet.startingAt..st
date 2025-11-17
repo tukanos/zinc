@@ -1,4 +1,4 @@
-*zinc-character-encoding-core
+*zinc-gemstone-character-encoding-core
 findFirstByteInString: aString inSet: inclusionMap startingAt: start
   "Trivial, non-primitive version"
 

@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-tests
 withServerBindingAddress: bindingAddress do: block
+  "Protocol: private"
   | server |
   server := super withServerDo: block.
   server bindingAddress: bindingAddress.
