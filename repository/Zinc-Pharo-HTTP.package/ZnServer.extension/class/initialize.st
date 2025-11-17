@@ -1,5 +1,6 @@
-class initialization
+*zinc-pharo-http
 initialize
+	"Protocol: class initialization"
 	ManagedServers := IdentitySet new.
 	AlwaysRestart := true.
 	self environment
