@@ -59,7 +59,8 @@ baseline: spec
                             repository: 'github://svenvc/zodiac:master/repository' ].
         spec
             package: 'Zinc-Pharo-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
-            package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests') ];
+            package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests'
+                                                                                    'Zinc-Pharo-Character-Encoding-Core') ];
             package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-Pharo-Character-Encoding-Core') ];
             package: 'Zinc-Pharo-HTTP' with: [ spec postLoadDoIt: #recompileZnLogEventHierarchy;
                                                     requires: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Resource-Meta-Core' 'Zinc-HTTP') ];
