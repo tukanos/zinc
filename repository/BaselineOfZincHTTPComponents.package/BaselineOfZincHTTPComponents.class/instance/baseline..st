@@ -110,27 +110,37 @@ baseline: spec
                              className: 'BaselineOfZodiac';
                              loads: #('Core');
                              repository: 'github://GsDevKit/zodiac:gs_master/repository' ].
+
         spec
-            package: 'Zinc-GemStone-Character-Encoding-Core' with: [ spec requires:  #('Zinc-Character-Encoding-Core') ];
-            package: 'Zinc-GemStone-Character-Encoding-Tests' with: [ spec
-                                                                          requires:  #('Zinc-Character-Encoding-Tests'
+            package: 'Zinc-GemStone-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
+            package: 'Zinc-GemStone-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests'
                                                                                        'Zinc-GemStone-Character-Encoding-Core') ];
+            package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-GemStone-Character-Encoding-Core') ];
+            package: 'Zinc-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
+                                              includes: #('SocketStream') ];
+            package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ].
+            package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-GemStone-Character-Encoding-Core' 'Zinc-GemStone-Resource-Meta-Core' 'Zinc-HTTP') ];
             package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
-            package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-HTTP') ];
-            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-HTTP' 'Zodiac') ];
-            package: 'Zinc-Zodiac-Tests' with: [ spec requires:  #('Zinc-Zodiac-Core') ];
+            package: 'Zinc-GemStone-Tests' with: [ spec requires: #('Zinc-Tests') ].
+        spec
+            package: 'Zinc-GemStone-WebSocket-Core' with: [ spec requires: #('Zinc-GemStone-HTTP') ];
+            package: 'Zinc-GemStone-WebSocket-Tests' with: [ spec requires: #('Zinc-GemStone-WebSocket-Core') ];
+            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
+            package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
+            package: 'Zinc-GemStone-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests')];
             package: 'SocketStream';
             package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
+
             package: 'Zinc-GemStone-Server-Tools' with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
-            package: 'Zinc-WebSocket-Core' with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ];
-            package: 'Zinc-HTTP' with: [ spec
-                                             requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
-                                             includes: #('SocketStream') ];
-            package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ].
+            package: 'Zinc-WebSocket-Core' with: [ spec requires: #('Zinc-HTTP' 'Cryptography') ].
         spec
-            group: 'Core' with: #('Zinc-GemStone-Server-Tools');
+            group: 'Core' with: #('Zinc-GemStone-HTTP' 'Zinc-GemStone-HTTP-Examples' 'Zinc-GemStone-Server-Tools');
             group: 'CI' with: #('REST' 'WebSocket');
-            group: 'SSL' with: #('Zinc-Zodiac-Core''Zodiac');
+            group: 'Tests' with: #('Zinc-GemStone-Tests' 'Zinc-GemStone-Character-Encoding-Tests');
+            group: 'Character-Encoding' with: #('Zinc-GemStone-Character-Encoding-Core' 'Zinc-GemStone-Character-Encoding-Tests');
+            group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
+            group: 'WebSocket' with: #('Zinc-GemStone-WebSocket-Core' 'Zinc-GemStone-WebSocket-Tests');
+            group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-GemStone-Zodiac-Tests');
             group: 'Zodiac' with: #('SSL') ].  "alias"
 
         spec
