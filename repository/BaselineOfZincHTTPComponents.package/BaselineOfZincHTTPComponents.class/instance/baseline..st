@@ -105,8 +105,9 @@ baseline: spec
                  with: [ spec
                              loads: #('Core');
                              repository: 'github://GsDevKit/XML-XMLParser:gemstone/src' ];
-             baseline: 'Zodiac'
+             baseline: 'Zodiac Project'
                  with: [ spec
+                             className: 'BaselineOfZodiac';
                              loads: #('Core');
                              repository: 'github://GsDevKit/zodiac:gs_master/repository' ].
         spec
@@ -129,8 +130,8 @@ baseline: spec
         spec
             group: 'Core' with: #('Zinc-GemStone-Server-Tools');
             group: 'CI' with: #('REST' 'WebSocket');
-            group: 'SSL' with: #('Zinc-Zodiac-Core''Zodiac').
-                "duplicity -> group vs. project baseline - group: 'Zodiac' with: #('SSL')" "alias" ].
+            group: 'SSL' with: #('Zinc-Zodiac-Core''Zodiac');
+            group: 'Zodiac' with: #('SSL') ].  "alias"
 
         spec
             for: #'gs3.x'
