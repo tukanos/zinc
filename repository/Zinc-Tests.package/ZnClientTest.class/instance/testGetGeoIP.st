@@ -8,7 +8,7 @@ testGetGeoIP
 		accept: ZnMimeType applicationJson;
 		contentReader: [ :entity |
 					self class environment
-						at: #NeoJSONReader
+						at: #'NeoJSONReader'
 						ifPresent: [ :parserClass | parserClass fromString: entity contents ]
 						ifAbsent: [ ^ self ] ];
 		ifFail: [ ^ self fail ];
