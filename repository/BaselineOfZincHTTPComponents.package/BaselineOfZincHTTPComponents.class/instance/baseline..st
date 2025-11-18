@@ -90,6 +90,10 @@ baseline: spec
                  with: [ spec
                              loads: #('Core');
                              repository: 'github://GsDevKit/PharoCompatibility:master/repository' ];
+            baseline: 'OrderedDictionary'
+                with: [ spec
+                             loads: #('Core');
+                             repository: 'github://GsDevKit/OrderedDictionary:master/repository' ];
              baseline: 'NeoJSON'
                  with: [ spec
                              loads: #('Core');
