@@ -1,12 +1,12 @@
 private
 byteCountFor: string
-	| n byteCount |
+	| stringSize byteCount |
 	"This assumes there are no line breaks in string and that padding is used"
-	n := string size.
-	byteCount := n // 4 * 3.
-	^ (n > 1 and: [ (string at: n) = $= ])
+	stringSize := string size.
+	byteCount := stringSize // 4 * 3.
+	^ (stringSize > 1 and: [ (string at: stringSize) = $= ])
 		ifTrue: [
-			(n > 2 and: [ (string at: n - 1) = $= ])
+			(stringSize > 2 and: [ (string at: stringSize - 1) = $= ])
 				ifTrue: [ byteCount - 2 ]
 				ifFalse: [ byteCount - 1 ] ]
 		ifFalse: [ byteCount ]

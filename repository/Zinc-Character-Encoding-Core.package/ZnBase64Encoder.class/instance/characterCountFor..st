@@ -1,9 +1,9 @@
 private
 characterCountFor: bytes
-	| n characterCount |
+	| byteSize characterCount |
 	"This assumes that padding is used"
-	n := bytes size.
-	characterCount := (n // 3 + (n \\ 3) sign) * 4.
+	byteSize := bytes size.
+	characterCount := (byteSize // 3 + (byteSize \\ 3) sign) * 4.
 	^ lineLength
 		ifNil: [ characterCount ]
 		ifNotNil: [ characterCount + (characterCount // lineLength * lineEnd size) ]

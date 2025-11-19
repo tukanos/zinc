@@ -1,4 +1,4 @@
-*zinc-character-encoding-core
+*zinc-gemstone-character-encoding-core
 asZnCharacterEncoder
   "Return a ZnCharacterEncoder instance using the receiver as identifier"
 
