@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-character-encoding-core
 valueForCharacter: char
+	"Protocol: private"
 	| code |
 	code := char charCode.
 	(code between: 0 and: 127)
