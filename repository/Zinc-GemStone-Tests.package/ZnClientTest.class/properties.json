@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ZnServerBasedTests",
+	"super" : "ZnServerBasedTest",
 	"category" : "Zinc-GemStone-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
