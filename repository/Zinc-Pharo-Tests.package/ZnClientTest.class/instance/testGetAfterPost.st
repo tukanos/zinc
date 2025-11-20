@@ -1,6 +1,5 @@
-*zinc-pharo-tests
+testing
 testGetAfterPost
-	"Protocol: testing"
 	self withServerDo: [ :server | | client |
 		server onRequestRespond: [ :request |
 			request uri firstPathSegment = 'one'

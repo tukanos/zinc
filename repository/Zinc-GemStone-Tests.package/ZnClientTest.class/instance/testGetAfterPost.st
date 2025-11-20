@@ -1,6 +1,5 @@
-*zinc-gemstone-tests
+testing
 testGetAfterPost
-  "Protocol: testing"
   self
     withServerDo: [ :server | 
       | client |

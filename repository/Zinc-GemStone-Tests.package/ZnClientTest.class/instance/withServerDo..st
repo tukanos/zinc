@@ -1,6 +1,5 @@
-*zinc-gemstone-tests
+private
 withServerDo: block
-  "Protocol: private"
   | server |
   server := super withServerDo: block.
   [ 
