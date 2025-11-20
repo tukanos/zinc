@@ -147,7 +147,7 @@ baseline: spec
             group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-GemStone-Zodiac-Tests');
             group: 'Zodiac' with: #('SSL') ].  "alias"
 
-        spec
+        "spec
             for: #'gs3.x'
             do: [
                 spec
@@ -168,4 +168,4 @@ baseline: spec
                     package: 'Zinc-Character-Encoding-GS32-Core'
                         with: [ spec 
                                     file: 'Zinc-Character-Encoding-GS32-Core.v37';
-                                    requires: #('Zinc-Character-Encoding-Core') ] ].
+                                    requires: #('Zinc-Character-Encoding-Core') ] ]."
