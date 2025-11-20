@@ -1,3 +1,3 @@
-*zinc-character-encoding-gs32-core
+*zinc-gemstone-character-encoding-core
 encodeString: string
   ^ string encodeAsUTF8
