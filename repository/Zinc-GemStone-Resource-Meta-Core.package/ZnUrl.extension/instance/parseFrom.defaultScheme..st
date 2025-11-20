@@ -33,4 +33,4 @@ parseFrom: string defaultScheme: defaultScheme
 					start := index ]
 				ifFalse: [ 
 					^ self parseAuthority:  string from: start to: end ] ].
-	self parsePath: string from: start to: end
+	self parsePath: (AnsiReadStream on: string from: start to: end)
