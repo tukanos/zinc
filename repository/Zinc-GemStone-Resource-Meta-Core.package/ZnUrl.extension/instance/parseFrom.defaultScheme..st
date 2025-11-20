@@ -10,7 +10,7 @@ parseFrom: string defaultScheme: defaultScheme
 			end := index - 1 ].
 	((index := (string indexOf: $?)) between: 1 and: end)
 		ifTrue: [
-			self query: (self parseQueryFrom: (ReadStream on: string from: index + 1 to: end)).
+			self query: (self parseQueryFrom: (AnsiReadStream on: string from: index + 1 to: end)).
 			end := index - 1 ].
 	((index := string indexOfSubCollection: '://') > 0 and: [ index <= end ])
 		ifTrue: [
@@ -29,8 +29,8 @@ parseFrom: string defaultScheme: defaultScheme
 		ifTrue: [
 			(index := string indexOf: $/ startingAt: start) > 0
 				ifTrue: [
-					self parseAuthority: (AnsiReadStream on: string from: start to: index - 1).
+					self parseAuthority: string from: start to: index - 1.
 					start := index ]
 				ifFalse: [ 
-					^ self parseAuthority: (AnsiReadStream on: string from: start to: end) ] ].
-	self parsePath: (AnsiReadStream on: string from: start to: end)
+					^ self parseAuthority:  string from: start to: end ] ].
+	self parsePath: string from: start to: end
