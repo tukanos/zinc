@@ -10,5 +10,5 @@
 	"name" : "ZnDispatcherDelegateTest",
 	"pools" : [
 		 ],
-	"super" : "ZnServerBasedTests",
+	"super" : "ZnServerBasedTest",
 	"type" : "normal" }
