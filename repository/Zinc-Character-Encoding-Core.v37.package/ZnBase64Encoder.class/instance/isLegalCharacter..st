@@ -1,6 +1,5 @@
-*zinc-character-encoding-core
+private
 isLegalCharacter: character
-	"Protocol: private"
 	"Return true when character is part of my alphabet"
 
 	| code |

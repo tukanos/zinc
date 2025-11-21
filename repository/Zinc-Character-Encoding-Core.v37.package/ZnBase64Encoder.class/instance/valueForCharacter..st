@@ -1,6 +1,5 @@
-*zinc-character-encoding-core
+private
 valueForCharacter: char
-	"Protocol: private"
 	| code |
 	code := char charCode.
 	(code between: 0 and: 127)
