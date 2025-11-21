@@ -1,3 +1,3 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 isOctetCharacter
 	^ self asciiValue < 256

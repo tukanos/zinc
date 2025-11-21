@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 backOnStream: stream
 	"Protocol: encoding - decoding"
 	"Move back one character on stream"
