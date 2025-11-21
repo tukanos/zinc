@@ -1,6 +1,5 @@
-*zinc-pharo-character-encoding-core
+convenience
 readInto: string startingAt: offset count: requestedCount fromStream: stream
-	"Protocol: convenience"
 	"Read requestedCount characters into string starting at offset,
 	returning the number read, there could be less available when stream is atEnd.
 	I signal a ZnByteStringBecameWideString notification if necessary"
