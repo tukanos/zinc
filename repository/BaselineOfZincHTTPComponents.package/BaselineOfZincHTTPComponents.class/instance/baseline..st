@@ -117,11 +117,11 @@ baseline: spec
                              repository: 'github://GsDevKit/zodiac:gs_master/repository' ].
 
         spec
-            package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-GemStone-Character-Encoding-Core') ];
+            package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
                                               includes: #('SocketStream') ];
             package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ];
-            package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-GemStone-Character-Encoding-Core' 'Zinc-GemStone-Resource-Meta-Core' 'Zinc-HTTP') ];
+            package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-GemStone-Resource-Meta-Core' 'Zinc-HTTP') ];
             package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
             package: 'Zinc-GemStone-Tests' with: [ spec requires: #('Zinc-Tests') ].
         spec
@@ -137,8 +137,7 @@ baseline: spec
         spec
             group: 'Core' with: #('Zinc-GemStone-HTTP' 'Zinc-GemStone-HTTP-Examples' 'Zinc-GemStone-Server-Tools');
             group: 'CI' with: #('REST' 'WebSocket');
-            group: 'Tests' with: #('Zinc-GemStone-Tests' 'Zinc-GemStone-Character-Encoding-Tests');
-            group: 'Character-Encoding' with: #('Zinc-GemStone-Character-Encoding-Core' 'Zinc-GemStone-Character-Encoding-Tests');
+            group: 'Tests' with: #('Zinc-GemStone-Tests');
             group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
             group: 'WebSocket' with: #('Zinc-GemStone-WebSocket-Core' 'Zinc-GemStone-WebSocket-Tests');
             group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-GemStone-Zodiac-Tests');
