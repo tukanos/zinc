@@ -1,5 +1,6 @@
-private
+*zinc-pharo-character-encoding-core
 valueForCharacter: char
+	"Protocol: private"
 	| code |
 	(code := char asciiValue) < 128
 		ifTrue: [
