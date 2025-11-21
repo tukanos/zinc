@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 next: count putAll: string startingAt: offset toStream: stream
 	"Protocol: convenience"
 	"Write count bytes from string starting at offset to stream."

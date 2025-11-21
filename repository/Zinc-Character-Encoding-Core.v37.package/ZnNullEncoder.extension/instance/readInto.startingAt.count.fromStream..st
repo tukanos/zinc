@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 readInto: string startingAt: offset count: requestedCount fromStream: stream
 	"Protocol: convenience"
 	"Read requestedCount characters into string starting at offset,

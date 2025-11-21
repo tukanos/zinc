@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 newForEncoding: string stringClass: stringClass
     "Protocol: instance creation"
     "Return a new character encoder object for an encoding described by string.

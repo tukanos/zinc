@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 isLegalCharacter: character
 	"Protocol: private"
 	"Return true when character is part of my alphabet"

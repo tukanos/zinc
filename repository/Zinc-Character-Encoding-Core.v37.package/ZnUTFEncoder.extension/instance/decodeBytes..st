@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 decodeBytes: bytes
 	"Protocol: convenience"
 	^ bytes asByteArray decodeFromUTF8

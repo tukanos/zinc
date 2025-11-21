@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-tests
+*zinc-character-encoding-gs3-tests
 testUTF8ByteOrderMark
   "Protocol: testing"
   "The Unicode Byte Order Mark (BOM) should be skipped."

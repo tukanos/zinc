@@ -1,4 +1,4 @@
-*zinc-gemstone-character-encoding-core
+*zinc-character-encoding-core
 convert: byteString
   "Protocol: convenience"
 	"Convert byteString to a wideString, signalling a resumable error"
