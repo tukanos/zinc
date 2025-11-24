@@ -1,4 +1,5 @@
 *zinc-character-encoding-core
-finish
+wrappedStream
 	"Protocol: initialize-release"
-	self flushBuffer
+
+	^ stream

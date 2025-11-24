@@ -1,4 +1,5 @@
 *zinc-character-encoding-core
-finish
+close
 	"Protocol: initialize-release"
-	self flushBuffer
+	self flushBuffer.
+	stream close

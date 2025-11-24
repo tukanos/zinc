@@ -1,4 +1,5 @@
 *zinc-character-encoding-core
-finish
+on: writeStream
 	"Protocol: initialize-release"
-	self flushBuffer
+	stream := writeStream.
+	position := 0
