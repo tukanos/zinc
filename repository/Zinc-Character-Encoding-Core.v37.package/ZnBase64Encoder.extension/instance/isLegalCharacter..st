@@ -1,7 +1,7 @@
-private
+*zinc-character-encoding-core
 isLegalCharacter: character
+	"Protocol: private"
 	"Return true when character is part of my alphabet"
-
 	| code |
 	code := character charCode.
 	^ (code between: 0 and: 127)
