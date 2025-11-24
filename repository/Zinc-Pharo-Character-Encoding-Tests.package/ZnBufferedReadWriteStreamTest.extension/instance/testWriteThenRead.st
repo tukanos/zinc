@@ -1,5 +1,6 @@
-tests
+*zinc-pharo-character-encoding-tests
 testWriteThenRead
+	"Protocol: tests"
 	| stream stringStream |
 
 	((SystemVersion current major < 7) or: [ SystemVersion current build < 690 ])
