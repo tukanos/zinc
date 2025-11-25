@@ -5,10 +5,11 @@ testWritingReset
 	file := 'test.txt' asFileReference ensureCreateFile.
 
 	writeStream := file binaryWriteStream.
-	writeStream nextPutAll: 'pedro'.
+	writeStream nextPutAll: 'towertalk'.
 	writeStream reset.
-	writeStream nextPutAll: 'pha'.
+	writeStream nextPutAll: 'small'.
 	writeStream close.
 
 	readStream := file readStream.
-	self assert: readStream contents equals: 'pharo'
+	self assert: readStream contents equals: 'smalltalk'.
+	file ensureDelete
