@@ -1,9 +1,11 @@
 *zinc-character-encoding-gs3-tests
 testWriteThenRead
 	"Protocol: tests"
+	"GS requires to use ANSI version of the streams.  Legacy stream position
+	will be used otherise!  That will yield incorrect results."
 	| stream stringStream |
 
-	stringStream := ReadWriteStream with: '0123456789' copy.
+	stringStream := AnsiReadWriteStream with: '0123456789' copy.
 	stringStream reset.
 	stream := ZnBufferedReadWriteStream on: stringStream.
 	stream sizeBuffer: 8.
