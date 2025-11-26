@@ -1,4 +1,4 @@
-*Zinc-Character-Encoding-Core
+*zinc-gemstone-character-encoding-core
 wrappedStream
 	"Answer the stream that the receiver wraps.
 	Since this the base stream, answer nil"

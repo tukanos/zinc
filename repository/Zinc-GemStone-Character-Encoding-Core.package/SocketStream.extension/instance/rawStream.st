@@ -1,4 +1,4 @@
-*Zinc-Character-Encoding-Core
+*zinc-gemstone-character-encoding-core
 rawStream
 	"Answer the innermost stream wrapped by the receiver, e.g. a raw binary file stream,
 	socket stream, or regular Read/WriteStream.
