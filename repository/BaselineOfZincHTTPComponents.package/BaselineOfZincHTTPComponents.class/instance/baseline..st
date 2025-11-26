@@ -117,7 +117,6 @@ baseline: spec
                              repository: 'github://GsDevKit/zodiac:gs_master/repository' ].
 
         spec
-            package: 'Zinc-GemStone-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
             package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
                                               includes: #('SocketStream') ];
@@ -161,7 +160,11 @@ baseline: spec
                     package: 'Zinc-Character-Encoding-Core'
                         with: [ spec
                                     file: 'Zinc-Character-Encoding-Core.v37';
-                                    includes: #('Zinc-Character-Encoding-GS32-Core') ];
+                                    includes: #('Zinc-GemStone-Character-Encoding-Core') ];
+                    package: 'Zinc-GemStone-Character-Encoding-Core' 
+                       with: [ spec 
+                                    file: 'Zinc-GemStone-Character-Encoding-Core';
+                                    includes: #('Zinc-Character-Encoding-GS32-Core')];
                     package: 'Zinc-Character-Encoding-GS32-Core'
                         with: [ spec 
                                     file: 'Zinc-Character-Encoding-GS32-Core.v37';
