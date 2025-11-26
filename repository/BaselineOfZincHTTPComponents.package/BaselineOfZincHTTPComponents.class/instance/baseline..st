@@ -117,6 +117,7 @@ baseline: spec
                              repository: 'github://GsDevKit/zodiac:gs_master/repository' ].
 
         spec
+            package: 'Zinc-GemStone-Character-Encoding-Core' with: [ spec requires: #('Zinc-Character-Encoding-Core') ];
             package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
             package: 'Zinc-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
                                               includes: #('SocketStream') ];
