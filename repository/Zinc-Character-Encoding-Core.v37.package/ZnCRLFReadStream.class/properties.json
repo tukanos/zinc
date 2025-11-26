@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Zinc-Character-Encoding-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Cr",
+		"Lf"
+	],
+	"instvars" : [
+		"stream",
+		"next"
+	],
+	"name" : "ZnCRLFReadStream",
+	"type" : "normal"
+}

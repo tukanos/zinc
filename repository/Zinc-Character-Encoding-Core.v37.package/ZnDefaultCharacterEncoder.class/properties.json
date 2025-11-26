@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DynamicVariable",
+	"category" : "Zinc-Character-Encoding-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZnDefaultCharacterEncoder",
+	"type" : "normal"
+}
