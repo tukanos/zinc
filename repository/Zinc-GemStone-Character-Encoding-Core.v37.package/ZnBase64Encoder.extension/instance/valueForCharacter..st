@@ -1,4 +1,4 @@
-*zinc-character-encoding-core
+*zinc-gemstone-character-encoding-core
 valueForCharacter: char
 	"Protocol: private"
 	| code |

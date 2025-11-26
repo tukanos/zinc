@@ -160,11 +160,11 @@ baseline: spec
                     package: 'Zinc-Character-Encoding-Core'
                         with: [ spec
                                     file: 'Zinc-Character-Encoding-Core.v37';
-                                    includes: #('Zinc-GemStone-Character-Encoding-Core') ];
+                                    includes: #('Zinc-GemStone-Character-Encoding-Core' 'Zinc-Character-Encoding-GS32-Core') ];
                     package: 'Zinc-GemStone-Character-Encoding-Core' 
                        with: [ spec 
-                                    file: 'Zinc-GemStone-Character-Encoding-Core';
-                                    includes: #('Zinc-Character-Encoding-GS32-Core')];
+                                   file: 'Zinc-GemStone-Character-Encoding-Core.v37';
+                                   requires: #('SocketStream' 'Zinc-Character-Encoding-Core') ];
                     package: 'Zinc-Character-Encoding-GS32-Core'
                         with: [ spec 
                                     file: 'Zinc-Character-Encoding-GS32-Core.v37';
