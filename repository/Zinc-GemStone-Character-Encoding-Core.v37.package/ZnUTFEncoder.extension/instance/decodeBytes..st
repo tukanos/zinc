@@ -2,7 +2,7 @@
 decodeBytes: bytes
 	"Protocol: convenience"
 	"Overridden to prevent the automagic switch from ByteString to QuadByteString.
-	See also #decodeBytesIntoquadByteString:"
+	See also #decodeBytesIntoQuadByteString:"
 
 	| byteStream |
 	byteStream := bytes readStream.
