@@ -9,6 +9,6 @@ testGetSmallHTMLStreaming
 	self assert: client response contentType equals: ZnMimeType textHtml.
 	self assert: result isStream.
 	self assert: client entity stream equals: result.
-	contents := ZnUTF8Encoder new decodeBytes: result upToEnd.
+	contents := ZnUTF8EncoderGS new decodeBytes: result upToEnd.
 	self assert: (contents includesSubstring: 'Small').
 	client close

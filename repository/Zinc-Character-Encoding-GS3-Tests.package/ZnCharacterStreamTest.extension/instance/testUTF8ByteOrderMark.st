@@ -4,7 +4,7 @@ testUTF8ByteOrderMark
   "The Unicode Byte Order Mark (BOM) should be skipped."
 
   | bom string bytes encoder decoded |
-  encoder := ZnUTF8Encoder new.
+  encoder := ZnUTF8EncoderGS new.
   bom := #[239 187 191].
   string := 'élève en Français'.
   bytes := encoder encodeString: string.

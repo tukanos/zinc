@@ -2,7 +2,7 @@
 testReadIntoStartingAtCountFromStreamWide
   "Protocol: tests"
   | encoder |
-  encoder := ZnUTF8Encoder new.
+  encoder := ZnUTF8EncoderGS new.
   {('abc'
     , (QuadByteString withAll: {(300 asCharacter). (400 asCharacter). (500 asCharacter)})
     , 'xyz')} do: [ :each |

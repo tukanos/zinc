@@ -4,8 +4,8 @@ testUTF8Overlong
 	See http://en.wikipedia.org/wiki/UTF-8#Overlong_encodings"
 
   self
-    should: [ ZnUTF8Encoder new decodeBytes: #(16rF0 16r82 16r82 16rAC) asByteArray ]
+    should: [ ZnUTF8EncoderGS new decodeBytes: #(16rF0 16r82 16r82 16rAC) asByteArray ]
     raise: ZnInvalidUTF8 , ArgumentError.
   self
-    should: [ ZnUTF8Encoder new decodeBytes: #(193 129 193 130 193 131) asByteArray ]
+    should: [ ZnUTF8EncoderGS new decodeBytes: #(193 129 193 130 193 131) asByteArray ]
     raise: ZnInvalidUTF8 , ArgumentError

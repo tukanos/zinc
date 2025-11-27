@@ -5,7 +5,7 @@ asZnCharacterEncoder
   " 'UTF-8' asZnCharacterEncoder "
 
   (self select: [ :each | each isAlphaNumeric ]) asLowercase = 'utf8'
-    ifTrue: [ ^ ZnUTF8Encoder new ]
+    ifTrue: [ ^ ZnUTF8EncoderGS new ]
     ifFalse: [ 
       (self select: [ :each | each isAlphaNumeric ]) asLowercase = '8bit'
         ifFalse: [ ZnNullEncoder new ] ].

@@ -20,5 +20,5 @@ readMessage
       frame isFinal ]
         whileFalse ].
   ^ isText
-    ifTrue: [ ZnUTF8Encoder new decodeBytes: bytes ]
+    ifTrue: [ ZnUTF8EncoderGS new decodeBytes: bytes ]
     ifFalse: [ bytes ]
