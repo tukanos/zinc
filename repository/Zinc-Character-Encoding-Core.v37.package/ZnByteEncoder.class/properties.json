@@ -1,17 +1,11 @@
 {
+	"commentStamp" : "",
+	"super" : "ZnSimplifiedByteEncoder",
 	"category" : "Zinc-Character-Encoding-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		"ByteTextConverters" ],
-	"commentStamp" : "<historical>",
-	"instvars" : [
-		"identifier",
-		"byteToUnicode",
-		"unicodeToByte",
-		"strict" ],
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
 	"name" : "ZnByteEncoder",
-	"pools" : [
-		 ],
-	"super" : "ZnCharacterEncoder",
-	"type" : "normal" }
+	"type" : "normal"
+}

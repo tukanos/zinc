@@ -1,15 +1,15 @@
 {
+	"commentStamp" : "",
+	"super" : "Object",
 	"category" : "Zinc-Character-Encoding-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"characterEncoder",
-		"safeSet" ],
+		"safeSet",
+		"decodePlusAsSpace"
+	],
 	"name" : "ZnPercentEncoder",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}
