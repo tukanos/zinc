@@ -1,7 +1,7 @@
 *Zinc-Character-Encoding-Core
 encodeWith: encoding
 	"Produce a ByteArray that encodes the receiver, using a specified encoding.
-	Encoding is either a ZnCharacterEncoder instance or an identifier for one."
+	Encoding is either a ZnCharacterEncoderGS instance or an identifier for one."
 
 	" 'Les élèves français' encodeWith: #utf8 "
 

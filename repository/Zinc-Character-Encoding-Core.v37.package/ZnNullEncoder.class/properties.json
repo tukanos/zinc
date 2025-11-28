@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ZnCharacterEncoder",
+	"super" : "ZnCharacterEncoderGS",
 	"category" : "Zinc-Character-Encoding-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

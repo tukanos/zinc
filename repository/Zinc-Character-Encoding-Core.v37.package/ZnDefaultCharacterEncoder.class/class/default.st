@@ -1,4 +1,4 @@
 accessing
 default
-  "For GemStone needed on class side"
-  ^ self new default
+  "For GemStone needs it on class side"
+  ^ ZnCharacterEncoderGS utf8

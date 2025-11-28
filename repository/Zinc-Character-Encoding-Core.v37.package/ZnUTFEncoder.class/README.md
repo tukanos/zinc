@@ -1,1 +1,1 @@
-I am ZnUTFEncoder. I am a ZnCharacterEncoder. My subclasses deal with the full range of Unicode character code points.
+I am ZnUTFEncoder. I am a ZnCharacterEncoderGS. My subclasses deal with the full range of Unicode character code points.
