@@ -1,3 +1,3 @@
 convenience
 utf8
-	^ ZnUTF8Encoder default
+	^ ZnUTF8EncoderGS default
