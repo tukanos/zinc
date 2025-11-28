@@ -1,4 +1,4 @@
 accessing
 default
-	"For Pharo needed on instance side"
+	"Pharo needs it on instance side"
 	^ ZnCharacterEncoder utf8
