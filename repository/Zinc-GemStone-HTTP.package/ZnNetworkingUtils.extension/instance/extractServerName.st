@@ -1,14 +1,15 @@
 *zinc-gemstone-http
 extractServerName: url
-  "Protocol: private"
+	"Protocol: private"
 	"From URL extract server name"
-	| bare |
-	bare := url asLowercase beginsWith: 'http://' ifTrue: [
-			( url asLowercase beginsWith: 'http://')
-				ifTrue: [ url copyFrom: 8 to: url size ]
-				ifFalse: [ url ] ]
+	| bare urlString |
+	urlString := url asString.
+	bare := (urlString asLowercase beginsWith: 'http://') ifTrue: [
+			( urlString asLowercase beginsWith: 'http://')
+				ifTrue: [ urlString copyFrom: 8 to: urlString size ]
+				ifFalse: [ urlString ] ]
 		ifFalse: [
-			( url asLowercase beginsWith: 'https://')
-				ifTrue: [ url copyFrom: 9 to: url size ]
-				ifFalse: [ url ] ].
+			( urlString asLowercase beginsWith: 'https://')
+				ifTrue: [ urlString copyFrom: 9 to: url size ]
+				ifFalse: [ urlString ] ].
 	^ bare copyUpTo: $/. "serverName"
