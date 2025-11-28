@@ -1,5 +1,6 @@
-testing
+*zinc-character-encoding-gs3-tests
 testUTF8IllegalInput
+	"Protocol: testing"
 	"See Unicode 14 standard, chapter 3, Conformance, 3.9 Unicode Encoding Forms, tables 3.6 & 3.7"
 
 	{

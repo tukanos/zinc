@@ -1,5 +1,6 @@
-testing
+*zinc-character-encoding-gs3-tests
 testByteEncoderFromUrl
+	"Protocol: testing"
 	| encoderFromUrl iso88592 bytes characters |
 	encoderFromUrl := ZnByteEncoder newFromUrl: 'http://files.pharo.org/extra/unicode/8859-2.TXT'.
 	iso88592 := ZnCharacterEncoderGS newForEncoding: #iso88592.
