@@ -1,4 +1,6 @@
 *zinc-gemstone-http
 initialize
-	"Protocol: initialize-release"
-	request := ZnRequest empty
+	"Protocol: initialization"
+	super initialize.
+	request := ZnRequest empty.
+	self loggingOn
