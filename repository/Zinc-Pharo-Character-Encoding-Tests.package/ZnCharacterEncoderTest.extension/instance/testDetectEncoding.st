@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testDetectEncoding
+	"Protocol: testing"
 	| bytes |
 	bytes := 'abc' asByteArray.
 	self assert: (ZnCharacterEncoder detectEncoding: bytes) equals: ZnCharacterEncoder ascii.

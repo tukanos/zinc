@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testCodePointEncodingDecoding
+	"Protocol: testing"
 	| encoder input output |
 	input := 'Düsseldorf Königsallee' collect: #codePoint as: Array.
 	self assert: input isCollection.

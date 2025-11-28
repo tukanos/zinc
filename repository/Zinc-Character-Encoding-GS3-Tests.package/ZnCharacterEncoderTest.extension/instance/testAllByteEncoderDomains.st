@@ -1,8 +1,9 @@
-testing
+*zinc-character-encoding-gs3-tests
 testAllByteEncoderDomains
+	"Protocol: testing"
 	| encoder characterDomain byteDomain encoded |
 	ZnByteEncoder knownEncodingIdentifiers do: [ :identifier |
-		encoder := ZnCharacterEncoder newForEncoding: identifier.
+		encoder := ZnCharacterEncoderGS newForEncoding: identifier.
 		self assert: encoder identifier equals: identifier.
 		self assert: encoder isStrict.
 		self assert: encoder isLenient not.

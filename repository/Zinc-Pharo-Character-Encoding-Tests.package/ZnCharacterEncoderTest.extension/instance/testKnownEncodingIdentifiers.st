@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testKnownEncodingIdentifiers
+	"Protocol: testing"
 	| all minimal asciiString notSelfIdentifying|
 	all := ZnCharacterEncoder knownEncodingIdentifiers asSet.
 	minimal := #('utf8' 'latin1' 'null' 'ascii' 'iso88591') asSet.

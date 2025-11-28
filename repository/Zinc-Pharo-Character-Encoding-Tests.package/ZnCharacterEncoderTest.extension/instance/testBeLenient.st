@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testBeLenient
+	"Protocol: testing"
 	| encoder unmapped |
 	encoder := ZnCharacterEncoder newForEncoding: 'iso-8859-1'.
 	unmapped := (128 to: 159) asByteArray.

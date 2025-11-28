@@ -1,5 +1,6 @@
-testing
+*zinc-character-encoding-gs3-tests
 testCodePointStreams
+	"Protocol: testing"
 	| string codePoints bytes result |
 	string := 'Düsseldorf Königsallee'.
 	codePoints := string collect: #codePoint as: Array.
@@ -9,7 +10,7 @@ testCodePointStreams
 		bytes := ByteArray streamContents: [ :out |
 			(ZnCodePointWriteStream on: out encoding: each)
 				nextPutAll: codePoints ].
-		self assert: bytes equals: (each asZnCharacterEncoder encodeString: string).
+		self assert: bytes equals: (each asZnCharacterEncoderGS encodeString: string).
 		result := (ZnCodePointReadStream on: bytes readStream encoding: each) upToEnd.
 		self assert: result equals: codePoints.
 		self assert: (codePoints collect: #asCharacter as: String) equals: string ]

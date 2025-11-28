@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testUTF8SurrogateCodePointsShouldFail
+	"Protocol: testing"
 	| encoder surrogateCodePoint |
 	encoder := #utf8 asZnCharacterEncoder.
 	surrogateCodePoint := 16rD801.

@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testLossyUTF8
+	"Protocol: testing"
 	| encoder replacement |
 	encoder := ZnLossyUTF8Encoder new.
 	self assert: #utf8lossy asZnCharacterEncoder equals: encoder.

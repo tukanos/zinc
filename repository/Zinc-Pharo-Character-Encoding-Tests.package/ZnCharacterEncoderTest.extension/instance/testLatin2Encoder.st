@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testLatin2Encoder
+	"Protocol: testing"
 	"Example characters taken from http://en.wikipedia.org/wiki/Latin2"
 
 	| encoder inputBytes outputBytes inputString outputString |
