@@ -1,9 +1,12 @@
 *zinc-gemstone-http
 printHeaderOn: stream
-  "Protocol: printing"
-	self timeStamp printYMDOn: stream.
+	"Protocol: printing"
+	"Print my generic context part, <date> <time> <seq-nr> <process> [ subclass addition], to stream"
+	
+	timestamp printYMDOn: stream.
 	stream space.
-	self timeStamp printHMSOn: stream.
+	timestamp printHMSOn: stream.
 	stream space.
-	self processId printOn: stream base: 10 length: 6 padded: true.
-	stream space; nextPut: self category first asUppercase
+	id \\ 1000 printOn: stream base: 10 length: 3 padded: true.
+	stream space.
+	processId printOn: stream base: 10 length: 6 padded: true

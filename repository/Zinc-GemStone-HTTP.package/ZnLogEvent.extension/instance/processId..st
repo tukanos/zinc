@@ -1,4 +1,4 @@
 *zinc-gemstone-http
-processId: integer
-  "Protocol: private"
-	processId := integer
+processId: anObject
+	"Protocol: initialize"
+	processId := anObject

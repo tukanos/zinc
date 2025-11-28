@@ -1,6 +1,7 @@
 *zinc-gemstone-http
-initialize 
-  "Protocol: initialize-release"
-	self timeStamp: TimeStamp now.
-	self category: #info.  
-	self processId: ZnUtils currentProcessID
+initialize
+	"Protocol: initialization"
+	super initialize.
+	timestamp := DateAndTime now.
+	id := self nextId.
+	processId := ZnUtils currentProcessID
