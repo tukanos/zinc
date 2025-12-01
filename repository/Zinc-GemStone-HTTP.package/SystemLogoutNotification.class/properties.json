@@ -1,0 +1,14 @@
+{
+	"category" : "Zinc-GemStone-HTTP",
+	"classinstvars" : [
+		 ],
+	"classvars" : [ "Subscriptions"
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SystemLogoutNotification",
+	"pools" : [
+		 ],
+	"super" : "SystemLoginNotification",
+	"type" : "normal" }
