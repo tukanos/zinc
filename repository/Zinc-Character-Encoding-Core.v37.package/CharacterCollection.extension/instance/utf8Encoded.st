@@ -1,4 +1,4 @@
-*Zinc-Character-Encoding-Core
+*zinc-character-encoding-core
 utf8Encoded
 	"Produce a ByteArray encoding the receiver using UTF-8,
 	the recommended encoding for Strings, unless you know what you are doing."
