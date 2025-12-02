@@ -16,5 +16,5 @@ testKnownEncodingIdentifiers
 		self assert: (encoder decodeBytes: bytes) equals: asciiString ].
 	"make sure identifiers are preserved"
 	notSelfIdentifying := ZnCharacterEncoderGS knownEncodingIdentifiers reject: [ :each | 
-		each asZnCharacterEncoderGS identifier = each ].
+		each asZnCharacterEncoder identifier = each ].
 	self assert: notSelfIdentifying isEmpty

@@ -3,7 +3,7 @@ testLossyUTF8
 	"Protocol: testing"
 	| encoder replacement |
 	encoder := ZnLossyUTF8Encoder new.
-	self assert: #utf8lossy asZnCharacterEncoderGS equals: encoder.
+	self assert: #utf8lossy asZnCharacterEncoder equals: encoder.
 	replacement := encoder replacementCodePoint asCharacter.
 	self 
 		assert: (#[65 160 66] decodeWith: encoder) 

@@ -2,7 +2,7 @@
 testUTF8SurrogateCodePointsShouldFail
 	"Protocol: testing"
 	| encoder surrogateCodePoint |
-	encoder := #utf8 asZnCharacterEncoderGS.
+	encoder := #utf8 asZnCharacterEncoder.
 	surrogateCodePoint := 16rD801.
 	self assert: (encoder isSurrogateCodePoint: surrogateCodePoint).
 	self

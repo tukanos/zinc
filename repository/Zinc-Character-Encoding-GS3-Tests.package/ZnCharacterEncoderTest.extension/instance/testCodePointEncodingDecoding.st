@@ -6,7 +6,7 @@ testCodePointEncodingDecoding
 	self assert: input isCollection.
 	self assert: (input allSatisfy: #isInteger).
 	#(utf8 utf16 utf32 latin1 null) do: [ :each |
-		encoder := each asZnCharacterEncoderGS.
+		encoder := each asZnCharacterEncoder.
 		output := encoder encodeCodePoints: input.
 		self assert: output isCollection.
 		self assert: (output allSatisfy: [ :e | e isInteger and: [ e between: 0 and: 255 ] ] ).
