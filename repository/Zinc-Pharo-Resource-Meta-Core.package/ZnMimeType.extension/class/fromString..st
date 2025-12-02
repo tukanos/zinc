@@ -1,5 +1,6 @@
-instance creation
+*zinc-pharo-resource-meta-core
 fromString: aString
+	"Protocol: instance creation"
 	| main endOfSub sub parts parameters |
 	main := aString copyUpTo: $/.
 	endOfSub := aString indexOf: $;.
