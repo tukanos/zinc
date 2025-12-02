@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-character-encoding-tests
 testDebuggingUTF8
-	self 
+	"Protocol: testing"
+	self
 		assert: (({ $A. 55296 asCharacter . $B } as: String) encodeWith: #utf8debug) utf8Decoded 
 		equals: 'A<Cannot utf-8 encode code point 55296>B'
