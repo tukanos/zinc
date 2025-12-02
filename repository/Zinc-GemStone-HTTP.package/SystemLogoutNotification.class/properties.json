@@ -10,5 +10,5 @@
 	"name" : "SystemLogoutNotification",
 	"pools" : [
 		 ],
-	"super" : "SystemLoginNotification",
+	"super" : "Object",
 	"type" : "normal" }

@@ -1,4 +1,4 @@
-accessing
+notification
 sessionEnd
   self subscriptions
     do: [ :objName |
