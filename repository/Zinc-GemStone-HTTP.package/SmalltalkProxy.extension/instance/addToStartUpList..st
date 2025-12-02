@@ -4,4 +4,3 @@ addToStartUpList: anObject
   "To 'start up'  in GemStone"
 
   SystemLoginNotification subscribe: anObject name.
-  anObject sessionStart.

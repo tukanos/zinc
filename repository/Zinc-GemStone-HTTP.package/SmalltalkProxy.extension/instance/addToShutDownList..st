@@ -4,4 +4,3 @@ addToShutDownList: anObject
   "Remove from 'shutdown'"
 
   SystemLogoutNotification subscribe: anObject name.
-  anObject sessionEnd.
