@@ -129,7 +129,6 @@ baseline: spec
             package: 'Zinc-GemStone-WebSocket-Tests' with: [ spec requires: #('Zinc-GemStone-WebSocket-Core') ];
             package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
             package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
-            package: 'Zinc-GemStone-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ];
             package: 'SocketStream';
             package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
             package: 'Zinc-GemStone-Server-Tools' with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
@@ -140,7 +139,7 @@ baseline: spec
             group: 'Tests' with: #('Zinc-GemStone-Tests');
             group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
             group: 'WebSocket' with: #('Zinc-GemStone-WebSocket-Core' 'Zinc-GemStone-WebSocket-Tests');
-            group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-GemStone-Zodiac-Tests');
+            group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests');
             group: 'Zodiac' with: #('SSL') ].  "alias"
 
         spec

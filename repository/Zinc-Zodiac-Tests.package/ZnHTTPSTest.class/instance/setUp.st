@@ -1,5 +1,4 @@
-*zinc-gemstone-tests
+running
 setUp
-  "Protocol: running"
   super setUp.
   GsSecureSocket disableCertificateVerificationOnClient
