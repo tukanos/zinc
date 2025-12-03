@@ -69,7 +69,7 @@ baseline: spec
         spec
             package: 'Zinc-Pharo-WebSocket-Core' with: [ spec requires: #('Zinc-Pharo-HTTP') ];
             package: 'Zinc-Pharo-WebSocket-Tests' with: [ spec requires: #('Zinc-Pharo-WebSocket-Core') ];
-            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
+            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-HTTP' 'Zodiac Project') ];
             package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
             package: 'Zinc-Pharo-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ].
         spec
