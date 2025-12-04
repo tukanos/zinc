@@ -1,5 +1,6 @@
-parsing
+*zinc-pharo-resource-meta-core
 parseFrom: string defaultScheme: defaultScheme
+	"Protocol: parsing"
 	| start end index |
 	start := 1.
 	end := string size.
