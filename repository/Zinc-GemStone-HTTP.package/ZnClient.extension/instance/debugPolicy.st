@@ -1,5 +1,5 @@
 *zinc-gemstone-http
 debugPolicy
-	"Protocol: initialization"
-	self
+	"Protocol: initialize-release"
+	self 
 		beOneShot
