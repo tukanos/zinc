@@ -1,4 +1,4 @@
-*Zinc-HTTP
+*zinc-pharo-http
 retrieveContents
 	"Download and return the resource that I refer to.
 	This will typically return a String or a ByteArray.
