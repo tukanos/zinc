@@ -13,6 +13,7 @@
 		"options",
 		"session",
 		"logLevel",
+		"log",
 		"newOptions"
 	],
 	"name" : "ZnClient",
