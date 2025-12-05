@@ -5,6 +5,5 @@ decode: string
 
 	| bytes stringStream |
 	stringStream := string readStream.
-	bytes := ByteArray streamContents: [ :byteStream |
-		self decode: stringStream to: byteStream ].
+	bytes := ByteArray streamContents: [ :byteStream | self decode: stringStream to: byteStream ].
 	^ self characterEncoder decodeBytes: bytes
