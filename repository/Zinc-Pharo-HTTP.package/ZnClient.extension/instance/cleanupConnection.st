@@ -1,5 +1,6 @@
-private
+*zinc-pharo-http
 cleanupConnection
+	"Protocol: private"
 	(self isOneShot
 		or: [
 			self streaming not
