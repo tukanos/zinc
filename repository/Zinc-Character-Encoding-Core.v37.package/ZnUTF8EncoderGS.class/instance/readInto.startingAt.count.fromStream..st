@@ -10,7 +10,7 @@ readInto: string startingAt: offset count: requestedCount fromStream: stream
 	offset to: offset + requestedCount - 1 do: [ :index | | codePoint |
 		stream atEnd ifTrue: [ ^ index - offset ].
 		codePoint := self nextCodePointFromStream: stream.
-		(codePoint > 255 and: [ stringBuffer isWideString not ])
+		(codePoint > 255 and: [ stringBuffer isQuadByteString not ])
 			ifTrue: [ stringBuffer := ZnByteStringBecameWideString convert: stringBuffer ].
 		stringBuffer at: index put: (Character value: codePoint) ].
 	^ requestedCount
