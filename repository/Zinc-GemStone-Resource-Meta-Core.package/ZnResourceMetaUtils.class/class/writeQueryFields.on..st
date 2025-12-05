@@ -1,4 +1,3 @@
-*zinc-gemstone-resource-meta-core
+converting
 writeQueryFields: dictionary on: stream
-	"Protocol: converting"
 	self writeQueryFields: dictionary withEncoder: ZnCharacterEncoderGS utf8 on: stream
