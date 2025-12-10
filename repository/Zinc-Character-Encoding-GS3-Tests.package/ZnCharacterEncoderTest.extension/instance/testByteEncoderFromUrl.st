@@ -2,6 +2,7 @@
 testByteEncoderFromUrl
 	"Protocol: testing"
 	| encoderFromUrl iso88592 bytes characters |
+	GsSecureSocket disableCertificateVerificationOnClient.
 	encoderFromUrl := ZnByteEncoder newFromUrl: 'http://files.pharo.org/extra/unicode/8859-2.TXT'.
 	iso88592 := ZnCharacterEncoderGS newForEncoding: #iso88592.
 	self assert: encoderFromUrl byteDomain equals: iso88592 byteDomain.
