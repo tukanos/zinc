@@ -1,3 +1,4 @@
+*zinc-character-encoding-gs3-tests
 testUTF8EncoderIncomplete
   "Protocol: testing"
   "The examples are taken from http://en.wikipedia.org/wiki/UTF-8#Description"
