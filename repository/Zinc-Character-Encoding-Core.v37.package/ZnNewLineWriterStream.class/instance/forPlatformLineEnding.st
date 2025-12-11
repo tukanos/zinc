@@ -1,4 +1,4 @@
 accessing
 forPlatformLineEnding
 
-	lineEnding := OSPlatform current lineEnding
+	lineEnding := String new withGemstoneLineEndings

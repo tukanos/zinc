@@ -1,5 +1,6 @@
-tests
+*zinc-pharo-character-encoding-tests
 testNextPut
+	"Protocol: tests"
 	"Ensure that the line ends are written correctly"
 
 	| expectedString stream crStream |
