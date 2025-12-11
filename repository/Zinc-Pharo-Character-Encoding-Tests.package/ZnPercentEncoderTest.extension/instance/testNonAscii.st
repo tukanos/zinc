@@ -1,4 +1,4 @@
-*zinc-character-encoding-gs3-tests
+*zinc-pharo-character-encoding-tests
 testNonAscii
 	"Protocol: tests"
 	| encoder |
