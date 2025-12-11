@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Error",
+	"category" : "Zinc-Character-Encoding-Exceptions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"subscript",
+                "lowerBound",
+                "upperbound"
+	],
+	"name" : "SubscriptOutOfBounds",
+	"type" : "normal"
+}
