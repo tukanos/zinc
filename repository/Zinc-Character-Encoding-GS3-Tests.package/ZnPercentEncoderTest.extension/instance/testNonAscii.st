@@ -1,0 +1,14 @@
+*zinc-character-encoding-gs3-tests
+testNonAscii
+	"Protocol: tests"
+	| encoder |
+	encoder := ZnPercentEncoder new.
+	self
+		assert: encoder characterEncoder
+		equals: (ZnCharacterEncoderGS newForEncoding: 'utf-8').
+	self
+		assert: (encoder encode: 'élève en Français')
+		equals: '%C3%A9l%C3%A8ve%20en%20Fran%C3%A7ais'.
+	self
+		assert: (encoder decode: '%C3%A9l%C3%A8ve%20en%20Fran%C3%A7ais')
+		equals: 'élève en Français'
