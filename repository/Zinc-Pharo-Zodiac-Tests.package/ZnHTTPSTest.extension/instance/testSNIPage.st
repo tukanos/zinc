@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-zodiac-tests
 testSNIPage
+	"Protocol: testing"
 	"| client |
 	self ensureSocketStreamFactory.
 	self isNativeSSLPluginPresent ifFalse: [ ^ self skip ].
