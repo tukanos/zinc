@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 sendCookies
-	"Protocol: private"
 	| cookies cookiesString |
 	session ifNil: [ ^ self ].
 	cookies := (session cookieJar cookiesForUrl: request url).
