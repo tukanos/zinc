@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private - protocol
 executeHandlingErrors
-	"Protocol: private - protocol"
 	^ [ self executeWithRetriesRemaining: self numberOfRetries ]
 			on: Error
 			do: self ifFailBlock

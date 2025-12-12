@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private - protocol
 executeRequestResponse
-	"Protocol: private - protocol"
 	| initialMilliseconds requestDuration responseDuration |
 	initialMilliseconds := Time millisecondClockValue.
 	self writeRequest.

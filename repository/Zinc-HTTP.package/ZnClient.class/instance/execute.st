@@ -1,6 +1,5 @@
-*zinc-pharo-http
+operations
 execute
-	"Protocol: operations"
 	"Execute the currently set up request to generate a response.
 	Return the #contents of the response, if any."
 

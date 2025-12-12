@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private - protocol
 executeWithRedirectsRemaining: redirectCount trail: collectionOfUrls
-	"Protocol: private - protocol"
 	self getConnectionAndExecute.
 	response isRedirect
 		ifTrue: [

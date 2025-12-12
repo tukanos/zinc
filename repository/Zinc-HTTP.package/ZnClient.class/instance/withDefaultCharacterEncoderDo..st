@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 withDefaultCharacterEncoderDo: block
-	"Protocol: private"
 	^ self defaultEncoder = ZnDefaultCharacterEncoder value
 			ifTrue: block
 			ifFalse: [
