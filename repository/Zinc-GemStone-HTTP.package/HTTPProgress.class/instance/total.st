@@ -1,5 +1,5 @@
 accessing
 total
-
-   "Return the value of the instance variable 'total'."
-   ^total
+   "Answer the total byte count to transfer. Can be nil."
+   
+   ^ total

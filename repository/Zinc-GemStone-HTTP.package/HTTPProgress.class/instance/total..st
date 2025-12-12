@@ -1,5 +1,5 @@
-updating
-total: newValue
+accessing
+total: byteCount
+   "Set the total byte count to transfer"
 
-   "Modify the value of the instance variable 'total'."
-   total := newValue
+   total := byteCount

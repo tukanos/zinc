@@ -1,5 +1,5 @@
-updating
-amount: newValue
-
-   "Modify the value of the instance variable 'amount'."
-   amount := newValue
+accessing
+amount: byteCount
+   "Set the amount of bytes that has already been transferred."
+   
+   amount := byteCount
