@@ -1,10 +1,9 @@
-*zinc-pharo-http
+private
 newConnectionTo: url
-	"Protocol: private"
 	| initialMilliseconds |
 	self signalHTTPProgress: 'Connecting to ',  url authority.
 	initialMilliseconds := Time millisecondClockValue.
-	(connection notNil and: [ connection isConnected ])
+	(connection isNotNil and: [ connection isConnected ])
 		ifTrue: [ connection close ].
 	connection := ZnNetworkingUtils socketStreamToUrl: url.
 	url hasSecureScheme

@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 setupTLSTo: url
-	"Protocol: private"
 	(ZnNetworkingUtils shouldProxyUrl: url)
 		ifTrue: [ | originalRequest |
 			"http://www.ietf.org/rfc/rfc2817.txt (section 5)"

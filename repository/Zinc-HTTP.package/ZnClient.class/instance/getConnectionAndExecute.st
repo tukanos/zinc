@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private - protocol
 getConnectionAndExecute
-	"Protocol: private - protocol"
 	self canReuseConnection
 		ifTrue: [
 			[ ^ self executeRequestResponse; cleanupConnection ]
