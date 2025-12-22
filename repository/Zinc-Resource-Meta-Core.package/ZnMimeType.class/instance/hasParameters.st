@@ -1,4 +1,4 @@
 testing
 hasParameters
 
-	^ parameters notNil and: [ parameters isNotEmpty ]
+	^ parameters notNil and: [ parameters notEmpty ]
