@@ -127,7 +127,7 @@ baseline: spec
         spec
             package: 'Zinc-GemStone-WebSocket-Core' with: [ spec requires: #('Zinc-GemStone-HTTP') ];
             package: 'Zinc-GemStone-WebSocket-Tests' with: [ spec requires: #('Zinc-GemStone-WebSocket-Core') ];
-            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zodiac Project') ];
+            package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-GemStone-HTTP' 'Zodiac Project') ];
             package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
             package: 'Zinc-GemStone-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
             package: 'SocketStream';
