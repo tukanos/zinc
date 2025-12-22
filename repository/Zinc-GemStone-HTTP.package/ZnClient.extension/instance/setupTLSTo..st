@@ -14,13 +14,13 @@ setupTLSTo: url
 
 	"GemStone - without any certificate we need to disable certiticate verification"
 	self certificate 
-		ifNil: [ connection sslSession disableCertificateVerification ]
+		ifNil: [ connection sslSession secureSocket disableCertificateVerification ]
 		ifNotNil: [ connection sslSession certificateName: self certificate.
-					connection sslSession enableCertificateVerification ].
+					connection sslSession secureSocket enableCertificateVerification ].
 
 	[ connection sslSession serverName: url host ]
 		on: (ZnUtils exceptionSet: #( #SocketError #PrimitiveFailed ))
-		do: [ :error | GsFile gcliLog: error onClient: true ].
+		do: [ :error | connection sslSession error: error asString ].
 
 	connection connect.
 	
