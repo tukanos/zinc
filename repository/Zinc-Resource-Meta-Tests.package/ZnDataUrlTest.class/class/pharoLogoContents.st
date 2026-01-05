@@ -1,0 +1,3 @@
+accessing
+pharoLogoContents
+	^ self pharoLogoContentsPng
