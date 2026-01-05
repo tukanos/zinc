@@ -1,6 +1,6 @@
-*zinc-pharo-resource-meta-core
+accessing
 defaultPortForScheme: aScheme
-	"Protocol: accessing"
 	(#(http ws) includes: aScheme) ifTrue: [ ^ 80 ].
 	(#(https wss) includes: aScheme) ifTrue: [ ^ 443 ].
+
 	^ nil
