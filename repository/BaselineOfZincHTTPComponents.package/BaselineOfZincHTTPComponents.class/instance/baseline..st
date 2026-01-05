@@ -76,7 +76,7 @@ baseline: spec
             group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
             group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests');
             group: 'Character-Encoding' with: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Character-Encoding-Tests');
-            group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
+            group: 'Resource-Meta' with: #('Zinc-Pharo-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
             group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests');
             group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-Pharo-Zodiac-Tests');
             group: 'Zodiac' with: #('SSL') ].  "alias"
@@ -138,7 +138,7 @@ baseline: spec
             group: 'Core' with: #('Zinc-GemStone-HTTP' 'Zinc-GemStone-HTTP-Examples' 'Zinc-GemStone-Server-Tools');
             group: 'CI' with: #('REST' 'WebSocket');
             group: 'Tests' with: #('Zinc-GemStone-Tests');
-            group: 'Resource-Meta' with: #('Zinc-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
+            group: 'Resource-Meta' with: #('Zinc-GemStone-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
             group: 'WebSocket' with: #('Zinc-GemStone-WebSocket-Core' 'Zinc-GemStone-WebSocket-Tests');
             group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-GemStone-Zodiac-Tests');
             group: 'Zodiac' with: #('SSL') ].  "alias"
