@@ -129,7 +129,7 @@ baseline: spec
             package: 'Zinc-GemStone-WebSocket-Tests' with: [ spec requires: #('Zinc-GemStone-WebSocket-Core') ];
             package: 'Zinc-Zodiac-Core' with: [ spec requires: #('Zinc-GemStone-HTTP' 'Zodiac Project') ];
             package: 'Zinc-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
-            package: 'Zinc-GemStone-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Core') ];
+            package: 'Zinc-GemStone-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ];
             package: 'SocketStream';
             package: 'Zinc-FileSystem-Legacy' with: [ spec requires: #('GLASS1') ];
             package: 'Zinc-GemStone-Server-Tools' with: [ spec requires: #('Zinc-HTTP' 'GsApplicationTools') ];
