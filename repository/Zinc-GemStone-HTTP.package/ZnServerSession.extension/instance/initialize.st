@@ -2,5 +2,5 @@
 initialize
   "Protocol: initialization"
 	super initialize.
-	attributes := GRSmallDictionary new.
+	attributes := Dictionary new.
 	created := modified := DateAndTime now
