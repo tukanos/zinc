@@ -1,5 +1,6 @@
-testing
+*Zinc-Pharo-Resource-Meta-Tests
 testWindowsDriveNamesInFileUrl
+	"Protocol: testing"
 	"Note the 3 slashes: 2 are from the scheme, file://, 1 is from the empty host and starts the absolute path"
 
 	SystemVersion current major < 3 ifTrue: [ self skip ].
