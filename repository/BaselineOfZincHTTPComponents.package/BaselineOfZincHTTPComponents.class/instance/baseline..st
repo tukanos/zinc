@@ -62,6 +62,7 @@ baseline: spec
             package: 'Zinc-Pharo-Character-Encoding-Tests' with: [ spec requires: #('Zinc-Character-Encoding-Tests'
                                                                                     'Zinc-Pharo-Character-Encoding-Core') ];
             package: 'Zinc-Pharo-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core' 'Zinc-Pharo-Character-Encoding-Core') ];
+            package: 'Zinc-Pharo-Resource-Meta-Tests' with: [ spec requires: #('Zinc-Pharo-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests') ];
             package: 'Zinc-Pharo-HTTP' with: [ spec postLoadDoIt: #recompileZnLogEventHierarchy;
                                                     requires: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Resource-Meta-Core' 'Zinc-HTTP') ];
             package: 'Zinc-Pharo-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
@@ -74,7 +75,7 @@ baseline: spec
             package: 'Zinc-Pharo-Zodiac-Tests' with: [ spec requires: #('Zinc-Zodiac-Tests') ].
         spec
             group: 'Core' with: #('Zinc-Pharo-HTTP' 'Zinc-Pharo-HTTP-Examples');
-            group: 'Tests' with: #('Zinc-Pharo-Tests' 'Zinc-Pharo-Character-Encoding-Tests');
+            group: 'Tests' with: #('Zinc-Pharo-Character-Encoding-Tests' 'Zinc-Pharo-Resource-Meta-Tests' 'Zinc-Pharo-Tests');
             group: 'Character-Encoding' with: #('Zinc-Pharo-Character-Encoding-Core' 'Zinc-Pharo-Character-Encoding-Tests');
             group: 'Resource-Meta' with: #('Zinc-Pharo-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
             group: 'WebSocket' with: #('Zinc-Pharo-WebSocket-Core' 'Zinc-Pharo-WebSocket-Tests');
@@ -118,6 +119,7 @@ baseline: spec
 
         spec
             package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
+            package: 'Zinc-GemStone-Resource-Meta-Tests' with: [ spec requires: #('Zinc-GemStone-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests') ];
             package: 'Zinc-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
                                               includes: #('SocketStream') ];
             package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ];
@@ -137,7 +139,7 @@ baseline: spec
         spec
             group: 'Core' with: #('Zinc-GemStone-HTTP' 'Zinc-GemStone-HTTP-Examples' 'Zinc-GemStone-Server-Tools');
             group: 'CI' with: #('REST' 'WebSocket');
-            group: 'Tests' with: #('Zinc-GemStone-Tests');
+            group: 'Tests' with: #('Zinc-GemStone-Resource-Meta-Tests' 'Zinc-GemStone-Tests');
             group: 'Resource-Meta' with: #('Zinc-GemStone-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests');
             group: 'WebSocket' with: #('Zinc-GemStone-WebSocket-Core' 'Zinc-GemStone-WebSocket-Tests');
             group: 'SSL' with: #('Zinc-Zodiac-Core' 'Zinc-Zodiac-Tests' 'Zinc-GemStone-Zodiac-Tests');
