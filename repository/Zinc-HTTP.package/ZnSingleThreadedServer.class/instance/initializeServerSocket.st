@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 initializeServerSocket
-	"Protocol: private"
 	"Set up a new server socket and listen on it"
 
 	serverSocket := self bindingAddress

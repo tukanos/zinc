@@ -1,6 +1,5 @@
-*zinc-pharo-http
+request handling
 serveConnectionOn: listeningSocket
-	"Protocol: request handling"
 	"We wait up to acceptWaitTimeout seconds for an incoming connection.
 	If we get one we wrap it in a SocketStream and #executeOneRequestResponseOn: on it.
 	We do not fork a worker thread/process but stay in the current one for just one request/response cycle."

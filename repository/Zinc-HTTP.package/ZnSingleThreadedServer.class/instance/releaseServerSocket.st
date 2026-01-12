@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 releaseServerSocket
-	"Protocol: private"
 	"Release our server socket"
 
 	| address port |

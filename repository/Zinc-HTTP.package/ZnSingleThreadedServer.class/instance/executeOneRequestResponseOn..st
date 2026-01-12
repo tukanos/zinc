@@ -1,6 +1,5 @@
-*zinc-pharo-http
+request handling
 executeOneRequestResponseOn: stream
-	"Protocol: request handling"
 	"Execute one single HTTP request / response cycle on stream in 3 steps:
 	#readRequest: #handleRequest: and #writeResponse:on:
 	Indicate that we intend to close the connection afterwards"

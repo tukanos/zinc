@@ -1,6 +1,5 @@
-*zinc-pharo-http
+request handling
 handleRequest: request timing: timing
-	"Protocol: request handling"
 	"Handle request and return a response.
 	Do logging and timing. Set a dynamic variable referencing the server.
 	If necessary do session management in the response."

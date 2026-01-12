@@ -1,6 +1,5 @@
-*zinc-pharo-http
+request handling
 handleRequestProtected: request
-	"Protocol: request handling"
 	"Handle request and return a response.
 	If a ZnRespond notification is signaled, return its response directly.
 	If an Error is thrown, return a HTTP Server Error response."
