@@ -1,7 +1,6 @@
-*zinc-gemstone-http
+private
 closeSocketStream: socketStream
-	"Protocol: private"
-	[ socketStream close ] 
-		on: Error 
+	[ socketStream close ]
+		on: Exception
 		do: [ :exception | exception printString, ' occured during close socket stream!' ]
 

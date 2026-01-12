@@ -1,6 +1,5 @@
-*zinc-pharo-http
+request handling
 listenLoop
-	"Protocol: request handling"
 	"We create a listening Socket, then wait for a connection.
 	After each connection we also check that the listening Socket is still valid
 	- if not we just make a recursive call to this method to start over."
