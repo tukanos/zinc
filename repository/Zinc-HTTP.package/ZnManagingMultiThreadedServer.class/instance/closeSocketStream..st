@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 closeSocketStream: socketStream
-	"Protocol: private"
 	super closeSocketStream: socketStream.
 	self lock critical: [
 		self connections remove: socketStream ifAbsent: [ ].

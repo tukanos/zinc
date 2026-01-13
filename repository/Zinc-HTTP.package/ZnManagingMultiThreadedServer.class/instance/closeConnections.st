@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 closeConnections
-	"Protocol: private"
 	self hasOpenConnections ifFalse: [ ^ self ].
 	self lock critical: [
 		self connections do: [ :each |
