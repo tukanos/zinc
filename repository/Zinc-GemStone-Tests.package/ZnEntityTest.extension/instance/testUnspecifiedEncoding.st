@@ -14,4 +14,4 @@ testUnspecifiedEncoding
 				andLength: nil.
 			self assert: entity contents equals: json.
 			entity := ZnEntity with: json type: ZnMimeType applicationJson.
-			self assert: entity encoder equals: ZnUTF8Encoder new ]
+			self assert: entity encoder equals: ZnUTF8EncoderGS new ]
