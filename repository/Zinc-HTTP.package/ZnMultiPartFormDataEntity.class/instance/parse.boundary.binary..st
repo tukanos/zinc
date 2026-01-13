@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 parse: bytes boundary: boundary binary: binary
-	"Protocol: private"
 	| next start fullBoundary |
 	fullBoundary := '--' asByteArray, boundary.
 	"Sometimes there is whitespace in front of the first boundary"
