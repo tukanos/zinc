@@ -1,5 +1,6 @@
-private
+*zinc-pharo-tests
 nextPutAll: collection on: stream chunked: size
+  "Protocol: private"
   | written |
   written := 0.
   [ written < collection size ]

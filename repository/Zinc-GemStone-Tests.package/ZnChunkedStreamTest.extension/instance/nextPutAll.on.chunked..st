@@ -1,0 +1,18 @@
+*zinc-gemstone-tests
+nextPutAll: collection on: stream chunked: size
+  "Protocol: private"
+  | written |
+  written := 0.
+  [ written < collection size ]
+    whileTrue: [ 
+      | chunkSize |
+      chunkSize := size min: (collection size - written).
+      chunkSize printOn: stream base: 16 showRadix: false.
+      stream nextPutAll: String crlf.
+      chunkSize
+        timesRepeat: [ stream nextPut: (collection at: (written := written + 1)) ].
+      stream nextPutAll: String crlf ].
+  stream
+    print: 0;
+    nextPutAll: String crlf;
+    nextPutAll: String crlf
