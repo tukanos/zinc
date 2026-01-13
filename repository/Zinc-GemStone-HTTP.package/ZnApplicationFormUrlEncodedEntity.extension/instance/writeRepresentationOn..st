@@ -1,10 +1,11 @@
-writing
+*zinc-gemstone-http
 writeRepresentationOn: stream
+	"Protocol: writing"
 	self contentType charSet
 		ifNotNil: [:charSet|
 			ZnResourceMetaUtils
 				writeQueryFields: self fields
-				withEncoder: (ZnCharacterEncoder newForEncoding: charSet)
+				withEncoder: (ZnCharacterEncoderGS newForEncoding: charSet)
 				on: stream]
 		ifNil: [
 			ZnResourceMetaUtils
