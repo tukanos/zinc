@@ -1,6 +1,5 @@
-*zinc-pharo-http
+instance creation
 readBinaryFrom: stream usingType: mimeType andLength: length
-	"Protocol: instance creation"
 	"Create and return a new buffered entity of mimeType and length from stream.
 	The concrete subclass depends on mimeType, but textual type will remain binary"
 
