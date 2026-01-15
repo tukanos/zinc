@@ -8,7 +8,9 @@ testClientLogging
 	client get: self smallHtmlUrl.
 	client close.
 	count := ZnLogEvent announcer numberOfSubscriptions.
-	ZnLogEvent announcer unsubscribe: self.
+	(ZnLogEvent announcer respondsTo: #'unsubscribeKeysContaining:')
+		ifTrue: [ ZnLogEvent announcer unsubscribeKeysContaining: self ]
+		ifFalse: [ZnLogEvent announcer unsubscribe: self ].
 	self
 		assert: ZnLogEvent announcer numberOfSubscriptions
 		equals: count - 1.
