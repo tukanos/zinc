@@ -1,6 +1,5 @@
-*zinc-pharo-tests
+testing
 testGzipCompressionAndChunking
-	"Protocol: testing"
 	self withServerDo: [ :server | | client |
 		server useGzipCompressionAndChunking: true.
 		(client := ZnClient new)

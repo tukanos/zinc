@@ -1,4 +1,3 @@
-*zinc-pharo-tests
+private
 withServerDo: block
-	"Protocol: private"
 	ZnServer withOSAssignedPortDo: block
