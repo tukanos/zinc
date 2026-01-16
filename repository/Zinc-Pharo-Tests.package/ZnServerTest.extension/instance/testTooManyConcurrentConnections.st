@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-tests
 testTooManyConcurrentConnections
+	"Protocol: testing"
 	self usingClassicSocketStreamsOnWindowsDo: [
 		self withServerDo: [ :server | | client clients |
 			self deny: server debugMode.
