@@ -4,8 +4,9 @@ testNextPut
 	"Ensure that the line ends are written correctly"
 
 | lineEnding expectedString stream crStream |
-
-	lineEnding := String new withGemstoneLineEndings.
+	lineEnding := (Smalltalk os platformName asLowercase beginsWith: 'win')
+		ifTrue: [ String crlf ]
+		ifFalse: [ String lf ].
 	expectedString := 'a', lineEnding, 'b'.
 	{ String cr.
 		String lf.
