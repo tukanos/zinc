@@ -2,15 +2,10 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'ZincHTTPComponents',
-<<<<<<< HEAD
-      #load : [ 'CI' ],
+      #load : [ 'default', 'SSL' ],
       #directory : 'repository',
       #onWarningLog : true,
       #platforms : [ #gemstone ]
-=======
-      #directory: 'repository',
-      #platforms : [ #pharo ]
->>>>>>> upstream/master
     }
   ]
 }
