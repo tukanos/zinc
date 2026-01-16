@@ -6,4 +6,4 @@ printHMSOn: aStream
 		nextPut: $:;
 		nextPutAll: (self minute asString padded: #left to: 2 with: $0);
 		nextPut: $:;
-		nextPutAll: (self second asString padded: #left to: 2 with: $0).
+		nextPutAll: (self second rounded asString padded: #left to: 2 with: $0).
