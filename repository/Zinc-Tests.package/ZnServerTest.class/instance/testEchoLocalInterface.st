@@ -1,7 +1,11 @@
 testing
 testEchoLocalInterface
-	| server response |
-	(server := ZnServer on: self port) bindingAddress: NetNameResolver loopBackAddress.
+	| resolver address server response |
+	resolver := (Smalltalk at: #'NetNameResolver').
+	address := resolver
+		ifNotNil: [ resolver loopBackAddress ]
+		ifNil: [ '127.0.0.1' ].
+	(server := ZnServer on: self port) bindingAddress: address.	
 	[ server start.
 	self assert: server isRunning & server isListening description: ('Failed to start server on port {1}. Is there one already?' format: {server port}).
 	response := ZnEasy
