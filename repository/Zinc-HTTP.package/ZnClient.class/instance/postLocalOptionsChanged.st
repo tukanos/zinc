@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private
 postLocalOptionsChanged
-	"Protocol: private"
 	"local options were just changed, if they apply (are not already dynamically overwritte),
 	apply those options that impact objects that fall outside the local options scope"
 

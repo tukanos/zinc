@@ -1,6 +1,5 @@
-*zinc-pharo-http
+private - protocol
 redirectUrl
-	"Protocol: private - protocol"
 	"We support both absolute and relative locations (http://en.wikipedia.org/wiki/HTTP_location)"
 
 	"Interpret the response location (the target of the redirect) relative to the original request's url.

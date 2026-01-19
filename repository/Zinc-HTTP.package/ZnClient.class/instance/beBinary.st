@@ -1,6 +1,5 @@
-*zinc-pharo-http
+options
 beBinary
-	"Protocol: options"
 	"Configure me to read HTTP responses without interpreting them further,
 	their resources/entities will remain bytes."
 

@@ -1,6 +1,5 @@
-*zinc-pharo-http
-queryAt: key add: value
-	"Protocol: accessing - request"
+accessing - request
+queryAt: key add: values
 	"Modify the receiver by adding a query variable key=value.
 	If key already exists, value is added to it."
 

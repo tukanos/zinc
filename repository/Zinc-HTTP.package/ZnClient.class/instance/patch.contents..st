@@ -1,6 +1,5 @@
-*zinc-pharo-http
+convenience
 patch: url contents: object
-	"Protocol: convenience"
 	"Execute an HTTP PATCH request on url with object as request #contents:
 	and return the response #contents."
 

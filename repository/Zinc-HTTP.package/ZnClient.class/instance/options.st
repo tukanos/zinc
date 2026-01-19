@@ -1,6 +1,5 @@
-*zinc-pharo-http
+operations
 options
-	"Protocol: operations"
 	"Execute an HTTP OPTIONS on the request set up and return the response #contents."
 
 	^ self

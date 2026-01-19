@@ -1,6 +1,5 @@
-*zinc-pharo-http
+cleanup
 close
-	"Protocol: cleanup"
 	"Close any HTTP network connection that I might have kept open."
 
 	connection

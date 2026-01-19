@@ -1,4 +1,3 @@
-*zinc-pharo-http
+accessing
 resetCredentials
-	"Protocol: accessing"
 	session ifNotNil: [ session resetCredentials ]

@@ -1,6 +1,5 @@
-*zinc-pharo-http
+initialization
 withOptions: block
-	"Protocol: initialization"
 	"Execute block with my options as argument.
 	This is useful when using me in a builder fashion."
 

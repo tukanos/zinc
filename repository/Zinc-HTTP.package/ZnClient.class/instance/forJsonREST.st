@@ -1,6 +1,5 @@
-*zinc-pharo-http
+initialization
 forJsonREST
-	"Protocol: initialization"
 	"Configure me to be a JSON REST client.
 	Install a JSON content reader and writer and accept application/json."
 

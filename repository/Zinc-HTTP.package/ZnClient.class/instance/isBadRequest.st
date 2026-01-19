@@ -1,6 +1,5 @@
-*zinc-pharo-http
+testing
 isBadRequest
-	"Protocol: testing"
 	"Return true if the last executed HTTP request returned an HTTP bad request response code."
 
 	^ response
