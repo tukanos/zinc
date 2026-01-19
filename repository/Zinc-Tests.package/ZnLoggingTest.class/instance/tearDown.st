@@ -2,10 +2,8 @@ running
 tearDown
 
 	"thisContext crTrace."
-	(ZnLogEvent announcer respondsTo: #'unsubscribeKeysContaining:')
-		ifTrue: [ ZnLogEvent announcer unsubscribeKeysContaining: self ] "GemStone"
-		ifFalse: [ZnLogEvent announcer unsubscribe: self ]. "Pharo"
 	
+	ZnLogEvent announcer unsubscribe: self.
 	logEventCollection removeAll.
 	logEventCollection := nil.
 	
