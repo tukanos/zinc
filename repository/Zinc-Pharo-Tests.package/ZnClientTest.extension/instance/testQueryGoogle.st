@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-tests
 testQueryGoogle
+	"Protocol: testing"
 	| client |
 	
 	"Finally give up as all search engines sadly refuse API style calls like this one after a while, especially on CI servers"
