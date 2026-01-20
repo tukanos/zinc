@@ -1,7 +1,8 @@
-testing
+*zinc-gemstone-tests
 testJsonRESTPost
+	"Protocol: testing"
 	| client |
-	self class environment at: #STONJSON ifAbsent: [ ^ self skip ].
+	self class environment at: #STONJSON ifAbsent: [ ^ self skip: 'Test skipped: #', self selector, ' | Reason: #STONJSON is not present!'  ].
 	self withServerDo: [ :server |
 		server onRequestRespond: [ :request |
 			request method = #POST
