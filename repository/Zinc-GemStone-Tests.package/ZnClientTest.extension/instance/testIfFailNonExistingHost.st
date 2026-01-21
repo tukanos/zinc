@@ -7,9 +7,9 @@ testIfFailNonExistingHost
 		beOneShot;
 		url: 'http://unknown-stfx.eu';
 		ifFail: [ : exception |
-			^ self assert: ((exception isKindOf: ArgumentError)
+			^ self assert: (((exception isKindOf: ArgumentError)
 								and: [ exception details beginsWith: 'host not found' ])
-							or: (exception isKindOf: ZnHttpUnsuccessful) ];
+							or: (exception isKindOf: ZnHttpUnsuccessful)) ];
 		get.
 	self assert: client isSuccess not.
 	client
