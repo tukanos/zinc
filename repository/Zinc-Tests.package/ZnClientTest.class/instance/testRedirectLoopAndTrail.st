@@ -23,11 +23,11 @@ testRedirectLoopAndTrail
 		(client := ZnClient new)
 			url: server localUrl; addPath: 'follow';
 			maxNumberOfRedirects: 10.
-		count := 0.
+		count := 1.
 		[ client get ] on: ZnTooManyRedirects do: [ :exception |
 			count := count + 1.
 			exception trail size <= 30
 				ifTrue: [ exception resume ]
 				ifFalse: [ exception resume: #doNotRetry ] ].
-		self assert: count equals: 4.
+		self assert: count equals: 5.
 		client close ]
