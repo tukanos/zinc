@@ -1,21 +1,14 @@
 as yet unclassified
 waitForDataFor: timeout ifClosed: closedBlock ifTimedOut: timedOutBlock
-  "Wait for the given nr of seconds for data to arrive."
+  "Wait for the given nr of seconds for data to arrive.
+  If it does not, execute <timedOutBlock>. If the connection
+  is closed before any data arrives, execute <closedBlock>."
 
-  | startTime msecsDelta |
+  | startTime msecsDelta msecsElapsed |
   startTime := Time millisecondClockValue.
   msecsDelta := (timeout * 1000) truncated.
-  [ (Time millisecondsSince: startTime) < msecsDelta ]
-    whileTrue: [ 
-      self readyForRead
-        ifTrue: [ ^ self ].
-      self isConnected
-        ifFalse: [ ^ closedBlock value ].
-      self
-        waitForNonBlockingReadActivityUpToMs:
-          (msecsDelta - (Time millisecondsSince: startTime) max: 0) ].
-  self readyForRead
-    ifFalse: [ 
-      self isConnected
-        ifTrue: [ ^ timedOutBlock value ]
-        ifFalse: [ ^ closedBlock value ] ]
+  [ self dataAvailable ] whileFalse: [
+    self isConnected ifFalse: [ ^ closedBlock value ].
+    (msecsElapsed := Time millisecondsSince: startTime) < msecsDelta
+      ifFalse: [ ^ timedOutBlock value ].
+    self waitForReadDataUpToMs: msecsDelta - msecsElapsed ]
