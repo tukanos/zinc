@@ -12,21 +12,15 @@ setupTLSTo: url
 			connection := ZnNetworkingUtils secureSocketStreamOn: connection socket.
 			request := originalRequest ].
 
-	"GemStone - without any certificate we need to disable certiticate verification"
-	self certificate 
-		ifNil: [ connection sslSession secureSocket disableCertificateVerification ]
-		ifNotNil: [ connection sslSession certificateName: self certificate.
-					connection sslSession secureSocket enableCertificateVerification ].
+	"GemStone way to enable/disable certificate verification"
+	(ZnCurrentOptions at: #verifyCertificates)
+		ifTrue: [ self certificate ifNotNil: [ connection sslSession certificateName: self certificate ].
+				  connection sslSession secureSocket enableCertificateVerification ]
+		ifFalse: [ connection sslSession secureSocket disableCertificateVerification ].
 
 	[ connection sslSession serverName: url host ]
 		on: (ZnUtils exceptionSet: #( #SocketError #PrimitiveFailed ))
 		do: [ :error | connection sslSession error: error asString ].
 
-	connection connect.
-	
-	((ZnCurrentOptions at: #verifyCertificates) 
-			and: [ connection sslSession certificateVerificationState ~= 0 ])
-		ifTrue: [ 
-			ZnCertificateVerificationFailed new 
-				verificationState: connection sslSession certificateVerificationState;
-				signal ]
+	"GemStone: In case of failing certification verification the signal is thrown within #connect"
+	connection connect

@@ -20,6 +20,7 @@ setupTLSTo: url
 
 	connection connect.
 	
+	"Pharo: This is to check failed certification verification"
 	((ZnCurrentOptions at: #verifyCertificates) 
 			and: [ connection sslSession certificateVerificationState ~= 0 ])
 		ifTrue: [ 
