@@ -120,10 +120,9 @@ baseline: spec
         spec
             package: 'Zinc-GemStone-Resource-Meta-Core' with: [ spec requires: #('Zinc-Resource-Meta-Core') ];
             package: 'Zinc-GemStone-Resource-Meta-Tests' with: [ spec requires: #('Zinc-GemStone-Resource-Meta-Core' 'Zinc-Resource-Meta-Tests') ];
-            package: 'Zinc-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy');
-                                              includes: #('SocketStream') ];
             package: 'Zinc-Tests' with: [ spec requires: #('PharoCompatibility') ];
-            package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('Zinc-GemStone-Resource-Meta-Core' 'Zinc-HTTP') ];
+            package: 'Zinc-GemStone-HTTP' with: [ spec requires: #('GLASS1' 'Zinc-FileSystem-Legacy' 'Zinc-GemStone-Resource-Meta-Core' 'Zinc-HTTP');
+                                                  includes: #('SocketStream') ];
             package: 'Zinc-GemStone-HTTP-Examples' with: [ spec requires: #('Zinc-HTTP-Examples') ];
             package: 'Zinc-GemStone-Tests' with: [ spec requires: #('Zinc-Tests') ].
         spec
