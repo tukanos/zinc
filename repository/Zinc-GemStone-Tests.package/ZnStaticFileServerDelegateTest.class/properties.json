@@ -10,5 +10,5 @@
 	"name" : "ZnStaticFileServerDelegateTest",
 	"pools" : [
 		 ],
-	"super" : "ZnServerBasedTest",
+	"super" : "TestCase",
 	"type" : "normal" }
