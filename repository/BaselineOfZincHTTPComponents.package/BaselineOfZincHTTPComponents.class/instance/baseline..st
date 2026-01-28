@@ -75,13 +75,13 @@ baseline: spec
 	spec
 		for: #'squeakCommon'
 		do: [ 
-			spec
+			"spec
 				configuration: 'NeoJSON'
 					with: [ 
 							spec
 								versionString: #'stable';
 								repository: 'http://mc.stfx.eu/Neo' ];
-				yourself.
+				yourself."
 			spec
 				package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ];
 				package: 'Zinc-Zodiac'
