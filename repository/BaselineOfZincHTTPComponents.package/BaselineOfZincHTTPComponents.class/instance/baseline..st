@@ -136,7 +136,7 @@ baseline: spec
 								loads: #('Core');
 								repository: 'github://GsDevKit/gsApplicationTools:master/repository' ];
 				baseline: 'NeoJSON'
-					with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
+					with: [ spec repository: 'github://GsDevKit/NeoJSON:gs_master/filetree' ];
 				yourself.
 			spec
 				package: 'SocketStream';
