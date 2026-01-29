@@ -1,5 +1,5 @@
 testing
-testQueryGoogle
+testQueryBing
   | client |
   (System stoneVersionReport at: 'gsVersion') asMetacelloVersionNumber
     <= '3.1.0' asMetacelloVersionNumber
@@ -8,7 +8,7 @@ testQueryGoogle
       ^ self ].
   (client := ZnClient new)
     http;
-    host: 'www.google.com';
+    host: 'www.bing.com';
     addPath: 'search';
     queryAt: 'q' put: 'Pharo Smalltalk';
     get.
