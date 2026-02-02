@@ -1,5 +1,6 @@
-private
+*zinc-pharo-http
 getImageOfType: mimeType fromUrl: urlObject
+	"Protocol: private"
 	| client |
 	(client := self client)
 		url: urlObject;
