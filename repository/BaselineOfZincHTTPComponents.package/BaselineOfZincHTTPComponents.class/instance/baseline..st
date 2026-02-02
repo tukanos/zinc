@@ -98,7 +98,7 @@ baseline: spec
              baseline: 'NeoJSON'
                  with: [ spec
                              loads: #('Core');
-                             repository: 'github://GsDevKit/NeoJSON:gs_master/repository' ];
+                             repository: 'github://GsDevKit/NeoJSON:gs_master/filetree' ];
              baseline: 'Cryptography'
                  with: [ spec
                              loads: #('Cryptography');
