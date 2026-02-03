@@ -1,5 +1,9 @@
 testing
 testUpload
+	(Smalltalk at: #ImageReadWriter) ifNil: [
+		"For details check ZnImageExampleDelegate>>formForImageEntity:"
+		^ self skip: '#', self selector, ' | Reason: No image (e.g. gif) parser in GemStone!' ].
+
 	self withServerDo: [ :server |
 		| image client |
 		image := self image.
