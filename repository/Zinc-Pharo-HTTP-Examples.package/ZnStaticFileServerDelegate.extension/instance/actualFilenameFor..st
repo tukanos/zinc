@@ -1,5 +1,6 @@
-private
+*zinc-pharo-http-examples
 actualFilenameFor: uri
+	"Protocol: private"
 	| subElements subDir entry |
 	(uri isEmpty and: [ self prefix isEmpty ]) ifTrue: [ ^ self indexFileIn: self directory ].
 	(self prefix isEmpty or: [ uri isEmpty not and: [ uri pathSegments beginsWith: self prefix ] ]) ifFalse: [ ^ nil ].
