@@ -12,10 +12,10 @@ httpDate: object
 		utc year printOn: stream.
 		stream
 			space;
-			nextPutAll: (self hour asString padded: #left to: 2 with: $0);
+			nextPutAll: (utc hour asString padded: #left to: 2 with: $0);
 			nextPut: $:;
-			nextPutAll: (self minute asString padded: #left to: 2 with: $0);
+			nextPutAll: (utc minute asString padded: #left to: 2 with: $0);
 			nextPut: $:;
-			nextPutAll: (self second asInteger asString padded: #left to: 2 with: $0);
+			nextPutAll: (utc second asInteger asString padded: #left to: 2 with: $0);
 			space;
 			nextPutAll: 'GMT' ]
