@@ -1,6 +1,5 @@
-*zinc-pharo-http-examples
+private
 withServerDo: block
-	"Protocol: private"
 	ZnServer withOSAssignedPortDo: [ :server | | staticFileServerDelegate |
 		(staticFileServerDelegate := ZnStaticFileServerDelegate new)
 			prefixFromString: 'local-files';
