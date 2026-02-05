@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-websocket-core
 sendFrame: frame
+	"Protocol: private"
   "Send a single frame, masked when I am in a client role, flush"
 
   | strm |
