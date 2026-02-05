@@ -1,3 +1,5 @@
 accessing
 serverClass
-  ^ ZnTransactionSafeManagingMultiThreadedServer
+  "Return the default ZnServer subclass to use"
+
+  ^ ZnManagingMultiThreadedServer
