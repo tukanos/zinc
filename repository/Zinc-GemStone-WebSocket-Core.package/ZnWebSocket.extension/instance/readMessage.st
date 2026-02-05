@@ -1,5 +1,6 @@
-protocol
+*zinc-gemstone-websocket-core
 readMessage
+	"Protocol: protocol"
   "Read and return a complete message String or ByteArray, joining frames. 
 	ConnectionClosed is signalled when the other end closes."
 

@@ -1,4 +1,4 @@
-*zinc-gemstone-tests
+*zinc-gemstone-websocket-core
 gemServer: anObject
   "Protocol: accessing"
 

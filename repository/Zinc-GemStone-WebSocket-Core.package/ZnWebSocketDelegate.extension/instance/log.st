@@ -1,4 +1,4 @@
-*zinc-gemstone-tests
+*zinc-gemstone-websocket-core
 log
   "Protocol: accessing"
 	^ ZnCurrentServer value log

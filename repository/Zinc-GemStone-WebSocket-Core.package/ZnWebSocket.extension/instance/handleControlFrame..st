@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-websocket-core
 handleControlFrame: frame
+	"Protocol: private"
   "Handle a control frame. ConnectionClosed is signalled when the other end closes."
 
   frame isClose

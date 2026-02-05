@@ -1,4 +1,4 @@
-*zinc-gemstone-tests
+*zinc-gemstone-websocket-core
 value: webSocket
   "Protocol: accessing"
   "I implement an echo service conversation as a server:

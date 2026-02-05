@@ -1,4 +1,4 @@
-*zinc-gemstone-tests
+*zinc-gemstone-websocket-tests
 testReadingPing
   "Protocol: testing"
   "Fourth example from RFC 6455 section 5.7"

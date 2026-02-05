@@ -1,5 +1,6 @@
-private
+*zinc-gemstone-websocket-core
 readFrame
+	"Protocol: private"
   "Read and return the next non-control frame. Wait.
 	Control frames are handled. ConnectionClosed is signalled when the other end closes."
 

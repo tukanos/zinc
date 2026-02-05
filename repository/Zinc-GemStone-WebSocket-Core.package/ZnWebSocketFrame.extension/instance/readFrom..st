@@ -1,4 +1,4 @@
-*zinc-gemstone-tests
+*zinc-gemstone-websocket-core
 readFrom: stream
   "Protocol: reading"
   | byte size mask |
