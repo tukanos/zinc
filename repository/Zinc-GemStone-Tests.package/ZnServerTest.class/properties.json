@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
-	"category" : "Zinc-Tests",
+	"super" : "ZnServerBasedTests",
+	"category" : "Zinc-GemStone-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ZnDispatcherDelegateTest",
+	"name" : "ZnServerTest",
 	"type" : "normal"
 }
