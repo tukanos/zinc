@@ -1,7 +1,7 @@
 private
 withServerDo: block
   | server |
-  server := ZnServer on: self port.
+  server := ZnServer on: 0.
   TranscriptProxy proxyTranscript ~~ nil
     ifTrue: [ 
       "interactive tests, log to Object Log ... 
