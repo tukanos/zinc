@@ -29,7 +29,7 @@ testLimitedAcceptStrategy
 		
 		"now try closing one of the four open clients while we are waiting"
 		clients do: [ :each | each get ].
-		[ 0.5 second wait. clients first close ] fork.
+		[ (Delay forMilliseconds: 500) wait. clients first close ] fork.
 		client get.
 		"this passes while we are waiting since a connection becomes available"
 		self assert: client isSuccess.
