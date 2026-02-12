@@ -1,3 +1,5 @@
 logging
 logDebug: message
-  self log debug: message
+  ZnWebSocketDebugLogEvent new
+    subject: message;
+    emit

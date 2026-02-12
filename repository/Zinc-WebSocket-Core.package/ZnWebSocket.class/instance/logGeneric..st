@@ -1,4 +1,4 @@
-accessing
+logging
 logGeneric: subject
 	ZnWebSocketGenericLogEvent new
 		subject: subject;
