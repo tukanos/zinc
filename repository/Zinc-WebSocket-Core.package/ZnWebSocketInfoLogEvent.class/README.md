@@ -1,0 +1,1 @@
+I am ZnWebSocketInfoLogEvent communicating about a info subject.

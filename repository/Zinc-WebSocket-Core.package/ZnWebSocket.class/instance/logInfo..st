@@ -1,3 +1,5 @@
 logging
 logInfo: message
-  self log info: message
+  ZnWebSocketInfoLogEvent new
+    subject: message;
+    emit
