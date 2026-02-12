@@ -5,5 +5,5 @@ useConnection: connection
 	We start a conversation by instanciating a WebSocket and passing it to our continuation."
 	
 	| webSocket |
-	webSocket := ZnWebSocket onStream: connection.
+	webSocket := self webSocketClass onStream: connection.
 	self continuation value: webSocket

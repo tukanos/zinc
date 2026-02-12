@@ -1,15 +1,15 @@
 request handling
 readRequest: streamTransientStackValue
   "Read a request from stream.
-	We add a virtual header containing the remote IP address of the client"
+  We add a virtual header containing the remote IP address of the client"
 
   | request |
-  request := self
-    withMaximumEntitySizeDo: [ self reader value: streamTransientStackValue value ].
+  request := self 
+    withDynamicVariablesDo: [ self reader value: streamTransientStackValue value ].
   request headers
     at: ZnConstants remoteAddressHeader
     put:
       (ZnNetworkingUtils
         ipAddressToString: streamTransientStackValue value socket remoteAddress).
-  self logRequest: request.
+  self logServerGeneric: 'Read ', request printString.
   ^ request
