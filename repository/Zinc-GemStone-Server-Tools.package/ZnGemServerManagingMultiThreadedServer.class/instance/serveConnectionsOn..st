@@ -11,9 +11,10 @@ serveConnectionsOn: listeningSocketTransientStackValue
   socket value ifNil: [ ^ self noteAcceptWaitTimedOut ].
   stream := TransientStackValue value: (self socketStreamOn: socket value).
   [ 
-  self log debug: 'Executing request/response loop'.
-  ZnCurrentServer
-    value: self
-    during: [ self executeOneRequestResponseOn: stream ] ]
+    self logServerGeneric: 'Executing request/response loop'.
+    ZnCurrentServer
+      value: self
+      during: [ self executeOneRequestResponseOn: stream ]
+  ]
     forkAt: Processor lowIOPriority
     named: self workerProcessName

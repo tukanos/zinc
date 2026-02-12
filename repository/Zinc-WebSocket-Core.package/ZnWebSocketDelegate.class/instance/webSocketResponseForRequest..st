@@ -4,7 +4,7 @@ webSocketResponseForRequest: request
 	
 	| acceptKey |
 	acceptKey := ZnWebSocketUtils handshake: (request headers at: 'Sec-WebSocket-Key').
-	^ ZnWebSocketResponse new
+	^ self webSocketResponseClass new
 		statusLine: (ZnStatusLine code: 101);
 		headers: (self responseHeadersForKey: acceptKey);
 		continuation: self continuation;

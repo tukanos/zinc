@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ZnServerErrorEvent",
+	"category" : "Zinc-GemStone-HTTP-Logging",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"message"
+	],
+	"name" : "ZnGsServerErrorEvent",
+	"type" : "normal"
+}

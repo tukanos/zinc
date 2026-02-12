@@ -6,4 +6,4 @@ writeResponse: response on: streamTransientStackValue
     ifTrue: [ self write: response duringTransactionOn: streamTransientStackValue value ]
     ifFalse: [ response writeOn: streamTransientStackValue value ].
   streamTransientStackValue value flush.
-  self logResponse: response
+  self logServerGeneric: 'Wrote ', response printString

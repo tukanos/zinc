@@ -5,4 +5,4 @@ closeSocketStream: socketStream
     critical: [ 
       self connections
         remove: socketStream
-        ifAbsent: [ self log error: [ 'Could not remove ' , socketStream printString , ' ignoring' ] ] ]
+        ifAbsent: [ self logServerGeneric: 'Could not remove ' , socketStream printString , ' ignoring'  ] ]
