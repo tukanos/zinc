@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"subject"
 	],
 	"name" : "ZnWebSocketDebugLogEvent",
 	"type" : "normal"
