@@ -1,5 +1,6 @@
-testing
+*zinc-pharo-tests
 testQueryBing
+  "Protocol: testing"
   | client |
   (client := ZnClient new)
     http;
