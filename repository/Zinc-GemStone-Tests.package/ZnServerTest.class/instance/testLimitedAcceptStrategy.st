@@ -1,5 +1,8 @@
 testing
 testLimitedAcceptStrategy
+	"On GemStone test needs to run within ZnGsServerTest or
+	ZnNewGsServerTest or ZnGsPersistentServerTest context"
+
 	self withServerDo: [ :server | | client clients |
 		server maximumNumberOfConcurrentConnections: 4.
 		server acceptStrategy: #limited.
