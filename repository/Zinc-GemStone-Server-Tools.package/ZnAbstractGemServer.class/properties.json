@@ -9,7 +9,8 @@
 		"log",
 		"logListener",
 		"logFilter",
-		"options" ],
+		"options",
+		"newOptions" ],
 	"name" : "ZnAbstractGemServer",
 	"pools" : [
 		 ],
