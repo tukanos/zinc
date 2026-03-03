@@ -7,6 +7,7 @@ startBasicServerOn: port
     gemServer: self;
     log: self log;
     gemServerOptions: self options;
+    gemServerLocalOptions: self localOptions;
     yourself.
   self serverInstance: znServer.
   self
