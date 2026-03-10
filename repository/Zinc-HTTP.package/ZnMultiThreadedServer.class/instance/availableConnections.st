@@ -1,0 +1,2 @@
+accessing
+	self subclassResponsibility
