@@ -5,4 +5,4 @@ welcome: request
 	| page entity |
 	page := self generateWelcomePage.
 	entity := ZnEntity html: page.
-	^ ZnResponse ok: entity
+	^ ZnResponse ok: entity withOptions: self server localOptions
