@@ -1,3 +1,3 @@
-server compat
+public
 stop
   self stopGems
