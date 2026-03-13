@@ -6,10 +6,10 @@ readRequestSafely: stream timing: timing
 		[ self readRequest: stream timing: timing ]
 			on: self readRequestBadExceptionSet
 			do: [ :exception |
-				self logServerReadError: exception.
-				self writeResponseBad: exception on: stream timing: timing.
-				nil ] ]
+					self logServerReadError: exception.
+					self writeResponseBad: exception on: stream timing: timing.
+					nil ] ]
 			on: self readRequestTerminationExceptionSet
 			do: [ :exception |
-				self logServerReadError: exception.
-				nil ]
+					self logServerReadError: exception.
+					nil ]

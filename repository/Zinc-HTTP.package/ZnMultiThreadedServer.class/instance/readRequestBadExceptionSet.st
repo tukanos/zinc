@@ -5,4 +5,4 @@ readRequestBadExceptionSet
 
 	^ ZnUtils
 		exceptionSet:
-			#(#ZnParseError #ZnCharacterEncodingError #ZnUnknownScheme #ZnPortNotANumber #ZnTooManyDictionaryEntries #ZnEntityTooLarge)
+			#(ZnParseError ZnCharacterEncodingError ZnUnknownScheme ZnPortNotANumber ZnTooManyDictionaryEntries ZnEntityTooLarge)

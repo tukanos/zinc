@@ -4,4 +4,4 @@ readRequestTerminationExceptionSet
 	are interpreted as equivalent to a timeout or connection close."
 
 	^ ZnUtils exceptionSet:
-		#(ConnectionClosed ConnectionTimedOut PrimitiveFailed SocketError)
+		#(ConnectionClosed ConnectionTimedOut PrimitiveFailed SpSocketError)
