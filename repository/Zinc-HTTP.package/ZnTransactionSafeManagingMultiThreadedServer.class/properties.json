@@ -7,7 +7,8 @@
 	"commentStamp" : "dkh 12/08/2014 15:21",
 	"instvars" : [
 		"lock",
-		"connections" ],
+		"connections",
+		"availableConnections" ],
 	"name" : "ZnTransactionSafeManagingMultiThreadedServer",
 	"pools" : [
 		 ],

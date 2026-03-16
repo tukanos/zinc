@@ -4,4 +4,4 @@ writeResponseTerminationExceptionSet
 	are interpreted as equivalent to a timeout or connection close."
 
 	^ ZnUtils exceptionSet:
-		#(#'ConnectionClosed' #'ConnectionTimedOut' #'SocketError' #'PrimitiveFailed')
+		#(ConnectionClosed ConnectionTimedOut PrimitiveFailed SocketError)
