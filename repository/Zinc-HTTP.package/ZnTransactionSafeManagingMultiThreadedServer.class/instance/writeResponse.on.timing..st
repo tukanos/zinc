@@ -9,6 +9,6 @@ writeResponse: response on: streamTransientStackValue timing: timing
 			ifTrue: [
 				GRPlatform current
 					doTransaction: [ response writeOn: streamTransientStackValue value ] ]
-			ifFalse: [ response writeOn: streamTransientStackValue value ].
+			ifFalse: [ response writeOn: streamTransientStackValue value ] ].
 	streamTransientStackValue value flush.
 	timing responseDuration: (self logResponseWritten: response started: initialMilliseconds)

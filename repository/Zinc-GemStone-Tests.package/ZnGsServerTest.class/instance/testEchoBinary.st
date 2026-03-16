@@ -18,4 +18,3 @@ testEchoBinary
           self
             assert:
               (response entity contents includesSubstring: entityOut printString) ]
-%

@@ -13,4 +13,3 @@ testCustomDefaultDelegate
 			client addPath: 'OK'.
 			self assert: client get equals: 'OK'.
 			client close ]
-%
