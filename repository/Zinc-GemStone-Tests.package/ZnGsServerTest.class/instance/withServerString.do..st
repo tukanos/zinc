@@ -1,3 +1,3 @@
 private
-withServerString: aString do: block
-  self withGemServerString: aString do: block
+withServerString: string do: block
+  self withGemServerString: string do: block
