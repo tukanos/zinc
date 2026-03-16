@@ -15,5 +15,4 @@ acceptOn: listeningSocket
 					"The timeout expired and no connection was accepted, give back the available connection slot"
 					self availableConnections signal ].
 			nil ]
-		ifNotNil: [ 
-			clientSocket ]
+		ifNotNil: [ clientSocket ]
