@@ -1,4 +1,4 @@
-﻿imageFormat
+imageFormat
 pharoLogoContentsPng
 	^ '
 		iVBORw0KGgoAAAANSUhEUgAAAWYAAAB3CAYAAAAw2+qcAAAypUlEQVR4XuVdB3gU1fZH39P3ng1BwIYg

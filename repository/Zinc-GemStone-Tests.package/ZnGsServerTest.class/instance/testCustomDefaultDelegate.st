@@ -1,4 +1,4 @@
-﻿testing
+testing
 testCustomDefaultDelegate
 	| customDelegate |
 	customDelegate := ZnDefaultServerDelegate empty.

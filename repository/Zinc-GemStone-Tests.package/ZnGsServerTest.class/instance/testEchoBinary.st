@@ -1,4 +1,4 @@
-﻿testing
+testing
 testEchoBinary  
   self withServerReader: [ :stream | ZnRequest readBinaryFrom: stream ]
     do: [ :server | 

@@ -1,4 +1,4 @@
-﻿testing
+testing
 testCustomServerString
 	self withServerString: 'foobar server'
 		do: [ :server |
