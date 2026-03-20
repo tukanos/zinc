@@ -9,11 +9,10 @@ startBasicServerOn: port
     gemServerOptions: self options;
     gemServerLocalOptions: self localOptions;
     yourself.
+    
   startMessage := server printString , ' (native thread: '
     , self activeProcessIsNative printString , ')'.
-  Transcript
-    cr;
-    show: 'Starting server: ' , startMessage.
+  server logServerGeneric: 'Starting server: ' , startMessage
+  
   server start.
   self serverInstance: server.
-  self log debug: 'started: ' , startMessage
