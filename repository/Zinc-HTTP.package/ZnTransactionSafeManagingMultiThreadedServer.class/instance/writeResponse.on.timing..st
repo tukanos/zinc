@@ -1,5 +1,5 @@
 request handling
-writeResponse: response on: streamTransientStackValue timing: timing
+writeResponse: response on: stream timing: timing
 	"Write response to stream and flush the stream"
 
 	| initialMilliseconds |
@@ -8,7 +8,7 @@ writeResponse: response on: streamTransientStackValue timing: timing
 		response isStreamingResponse
 			ifTrue: [
 				GRPlatform current
-					doTransaction: [ response writeOn: streamTransientStackValue value ] ]
-			ifFalse: [ response writeOn: streamTransientStackValue value ] ].
-	streamTransientStackValue value flush.
+					doTransaction: [ response writeOn: stream ] ]
+			ifFalse: [ response writeOn: stream ] ].
+	stream flush.
 	timing responseDuration: (self logResponseWritten: response started: initialMilliseconds)

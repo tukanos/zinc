@@ -7,6 +7,6 @@ closeConnections
       [ each close ]
         on: Error
         do: [ :exception |
-          self logServerGeneric: exception description.
-          self logServerGeneric: (GsProcess stackReportToLevel: 100) ] ].
+              self logServerGeneric: exception description.
+              self logServerGeneric: (GsProcess stackReportToLevel: 100) ] ].
     self connections removeAll ]

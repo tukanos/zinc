@@ -3,11 +3,11 @@ releaseServerSocket
   "Release our server socket"
   | address port |
   
-  serverSocket value ifNil: [ ^ self ].
-  address := [ serverSocket value address ] on: Error do: [ nil ].
-  port := [ serverSocket value port ] on: Error do: [ nil ].
+  self serverSocket ifNil: [ ^ self ].
+  address := [ self serverSocket address ] on: Error do: [ nil ].
+  port := [ self serverSocket port ] on: Error do: [ nil ].
   (Delay forMilliseconds: 10) wait.
-  serverSocket value destroy.
+  self serverSocket destroy.
   serverSocket := nil.
   self logServerSocketReleasedAddress: address port: port.
   self isUsingLimitedAcceptStrategy

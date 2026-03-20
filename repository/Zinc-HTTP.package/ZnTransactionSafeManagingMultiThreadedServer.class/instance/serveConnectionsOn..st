@@ -11,7 +11,7 @@ serveConnectionsOn: listeningSocketTransientStackValue
   stream := [  TransientStackValue value: (self socketStreamOn: socket value) ]
       on: ZnTooManyConcurrentConnections 
       do: [ ^ self ].
-  [ [ [ self executeRequestResponseLoopOn: stream ]
+  [ [ [ self executeRequestResponseLoopOn: stream value ]
     ensure: [ self logConnectionClosed: stream value.
         self closeSocketStream: stream value ] ]
         ifCurtailed: [ socket value destroy ] ]

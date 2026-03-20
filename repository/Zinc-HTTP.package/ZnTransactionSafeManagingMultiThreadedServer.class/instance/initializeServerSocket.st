@@ -17,7 +17,6 @@ initializeServerSocket
     
     self logServerGeneric: 'Initialized server socket'.
     
-    "common part in Pharo and GemStone"
     self isUsingLimitedAcceptStrategy 
       ifTrue: [ "Create a Semaphore that counts the available connections that can accept"
         availableConnections := Semaphore new.
