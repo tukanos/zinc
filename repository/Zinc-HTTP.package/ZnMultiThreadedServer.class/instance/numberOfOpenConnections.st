@@ -1,5 +1,5 @@
 accessing
 numberOfOpenConnections
 	^ self hasOpenConnections
-		ifTrue: [ connections size ]
+		ifTrue: [ self connections size ]
 		ifFalse: [ 0 ]

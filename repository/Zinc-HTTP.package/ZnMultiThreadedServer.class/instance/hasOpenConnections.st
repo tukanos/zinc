@@ -1,3 +1,3 @@
 testing
 hasOpenConnections
-	^ connections notNil and: [ connections isNotEmpty ]
+	^ self connections notNil and: [ self connections isNotEmpty ]
