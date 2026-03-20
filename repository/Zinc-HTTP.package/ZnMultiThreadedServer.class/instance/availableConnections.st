@@ -1,2 +1,3 @@
 accessing
+availableConnections
 	self subclassResponsibility
