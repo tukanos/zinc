@@ -12,5 +12,6 @@ handleRequest: request gemServer: gemServer
 "
 
   gemServer
-    gemServerTransaction: [ ^ self handleRequest: request ]
+    gemServerTransaction: [ self server: gemServer.
+                            ^ self handleRequest: request ]
     exceptionSet: ExceptionSet new	"let error handlers up the stack handle the error"
