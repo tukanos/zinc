@@ -5,4 +5,4 @@ delegate
 
 	^ self 
 		optionAt: #delegate
-		ifAbsentPut: [ ZnDefaultGsTransactionalServerDelegate new server: self; yourself ]
+		ifAbsentPut: [ ZnDefaultGsTransactionalServerDelegate new server: self gemServer; yourself ]
