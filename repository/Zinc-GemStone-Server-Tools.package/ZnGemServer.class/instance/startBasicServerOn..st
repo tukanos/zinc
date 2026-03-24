@@ -12,7 +12,7 @@ startBasicServerOn: port
     
   startMessage := server printString , ' (native thread: '
     , self activeProcessIsNative printString , ')'.
-  server logServerGeneric: 'Starting server: ' , startMessage
+  server logServerGeneric: 'Starting server: ', startMessage.
   
   server start.
   self serverInstance: server.
