@@ -1,6 +1,6 @@
-running
+*zinc-pharo-tests
 setUp
-
+	"Protocol: running"
 	super setUp.
 
 	logEventCollection := OrderedCollection new.

@@ -1,6 +1,6 @@
-running
+*zinc-pharo-tests
 tearDown
-
+	"Protocol: running"
 	"thisContext crTrace."
 	
 	ZnLogEvent announcer unsubscribe: self.
